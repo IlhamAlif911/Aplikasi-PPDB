@@ -161,10 +161,10 @@ class Formulir extends Base
             return redirect()->to('pendaftaran-berhasil/' . $pendaftar_id);
         } else {
             session()->setFlashdata('error', $validation->listErrors());
-            return redirect()->to('formulir-pendaftaran-zonasi/' . $id_jalur)->withInput();
+            return redirect()->to('formulir-pendaftaran/' . $id_jalur)->withInput();
         }
     }
-    
+
     public function test()
     {
         $data['jenis_beasiswa'] = $this->codeAll('JENIS BEASISWA');

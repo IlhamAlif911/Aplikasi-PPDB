@@ -130,6 +130,7 @@ class Worksheet extends Base
         if ($data_pendaftar != null) {
             $id_pendaftar = $data_pendaftar->id;
         } else $id_pendaftar = '0';
+        // get password
         $pass = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
         $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur1']->id . '000' . $id_pendaftar;
         // end
@@ -162,7 +163,7 @@ class Worksheet extends Base
                     "email" =>$value[8],
                     "asal_sekolah" =>$value[9],
                     "status_penerimaan" => 101,
-                    "type_registration" 2,
+                    "type_registration" => 2,
                 ]);
                 $pendaftar_id = $pendaftar->getInsertID();
                 $pendaftaran->insert([
