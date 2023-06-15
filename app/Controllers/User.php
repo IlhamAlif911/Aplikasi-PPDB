@@ -43,12 +43,34 @@ class User extends Base
         $jalur = new DataJalur();
         $tahap = new DataTahap();
         $periode = new DataPeriode();
+        $jurusan = new DataJurusan();
+        $agenda = new DataAgenda();
 
         $data['periode'] = $periode->where('status', 'aktif')->first();
-        $data['jalur'] = $jalur->where('id_tahap', $id)->findall();
-        $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->findall();
-        $data['page']= 'Jalur';
         $opsi_jalur = $this->codeAll('JALUR');
+        $data['jurusan'] = $jurusan->where('status', 'aktif')->findAll();
+        $data['agenda'] = $agenda->findAll();
+        $date = date('Y-m-d');
+
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        if (!$data_tahap) {
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->findall();
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->where('id_tahap',$id)->findall();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->findall();
+            $data['jalur'] = $jalur->where('id_tahap',$id)->findall();
+        }
 
         $data['kode_zonasi'] = '';
         $data['kode_prestasi'] = '';
@@ -66,6 +88,8 @@ class User extends Base
             } else
                 $data['kode_custom'] = $o->id;
         }
+        $data['page']= 'Jalur';
+
         return view('User/jalur', $data);
     }
     public function tahap($id)
@@ -78,8 +102,40 @@ class User extends Base
     }
 
     public function login()
-    {
+    {   
+        $periode = new DataPeriode();
+        $tahap = new DataTahap();
+        $jurusan = new DataJurusan();
+        $jalur = new DataJalur();
+        $agenda = new DataAgenda();
+        $data['page'] = 'Beranda';
+        $data['periode'] = $periode->where('status', 'aktif')->first();
+        $data['jurusan'] = $jurusan->where('status', 'aktif')->findAll();
+        $data['agenda'] = $agenda->findAll();
+        $date = date('Y-m-d');
+
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        if (!$data_tahap) {
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->orderBy('id', 'DESC')->first();
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['tahap'] = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+        }
+
         $data['page'] = 'Login';
+        
         return view('login',$data);
     }
 
@@ -91,99 +147,99 @@ class User extends Base
 
     public function pendaftaran_berhasil($id)
     {
+        $periode = new DataPeriode();
+        $tahap = new DataTahap();
+        $jurusan = new DataJurusan();
+        $jalur = new DataJalur();
+        $agenda = new DataAgenda();
         $pendaftar = new DataPendaftar();
-        $data['pendaftar'] = $pendaftar->where('id', $id)->first();
-
         $user = new Users();
-        $data['user'] = $user->where('id_ref', $id)->first();
+        $data['page'] = 'Beranda';
+        $data['periode'] = $periode->where('status', 'aktif')->first();
+        $data['jurusan'] = $jurusan->where('status', 'aktif')->findAll();
+        $data['agenda'] = $agenda->findAll();
+        $date = date('Y-m-d');
 
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        if (!$data_tahap) {
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->orderBy('id', 'DESC')->first();
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['tahap'] = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+        }
+
+        
+        $data['pendaftar'] = $pendaftar->where('id', $id)->first();
+        $data['user'] = $user->where('id_ref', $id)->first();
         $data['status_penerimaan'] = $this->code($data['pendaftar']->status_penerimaan);
+        
         $data['page'] = 'Pendaftaran Berhasil';
         return view('User/pendaftaran_berhasil', $data);
     }
 
-    // public function formulir_pendaftaran_prestasi($id)
-    // {
-    //     $countryModel = new Provinces();
-    //     $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
-
-    //     $jalur = new DataJalur();
-    //     $data['jalur'] = $jalur->where('id', $id)->first();
-
-    //     $tahap = new DataTahap();
-    //     $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
-
-    //     $periode = new DataPeriode();
-    //     $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
-
-    //     $rapot = new Rapot();
-    //     $data['rapot'] = $rapot->findAll();
-
-    //     $pendaftar = new DataPendaftar();
-    //     $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
-
-    //     $jurusan = new DataJurusan();
-    //     $data['jurusan'] = $jurusan->findAll();
-
-    //     $data['jenis_prestasi'] = $this->codeAll('JENIS PRESTASI');
-
-    //     $data['tingkat_prestasi'] = $this->codeAll('TINGKAT PRESTASI');
-
-    //     $data['jenis_beasiswa'] = $this->codeAll('JENIS BEASISWA');
-        
-    //     $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
-
-    //     $data['agama'] = $this->codeAll('AGAMA');
-
-    //     $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
-
-    //     $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
-
-    //     $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
-
-    //     $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
-
-    //     $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
-
-    //     $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
-
-    //     $data['agama'] = $this->codeAll('AGAMA');
-
-    //     if ($data_pendaftar != null) {
-    //         $id_pendaftar = $data_pendaftar->id;
-    //     } else $id_pendaftar = '0';
-
-    //     $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
-
-    //     return view('User/formulir_pendaftaran_prestasi', $data);
-    //}
-
     public function formulir_pendaftaran($id)
     {
-        $countryModel = new Provinces();
-        $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
-
-        $jalur = new DataJalur();
-        $data['jalur'] = $jalur->where('id', $id)->first();
-
-        $tahap = new DataTahap();
-        $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
-
+        
         $periode = new DataPeriode();
-        $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
-
-        $pendaftar = new DataPendaftar();
-        $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
-
+        $tahap = new DataTahap();
         $jurusan = new DataJurusan();
-        $data['jurusan'] = $jurusan->findAll();
+        $jalur = new DataJalur();
+        $agenda = new DataAgenda();
+        $pendaftar = new DataPendaftar();
+        $countryModel = new Provinces();
+        $data['periode1'] = $periode->where('status', 'aktif')->first();
+        $date = date('Y-m-d');
 
+        $data_tahap = $tahap->where(['id_periode' => $data['periode1']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        if (!$data_tahap) {
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->where('id', $id)->first();
+
+            $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
+
+            $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
+
+            $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
+
+            $data['jurusan'] = $jurusan->findAll();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->where('id', $id)->first();
+
+            $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
+
+            $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
+
+            $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
+
+            $data['jurusan'] = $jurusan->findAll();
+        }
+
+        $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
         $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
-
         $data['agama'] = $this->codeAll('AGAMA');
-
         $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
-
         $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
 
         if ($data_pendaftar != null) {
@@ -194,54 +250,7 @@ class User extends Base
         $data['page'] = 'Formulir Pendaftaran';
         return view('User/formulir_pendaftaran_zonasi', $data);
     }
-    // public function formulir_pendaftaran_afirmasi($id)
-    // {
-    //     $countryModel = new Provinces();
-    //     $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
-
-    //     $jalur = new DataJalur();
-    //     $data['jalur'] = $jalur->where('id', $id)->first();
-
-    //     $tahap = new DataTahap();
-    //     $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
-
-    //     $periode = new DataPeriode();
-    //     $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
-
-    //     $pendaftar = new DataPendaftar();
-    //     $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
-
-    //     $jurusan = new DataJurusan();
-    //     $data['jurusan'] = $jurusan->findAll();
-
-    //     $data['alasan_layak_pip'] = $this->codeAll('ALASAN LAYAK PIP');
-        
-    //     $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
-
-    //     $data['agama'] = $this->codeAll('AGAMA');
-
-    //     $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
-
-    //     $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
-
-    //     $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
-
-    //     $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
-
-    //     $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
-
-    //     $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
-
-    //     $data['agama'] = $this->codeAll('AGAMA');
-
-    //     if ($data_pendaftar != null) {
-    //         $id_pendaftar = $data_pendaftar->id;
-    //     } else $id_pendaftar = '0';
-
-    //     $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
-
-    //     return view('User/formulir_pendaftaran_afirmasi', $data);
-    // }
+    
     public function list_agenda()
     {
         $agenda = new DataAgenda();

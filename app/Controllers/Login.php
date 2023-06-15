@@ -53,13 +53,7 @@ class Login extends Base
                     return redirect()->to('dashboard');
                 }
                 if ($data_user->role == '2') {
-                    if ($data_pendaftar->status_penerimaan == $stat1->id) {
-                        return redirect()->to('dashboard-siswa');
-                    }elseif ($data_pendaftar->status_penerimaan == $stat2->id) {
-                        return redirect()->to('dashboard-siswa');
-                    }elseif ($data_pendaftar->status_penerimaan == $stat3->id) {
-                        return redirect()->to('dashboard-siswa');
-                    }elseif ($data_pendaftar->status_penerimaan == $stat4->id) {
+                    if ($data_pendaftar->status_penerimaan == $stat1->id || $data_pendaftar->status_penerimaan == $stat2->id || $data_pendaftar->status_penerimaan == $stat3->id || $data_pendaftar->status_penerimaan == $stat4->id) {
                         return redirect()->to('dashboard-siswa');
                     }else {
                         session()->setFlashdata('error', 'Permintaan Anda Ditolak');
@@ -71,7 +65,7 @@ class Login extends Base
                 return redirect()->back();
             }
         } else {
-            session()->setFlashdata('error', 'E-mail/Nomor Pendaftaran atau Password Salah');
+            session()->setFlashdata('error', 'E-mail/Nomor Pendaftaran belum terdaftar atau belum aktif');
             return redirect()->back();
         }
     }

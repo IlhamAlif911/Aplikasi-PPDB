@@ -22,7 +22,7 @@ class Admin extends Base
     {
         // proteksi halaman
         if (! session()->get('logged_in')) {
-            session()->setFlashdata('error', 'Anda Belum Login !!!!');
+            session()->setFlashdata('error', 'Anda Belum Login !');
             return redirect()->to('/login');
         }
         $pendaftaran = new DataPendaftaran();
@@ -81,7 +81,7 @@ class Admin extends Base
 
         // proteksi halaman
         if (! session()->get('logged_in')) {
-            session()->setFlashdata('error', 'Anda Belum Login !!!!');
+            session()->setFlashdata('error', 'Anda Belum Login !');
             return redirect()->to('/login');
         }
 
@@ -104,6 +104,11 @@ class Admin extends Base
 
     public function data_pendaftar($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jalur = new DataJalur();
 
         $tahap = new DataTahap();
@@ -145,8 +150,13 @@ class Admin extends Base
 
     public function pilih_tahap($id)
     {
-        $tahap = new DataTahap();
         
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+        $tahap = new DataTahap();
         $data['tahap'] = $tahap->where('id_periode',$id)->findAll();
         
         $data['page'] = 'pendaftar';
@@ -157,6 +167,11 @@ class Admin extends Base
 
     public function data_seleksi()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $data['page'] = 'seleksi';
         $data['title'] = 'Data Seleksi';
 
@@ -165,6 +180,11 @@ class Admin extends Base
 
     public function profil_siswa()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $data['page'] = 'pendaftar';
         $data['title'] = 'Profil Siswa';
 
@@ -173,12 +193,22 @@ class Admin extends Base
 
     public function profil_pendaftar()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $data['title'] = 'Profil Pendaftar';
         return view('Admin/profil_pendaftar', $data);
     }
 
     public function data_pembayaran()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pembayaran = new DataPembayaran();
         $user = new Users();
         $data['user'] = $user->findAll();
@@ -192,6 +222,11 @@ class Admin extends Base
 
     public function kategori_kode()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kategori = new KategoriKode();
 
         $data['page'] = 'kategori';
@@ -203,6 +238,11 @@ class Admin extends Base
     }
     public function periode()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $data['page'] = 'tahap';
@@ -214,6 +254,11 @@ class Admin extends Base
     }
     public function tahap()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $tahap = new DataTahap();
@@ -230,6 +275,11 @@ class Admin extends Base
 
     public function jalur()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $tahap = new DataTahap();
@@ -252,6 +302,11 @@ class Admin extends Base
 
     public function akun()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $user = new Users();
 
         $pendaftar = new DataPendaftar();
@@ -269,7 +324,11 @@ class Admin extends Base
     public function konfirmasi_pembayaran($id)
     {
         $user = new Users();
-
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pendaftar = new DataPendaftar();
         $pembayaran = new DataPembayaran();
         $data['pembayaran'] = $pembayaran->where('id_pendaftar',$id)->first();
@@ -288,6 +347,11 @@ class Admin extends Base
 
     public function data_jurusan()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jurusan = new DataJurusan();
         $data['jurusan'] = $jurusan->findAll();
 
@@ -299,6 +363,11 @@ class Admin extends Base
 
     public function data_agenda()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $agenda = new DataAgenda();
         $data['agenda'] = $agenda->findAll();
 
@@ -307,5 +376,6 @@ class Admin extends Base
 
         return view('Admin/data_agenda', $data);
     }
+    
 }
 ?>
