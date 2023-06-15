@@ -1,0 +1,16 @@
+ERROR - 2022-10-11 23:29:29 --> Column 'tingkat_penghargaan' cannot be null
+CRITICAL - 2022-10-11 23:29:29 --> Column 'tingkat_penghargaan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `prestasi` (`id_galeri`, `tingkat_penghargaan`, `tanggal_pelaksanaan`, `penyelenggara`) VALUES (1, NULL, \'publish\', \'<p>Lomba 1 Pembuatan Aplikasi</p>\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `prestasi` (`id_galeri`, `tingkat_penghargaan`, `tanggal_pelaksanaan`, `penyelenggara`) VALUES (1, NULL, \'publish\', \'<p>Lomba 1 Pembuatan Aplikasi</p>\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `prestasi` (`id_galeri`, `tingkat_penghargaan`, `tanggal_pelaksanaan`, `penyelenggara`) VALUES (1, NULL, \'publish\', \'<p>Lomba 1 Pembuatan Aplikasi</p>\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `prestasi` (`id_galeri`, `tingkat_penghargaan`, `tanggal_pelaksanaan`, `penyelenggara`) VALUES (:id_galeri:, :tingkat_penghargaan:, :tanggal_pelaksanaan:, :penyelenggara:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kesiswaan.php(191): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->add_prestasi('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

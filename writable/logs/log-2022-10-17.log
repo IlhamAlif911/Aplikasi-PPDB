@@ -1,0 +1,28 @@
+CRITICAL - 2022-10-17 14:51:40 --> Undefined property: stdClass::$tanggal_mulai
+in APPPATH\Controllers\Informasi.php on line 25.
+ 1 APPPATH\Controllers\Informasi.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tanggal_mulai', 'APPPATH\\Controllers\\Informasi.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Informasi->informasi('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-17 15:38:08 --> Undefined variable $poster
+in APPPATH\Views\panelAdmin\editBerita.php on line 36.
+ 1 APPPATH\Views\panelAdmin\editBerita.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $poster', 'APPPATH\\Views\\panelAdmin\\editBerita.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editBerita.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editBerita', [], true)
+ 5 APPPATH\Controllers\Informasi.php(117): view('panelAdmin/editBerita', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Informasi->edit_informasi('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-17 15:39:29 --> Undefined variable $galeri
+in APPPATH\Controllers\Informasi.php on line 100.
+ 1 APPPATH\Controllers\Informasi.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $galeri', 'APPPATH\\Controllers\\Informasi.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Informasi->edit_informasi('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Informasi))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

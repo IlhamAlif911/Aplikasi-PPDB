@@ -1,0 +1,336 @@
+CRITICAL - 2023-05-16 11:48:49 --> file_get_contents(F:\xampp\htdocs\ppdbv2\writable\debugbar/debugbar_1684209593.426738.json): failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(F:\\xampp\\htdocs\\ppdbv2\\writable\\debugbar/debugbar_1684209593.426738.json): failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 82, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): file_get_contents('ROOTPATH\\writable\\debugbar/debugbar_1684209593.426738.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1684212521.633080', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(472): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 11:49:40 --> Illegal parameter data types varchar and row for operation '='
+CRITICAL - 2023-05-16 11:49:40 --> Illegal parameter data types varchar and row for operation '='
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `kode_aplikasi`
+WHERE `nama_opsi` = (\'Lulus Seleksi\',\'Menunggu Konfirmasi Pembayaran\',\'Pembayaran Berhasil\',\'Daftar Ulang Berhasil\')
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kode_aplikasi`
+WHERE `nama_opsi` = (\'Lulus Seleksi\',\'Menunggu Konfirmasi Pembayaran\',\'Pembayaran Berhasil\',\'Daftar Ulang Berhasil\')
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kode_aplikasi`
+WHERE `nama_opsi` = (\'Lulus Seleksi\',\'Menunggu Konfirmasi Pembayaran\',\'Pembayaran Berhasil\',\'Daftar Ulang Berhasil\')
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kode_aplikasi`
+WHERE `nama_opsi` = :nama_opsi:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Base.php(25): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Login.php(16): App\Controllers\Base->codeWithName([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 12:34:05 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 55.
+ 1 APPPATH\Controllers\Pendaftar.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 55, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 13:14:00 --> syntax error, unexpected 'if' (T_IF), expecting ';'
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 3 APPPATH\Controllers\Pendaftar.php(94): view('Admin/profil_zonasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 13:14:15 --> Undefined variable: data_pendaftar
+in APPPATH\Views\Admin\profil_zonasi.php on line 35.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_pendaftar', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(94): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:19:49 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:22:48 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:22:53 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:24:44 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:27:28 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:27:36 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:31:05 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:31:08 --> Undefined variable: status
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:33:58 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:38:40 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(173): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:38:42 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(173): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:40:02 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 18.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:40:43 --> syntax error, unexpected '}', expecting end of file
+in APPPATH\Views\Admin\profil_zonasi.php on line 403.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 3 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:40:54 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 37.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:42:14 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 37.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:43:32 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 37.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:43:39 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 37.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:45:29 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 14:50:52 --> Undefined variable: status1
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: status1', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:00:37 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:11:29 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:11:31 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(172): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:17:28 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 10.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(174): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:18:51 --> Undefined variable: stat
+in APPPATH\Views\Admin\profil_zonasi.php on line 29.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(174): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 15:36:28 --> syntax error, unexpected 'if' (T_IF)
+in APPPATH\Controllers\Pendaftar.php on line 175.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

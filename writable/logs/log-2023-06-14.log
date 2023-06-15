@@ -1,0 +1,163 @@
+CRITICAL - 2023-06-14 02:25:49 --> Undefined variable: statedata
+in APPPATH\Controllers\Dynamic_dependent.php on line 134.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statedata', 'APPPATH\\Controllers\\Dynamic_dependent.php', 134, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:26:00 --> Undefined variable: statedata
+in APPPATH\Controllers\Dynamic_dependent.php on line 134.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statedata', 'APPPATH\\Controllers\\Dynamic_dependent.php', 134, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:26:01 --> Undefined variable: statedata
+in APPPATH\Controllers\Dynamic_dependent.php on line 134.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statedata', 'APPPATH\\Controllers\\Dynamic_dependent.php', 134, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:26:02 --> Undefined variable: statedata
+in APPPATH\Controllers\Dynamic_dependent.php on line 134.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(134): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: statedata', 'APPPATH\\Controllers\\Dynamic_dependent.php', 134, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:55:28 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:55:33 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:55:34 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:57:02 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:57:04 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:57:06 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:57:07 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 02:58:24 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:00:12 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:00:14 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:00:17 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:00:18 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:01:28 --> Undefined index: nama_tahap
+in APPPATH\Controllers\Dynamic_dependent.php on line 103.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_tahap', 'APPPATH\\Controllers\\Dynamic_dependent.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:14:25 --> json_encode() expects parameter 2 to be int, array given
+in APPPATH\Controllers\Dynamic_dependent.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_encode() expects parameter 2 to be int, array given', 'APPPATH\\Controllers\\Dynamic_dependent.php', 105, [...])
+ 2 APPPATH\Controllers\Dynamic_dependent.php(105): json_encode([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:14:31 --> json_encode() expects parameter 2 to be int, array given
+in APPPATH\Controllers\Dynamic_dependent.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_encode() expects parameter 2 to be int, array given', 'APPPATH\\Controllers\\Dynamic_dependent.php', 105, [...])
+ 2 APPPATH\Controllers\Dynamic_dependent.php(105): json_encode([], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-14 03:14:32 --> json_encode() expects parameter 2 to be int, array given
+in APPPATH\Controllers\Dynamic_dependent.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_encode() expects parameter 2 to be int, array given', 'APPPATH\\Controllers\\Dynamic_dependent.php', 105, [...])
+ 2 APPPATH\Controllers\Dynamic_dependent.php(105): json_encode([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

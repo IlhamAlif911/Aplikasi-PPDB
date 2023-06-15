@@ -1,0 +1,13 @@
+__ci_last_regenerate|i:1677792422;_ci_previous_url|s:53:"http://localhost:8080/formulir-pendaftaran-prestasi/7";error|s:454:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>NISN sudah digunakan sebelumnya</li>
+					<li>NIK sudah digunakan sebelumnya</li>
+					<li>Nomor Akta sudah digunakan sebelumnya</li>
+					<li>Nomor Seri Ijazah sudah digunakan sebelumnya</li>
+					<li>Nomor Seri SKHUS sudah digunakan sebelumnya</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:1:{s:5:"error";s:3:"old";}

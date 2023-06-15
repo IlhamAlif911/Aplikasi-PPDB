@@ -1,0 +1,40 @@
+CRITICAL - 2023-01-20 08:49:51 --> Invalid file: dashboard.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Admin.php(10): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-20 11:30:18 --> Invalid file: data-pendaftar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data-pendaftar.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('data-pendaftar', [], true)
+ 3 APPPATH\Controllers\Admin.php(15): view('data-pendaftar')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-20 11:30:28 --> Invalid file: Admin/data-pendaftar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/data-pendaftar.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data-pendaftar', [], true)
+ 3 APPPATH\Controllers\Admin.php(15): view('Admin/data-pendaftar')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-20 15:39:19 --> Invalid file: Admin/edit-profil-siswa.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/edit-profil-siswa.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/edit-profil-siswa', [], true)
+ 3 APPPATH\Controllers\Admin.php(25): view('Admin/edit-profil-siswa')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->edit_siswa()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -1,0 +1,38 @@
+CRITICAL - 2022-08-26 03:13:44 --> Invalid file: landingPage/header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landingPage/header.php')
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('landingPage/header', null, true)
+ 3 APPPATH\Views\landingPage\index.php(14): CodeIgniter\View\View->include('landingPage/header')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\landingPage\\index.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('landingPage/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('landingPage/index')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-26 03:14:24 --> syntax error, unexpected token ";"
+in APPPATH\Views\landingPage\index.php on line 14.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('landingPage/index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('landingPage/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-26 03:14:49 --> Invalid file: landingPage/header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landingPage/header.php')
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('landingPage/header', null, true)
+ 3 APPPATH\Views\landingPage\index.php(14): CodeIgniter\View\View->include('landingPage/header')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\landingPage\\index.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('landingPage/index', [], true)
+ 7 APPPATH\Controllers\Home.php(9): view('landingPage/index')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

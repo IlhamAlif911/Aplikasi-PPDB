@@ -1,0 +1,326 @@
+CRITICAL - 2023-05-15 13:40:22 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 14:00:07 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 14:00:42 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 14:10:50 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 14:12:57 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 14:12:58 --> Call to undefined function set_value()
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 15:11:47 --> Undefined variable: kewarganearaan
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 169.
+ 1 APPPATH\Views\User\formulir_pendaftaran_zonasi.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kewarganearaan', 'APPPATH\\Views\\User\\formulir_pendaftaran_zonasi.php', 169, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\formulir_pendaftaran_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 5 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 15:40:35 --> Undefined variable: kewargaegaraan
+in APPPATH\Views\User\formulir_pendaftaran_zonasi.php on line 169.
+ 1 APPPATH\Views\User\formulir_pendaftaran_zonasi.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kewargaegaraan', 'APPPATH\\Views\\User\\formulir_pendaftaran_zonasi.php', 169, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\formulir_pendaftaran_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 5 APPPATH\Controllers\User.php(200): view('User/formulir_pendaftaran_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-05-15 16:39:55 --> Unknown column 'nomor_akta' in 'where clause'
+CRITICAL - 2023-05-15 16:39:55 --> Unknown column 'nomor_akta' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `data_pendaftar`
+WHERE `nomor_akta` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `data_pendaftar`
+WHERE `nomor_akta` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `data_pendaftar`
+WHERE `nomor_akta` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `data_pendaftar`
+WHERE `nomor_akta` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(306): CodeIgniter\Validation\Rules->is_unique(null, 'nomor_akta', [...], null)
+ 7 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('nomor_akta', 'nomor_akta', null, [...], [...])
+ 8 APPPATH\Controllers\Formulir.php(93): CodeIgniter\Validation\Validation->run()
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_zonasi('4')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 20:57:58 --> Trying to get property 'id' of non-object
+in APPPATH\Views\User\formulirtest.php on line 169.
+ 1 APPPATH\Views\User\formulirtest.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\User\\formulirtest.php', 169, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\formulirtest.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulirtest', [], true)
+ 5 APPPATH\Controllers\User.php(200): view('User/formulirtest', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 21:00:29 --> Trying to get property 'prov_id' of non-object
+in APPPATH\Views\User\formulirtest.php on line 169.
+ 1 APPPATH\Views\User\formulirtest.php(169): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'prov_id\' of non-object', 'APPPATH\\Views\\User\\formulirtest.php', 169, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\formulirtest.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulirtest', [], true)
+ 5 APPPATH\Controllers\User.php(200): view('User/formulirtest', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-15 21:03:06 --> Undefined property: stdClass::$nama_opsi
+in APPPATH\Views\User\formulirtest.php on line 395.
+ 1 APPPATH\Views\User\formulirtest.php(395): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_opsi', 'APPPATH\\Views\\User\\formulirtest.php', 395, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\formulirtest.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulirtest', [], true)
+ 5 APPPATH\Controllers\User.php(200): view('User/formulirtest', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-05-15 21:57:10 --> Unknown column 'id_pendaftar' in 'where clause'
+CRITICAL - 2023-05-15 21:57:10 --> Unknown column 'id_pendaftar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = :id_pendaftar:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:52:05 --> Unknown column 'id_pendaftar' in 'where clause'
+CRITICAL - 2023-05-15 22:52:05 --> Unknown column 'id_pendaftar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = :id_pendaftar:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:54:43 --> Unknown column 'id_siswa' in 'where clause'
+CRITICAL - 2023-05-15 22:54:43 --> Unknown column 'id_siswa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = :id_siswa:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(87): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:55:22 --> Unknown column 'id_pendaftar' in 'where clause'
+CRITICAL - 2023-05-15 22:55:22 --> Unknown column 'id_pendaftar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = :id_pendaftar:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:55:52 --> Unknown column 'id_siswa' in 'where clause'
+CRITICAL - 2023-05-15 22:55:52 --> Unknown column 'id_siswa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = :id_siswa:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(87): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:56:17 --> Unknown column 'id_pendaftar' in 'where clause'
+CRITICAL - 2023-05-15 22:56:17 --> Unknown column 'id_pendaftar' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prestasi_siswa`
+WHERE `id_pendaftar` = :id_pendaftar:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 22:57:20 --> Unknown column 'id_siswa' in 'where clause'
+CRITICAL - 2023-05-15 22:57:20 --> Unknown column 'id_siswa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = \'19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `afirmasi`
+WHERE `id_siswa` = :id_siswa:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pendaftar.php(87): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:57:47 --> Undefined property: stdClass::$nomor_akta
+in APPPATH\Views\Admin\profil_prestasi.php on line 82.
+ 1 APPPATH\Views\Admin\profil_prestasi.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nomor_akta', 'APPPATH\\Views\\Admin\\profil_prestasi.php', 82, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_prestasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_prestasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(94): view('Admin/profil_prestasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('19')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 23:20:48 --> Undefined property: stdClass::$nomor_akta
+in APPPATH\Controllers\Pendaftar.php on line 128.
+ 1 APPPATH\Controllers\Pendaftar.php(128): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nomor_akta', 'APPPATH\\Controllers\\Pendaftar.php', 128, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('19')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

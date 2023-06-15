@@ -1,0 +1,9 @@
+__ci_last_regenerate|i:1684726062;_ci_previous_url|s:61:"http://localhost/ppdbv2/public/formulir-pendaftaran-zonasi/12";error|s:241:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Email sudah digunakan sebelumnya</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:3:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:43:{s:7:"periode";s:1:"2";s:5:"tahap";s:1:"9";s:5:"jalur";s:2:"12";s:12:"nama_lengkap";s:21:"Ilham Alif JAmaluddin";s:4:"nisn";s:10:"1234557890";s:3:"nik";s:16:"3302082205870001";s:12:"tempat_lahir";s:11:"Purbalingga";s:13:"tanggal_lahir";s:10:"02/05/1997";s:13:"jenis_kelamin";s:1:"l";s:5:"agama";s:1:"1";s:19:"berkebutuhan_khusus";s:1:"9";s:6:"alamat";s:6:"Tambak";s:8:"provinsi";s:2:"13";s:9:"kabupaten";s:3:"187";s:9:"kecamatan";s:4:"3012";s:9:"kelurahan";s:5:"37342";s:8:"kode_pos";s:5:"53196";s:2:"rt";s:2:"02";s:2:"rw";s:2:"03";s:8:"nomor_hp";s:12:"089658176349";s:5:"email";s:22:"stevevai0210@gmail.com";s:9:"nama_ayah";s:5:"dummy";s:15:"pendidikan_ayah";s:2:"46";s:14:"pekerjaan_ayah";s:2:"55";s:11:"alamat_ayah";s:6:"Tambak";s:13:"nomor_hp_ayah";s:12:"089658176349";s:8:"nama_ibu";s:5:"mummy";s:14:"pendidikan_ibu";s:2:"46";s:13:"pekerjaan_ibu";s:2:"55";s:10:"alamat_ibu";s:6:"Tambak";s:12:"nomor_hp_ibu";s:12:"089658176349";s:9:"nama_wali";s:0:"";s:15:"pendidikan_wali";s:0:"";s:14:"pekerjaan_wali";s:0:"";s:11:"alamat_wali";s:0:"";s:13:"nomor_hp_wali";s:0:"";s:12:"asal_sekolah";s:20:"SMP Negeri 1 Sumpiuh";s:7:"jurusan";s:1:"3";s:17:"nomor_pendaftaran";s:9:"291200023";s:8:"password";s:6:"911123";s:13:"konf_password";s:6:"911123";s:10:"konfirmasi";s:3:"cek";s:6:"submit";s:0:"";}}_ci_validation_errors|s:58:"a:1:{s:5:"email";s:32:"Email sudah digunakan sebelumnya";}";

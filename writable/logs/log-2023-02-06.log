@@ -1,0 +1,47 @@
+CRITICAL - 2023-02-06 10:52:44 --> Undefined variable $country
+in APPPATH\Views\User\cek.php on line 213.
+ 1 APPPATH\Views\User\cek.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $country', 'APPPATH\\Views\\User\\cek.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/cek', [], true)
+ 5 APPPATH\Controllers\User.php(65): view('User/cek')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 10:57:52 --> Undefined variable $city
+in APPPATH\Views\User\cek.php on line 225.
+ 1 APPPATH\Views\User\cek.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $city', 'APPPATH\\Views\\User\\cek.php', 225)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/cek', [], true)
+ 5 APPPATH\Controllers\User.php(69): view('User/cek', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 11:27:43 --> Undefined variable $country
+in APPPATH\Views\User\cek.php on line 214.
+ 1 APPPATH\Views\User\cek.php(214): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $country', 'APPPATH\\Views\\User\\cek.php', 214)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\cek.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/cek.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 6 APPPATH\Controllers\User.php(37): view('User/formulir_pendaftaran_zonasi')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran_zonasi()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-06 16:28:57 --> Invalid file: formulir_pendaftaran.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('formulir_pendaftaran.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('formulir_pendaftaran', [], true)
+ 3 APPPATH\Controllers\Home.php(40): view('formulir_pendaftaran')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->formulir_pendaftaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -1,0 +1,24 @@
+CRITICAL - 2022-11-10 09:12:08 --> Too few arguments to function App\Controllers\Home::index(), 0 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-10 14:11:12 --> Attempt to read property "file_logo" on string
+in APPPATH\Views\panelAdmin\sidebar.php on line 5.
+ 1 APPPATH\Views\panelAdmin\sidebar.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_logo" on string', 'APPPATH\\Views\\panelAdmin\\sidebar.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('panelAdmin/sidebar', null, true)
+ 5 APPPATH\Views\panelAdmin\index.php(24): CodeIgniter\View\View->include('panelAdmin/sidebar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('panelAdmin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dataSambutan', [], true)
+10 APPPATH\Controllers\Profile.php(256): view('panelAdmin/dataSambutan', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->sambutan('1')
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

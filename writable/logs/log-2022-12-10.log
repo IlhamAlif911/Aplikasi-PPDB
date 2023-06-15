@@ -1,0 +1,30 @@
+CRITICAL - 2022-12-10 10:47:48 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 108.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 4 APPPATH\Controllers\KodeOpsi.php(39): view('panelAdmin/kategoriDataOpsi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 10:51:25 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 108.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 4 APPPATH\Controllers\KodeOpsi.php(39): view('panelAdmin/kategoriDataOpsi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:14:15 --> Attempt to read property "nama_kategori" on null
+in APPPATH\Controllers\KodeOpsi.php on line 77.
+ 1 APPPATH\Controllers\KodeOpsi.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_kategori" on null', 'APPPATH\\Controllers\\KodeOpsi.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('13')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

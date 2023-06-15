@@ -1,0 +1,35 @@
+ERROR - 2022-10-31 16:04:42 --> Cannot delete or update a parent row: a foreign key constraint fails (`sekolah_gumintang`.`galeri`, CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`penerbit`) REFERENCES `pegawai` (`id`))
+CRITICAL - 2022-10-31 16:04:42 --> Cannot delete or update a parent row: a foreign key constraint fails (`sekolah_gumintang`.`galeri`, CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`penerbit`) REFERENCES `pegawai` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pegawai`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pegawai`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pegawai`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2358): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pegawai`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\PegawaiController.php(415): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->deletePegawai('1')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-10-31 16:07:47 --> Duplicate entry '123' for key 'nik'
+CRITICAL - 2022-10-31 16:07:47 --> Duplicate entry '123' for key 'nik'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'123\', \'Wasinem\', \'\', \'Cilacap\', \'2022-10-26\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'0\', \'\', \'\', \'0\', \'aktif\', \'tenaga pendidik\', \'39\', \'1\', \'1\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'123\', \'Wasinem\', \'\', \'Cilacap\', \'2022-10-26\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'0\', \'\', \'\', \'0\', \'aktif\', \'tenaga pendidik\', \'39\', \'1\', \'1\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'123\', \'Wasinem\', \'\', \'Cilacap\', \'2022-10-26\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'0\', \'\', \'\', \'0\', \'aktif\', \'tenaga pendidik\', \'39\', \'1\', \'1\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (:id_sekolah:, :nik:, :nama:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :email:, :nomor_telp:, :nomor_hp:, :alamat:, :provinsi:, :kabupaten:, :kecamatan:, :kelurahan:, :kode_pos:, :rt:, :rw:, :agama:, :npwp:, :nama_npwp:, :status_perkawinan:, :status_aktif:, :jenis_pegawai:, :pendidikan_terakhir:, :instansi_pendidikan_terakhir:, :bidang_studi:, :file_foto:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PegawaiController.php(355): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->addPegawai('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

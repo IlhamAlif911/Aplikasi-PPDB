@@ -1,0 +1,73 @@
+CRITICAL - 2022-11-07 08:55:36 --> Too few arguments to function App\Controllers\Home::index(), 0 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 09:12:37 --> Undefined variable $tanggal_pelaksanaan
+in APPPATH\Views\panelAdmin\editGaleri.php on line 98.
+ 1 APPPATH\Views\panelAdmin\editGaleri.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_pelaksanaan', 'APPPATH\\Views\\panelAdmin\\editGaleri.php', 98)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editGaleri.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editGaleri', [], true)
+ 5 APPPATH\Controllers\Kesiswaan.php(153): view('panelAdmin/editGaleri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->editGaleri('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 09:15:24 --> Undefined variable $tanggal_pelaksanaan
+in APPPATH\Views\panelAdmin\editGaleri.php on line 99.
+ 1 APPPATH\Views\panelAdmin\editGaleri.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_pelaksanaan', 'APPPATH\\Views\\panelAdmin\\editGaleri.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editGaleri.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editGaleri', [], true)
+ 5 APPPATH\Controllers\Kesiswaan.php(153): view('panelAdmin/editGaleri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->editGaleri('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 09:16:21 --> Undefined variable $tanggal_pelaksanaan
+in APPPATH\Views\panelAdmin\editGaleri.php on line 99.
+ 1 APPPATH\Views\panelAdmin\editGaleri.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_pelaksanaan', 'APPPATH\\Views\\panelAdmin\\editGaleri.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editGaleri.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editGaleri', [], true)
+ 5 APPPATH\Controllers\Kesiswaan.php(153): view('panelAdmin/editGaleri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->editGaleri('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 09:19:15 --> Undefined variable $tanggal_pelaksanaan
+in APPPATH\Views\panelAdmin\editGaleri.php on line 99.
+ 1 APPPATH\Views\panelAdmin\editGaleri.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_pelaksanaan', 'APPPATH\\Views\\panelAdmin\\editGaleri.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editGaleri.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editGaleri', [], true)
+ 5 APPPATH\Controllers\Kesiswaan.php(153): view('panelAdmin/editGaleri', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->editGaleri('7')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 13:58:00 --> chmod(): No such file or directory
+in APPPATH\Controllers\Kesiswaan.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', 'APPPATH\\Controllers\\Kesiswaan.php', 367)
+ 2 APPPATH\Controllers\Kesiswaan.php(367): chmod('./assets/file_gambar_10770(3).png', 511)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->deleteGaleri('2')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-07 13:58:41 --> chmod(): No such file or directory
+in APPPATH\Controllers\Kesiswaan.php on line 367.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', 'APPPATH\\Controllers\\Kesiswaan.php', 367)
+ 2 APPPATH\Controllers\Kesiswaan.php(367): chmod('./assets/file_gambar_10770(3).png', 511)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->deleteGaleri('2')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

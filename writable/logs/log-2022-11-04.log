@@ -1,0 +1,55 @@
+CRITICAL - 2022-11-04 08:35:59 --> Too few arguments to function App\Controllers\Home::index(), 0 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:34:01 --> Attempt to read property "file_ta" on null
+in APPPATH\Controllers\Kurikulum.php on line 345.
+ 1 APPPATH\Controllers\Kurikulum.php(345): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_ta" on null', 'APPPATH\\Controllers\\Kurikulum.php', 345)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:35:08 --> Attempt to read property "id_sekolah" on null
+in APPPATH\Controllers\Kurikulum.php on line 352.
+ 1 APPPATH\Controllers\Kurikulum.php(352): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_sekolah" on null', 'APPPATH\\Controllers\\Kurikulum.php', 352)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:37:25 --> Attempt to read property "id_sekolah" on null
+in APPPATH\Controllers\Kurikulum.php on line 352.
+ 1 APPPATH\Controllers\Kurikulum.php(352): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_sekolah" on null', 'APPPATH\\Controllers\\Kurikulum.php', 352)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:39:32 --> Attempt to read property "id_sekolah" on null
+in APPPATH\Controllers\Kurikulum.php on line 352.
+ 1 APPPATH\Controllers\Kurikulum.php(352): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_sekolah" on null', 'APPPATH\\Controllers\\Kurikulum.php', 352)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:41:28 --> Attempt to read property "id_sekolah" on null
+in APPPATH\Controllers\Kurikulum.php on line 354.
+ 1 APPPATH\Controllers\Kurikulum.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_sekolah" on null', 'APPPATH\\Controllers\\Kurikulum.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:42:18 --> Attempt to read property "id" on null
+in APPPATH\Controllers\Kurikulum.php on line 354.
+ 1 APPPATH\Controllers\Kurikulum.php(354): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Controllers\\Kurikulum.php', 354)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteTa('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

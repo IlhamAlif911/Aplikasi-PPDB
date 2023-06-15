@@ -1,0 +1,212 @@
+CRITICAL - 2022-11-01 09:24:57 --> Undefined property: stdClass::$username
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 81.
+ 1 APPPATH\Views\panelAdmin\kategoriDataOpsi.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$username', 'APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 5 APPPATH\Controllers\KodeOpsi.php(29): view('panelAdmin/kategoriDataOpsi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1', 'jenis kelamin')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 09:28:44 --> Undefined variable $j
+in APPPATH\Views\panelAdmin\dataPegawai.php on line 52.
+ 1 APPPATH\Views\panelAdmin\dataPegawai.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Views\\panelAdmin\\dataPegawai.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\dataPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dataPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(28): view('panelAdmin/dataPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->dataGuru('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 10:46:21 --> Call to a member function listErrors() on null
+in APPPATH\Controllers\PegawaiController.php on line 355.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 12:05:28 --> Undefined variable $j
+in APPPATH\Views\panelAdmin\editPegawai.php on line 13.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(372): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 12:05:36 --> Undefined variable $j
+in APPPATH\Views\panelAdmin\editPegawai.php on line 13.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(372): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 12:06:13 --> Undefined array key "status_kepegawaian"
+in APPPATH\Controllers\PegawaiController.php on line 47.
+ 1 APPPATH\Controllers\PegawaiController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status_kepegawaian"', 'APPPATH\\Controllers\\PegawaiController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->updatePegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-01 12:21:08 --> Duplicate entry '1234567891011122' for key 'nik'
+CRITICAL - 2022-11-01 12:21:08 --> Duplicate entry '1234567891011122' for key 'nik'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `pegawai` SET `nik` = \'1234567891011122\', `nama` = \'Masjid-As Salam2\', `jenis_kelamin` = \'L\', `tempat_lahir` = \'Pemalang \', `tanggal_lahir` = \'0009-11-12\', `email` = \'\', `nomor_telp` = \'\', `nomor_hp` = \'\', `alamat` = \'\', `provinsi` = \'0\', `kabupaten` = \'0\', `kecamatan` = \'0\', `kelurahan` = \'0\', `kode_pos` = \'\', `rt` = \'0\', `rw` = \'0\', `agama` = \'0\', `npwp` = \'\', `nama_npwp` = \'\', `status_perkawinan` = \'7\', `status_aktif` = \'aktif\', `jenis_pegawai` = \'tenaga pendidik\', `pendidikan_terakhir` = \'42\', `instansi_pendidikan_terakhir` = \'sss\', `bidang_studi` = \'123\', `file_foto` = NULL
+WHERE `pegawai`.`id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pegawai` SET `nik` = \'1234567891011122\', `nama` = \'Masjid-As Salam2\', `jenis_kelamin` = \'L\', `tempat_lahir` = \'Pemalang \', `tanggal_lahir` = \'0009-11-12\', `email` = \'\', `nomor_telp` = \'\', `nomor_hp` = \'\', `alamat` = \'\', `provinsi` = \'0\', `kabupaten` = \'0\', `kecamatan` = \'0\', `kelurahan` = \'0\', `kode_pos` = \'\', `rt` = \'0\', `rw` = \'0\', `agama` = \'0\', `npwp` = \'\', `nama_npwp` = \'\', `status_perkawinan` = \'7\', `status_aktif` = \'aktif\', `jenis_pegawai` = \'tenaga pendidik\', `pendidikan_terakhir` = \'42\', `instansi_pendidikan_terakhir` = \'sss\', `bidang_studi` = \'123\', `file_foto` = NULL
+WHERE `pegawai`.`id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pegawai` SET `nik` = \'1234567891011122\', `nama` = \'Masjid-As Salam2\', `jenis_kelamin` = \'L\', `tempat_lahir` = \'Pemalang \', `tanggal_lahir` = \'0009-11-12\', `email` = \'\', `nomor_telp` = \'\', `nomor_hp` = \'\', `alamat` = \'\', `provinsi` = \'0\', `kabupaten` = \'0\', `kecamatan` = \'0\', `kelurahan` = \'0\', `kode_pos` = \'\', `rt` = \'0\', `rw` = \'0\', `agama` = \'0\', `npwp` = \'\', `nama_npwp` = \'\', `status_perkawinan` = \'7\', `status_aktif` = \'aktif\', `jenis_pegawai` = \'tenaga pendidik\', `pendidikan_terakhir` = \'42\', `instansi_pendidikan_terakhir` = \'sss\', `bidang_studi` = \'123\', `file_foto` = NULL
+WHERE `pegawai`.`id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `pegawai` SET `nik` = :nik:, `nama` = :nama:, `jenis_kelamin` = :jenis_kelamin:, `tempat_lahir` = :tempat_lahir:, `tanggal_lahir` = :tanggal_lahir:, `email` = :email:, `nomor_telp` = :nomor_telp:, `nomor_hp` = :nomor_hp:, `alamat` = :alamat:, `provinsi` = :provinsi:, `kabupaten` = :kabupaten:, `kecamatan` = :kecamatan:, `kelurahan` = :kelurahan:, `kode_pos` = :kode_pos:, `rt` = :rt:, `rw` = :rw:, `agama` = :agama:, `npwp` = :npwp:, `nama_npwp` = :nama_npwp:, `status_perkawinan` = :status_perkawinan:, `status_aktif` = :status_aktif:, `jenis_pegawai` = :jenis_pegawai:, `pendidikan_terakhir` = :pendidikan_terakhir:, `instansi_pendidikan_terakhir` = :instansi_pendidikan_terakhir:, `bidang_studi` = :bidang_studi:, `file_foto` = :file_foto:
+WHERE `pegawai`.`id` IN :pegawai.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PegawaiController.php(265): CodeIgniter\Model->update('4', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->updatePegawai('4')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 12:53:31 --> Undefined array key "data_pns"
+in APPPATH\Controllers\PegawaiController.php on line 262.
+ 1 APPPATH\Controllers\PegawaiController.php(262): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data_pns"', 'APPPATH\\Controllers\\PegawaiController.php', 262)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->updatePegawai('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 13:39:29 --> Undefined array key "pegawai"
+in APPPATH\Controllers\PegawaiController.php on line 399.
+ 1 APPPATH\Controllers\PegawaiController.php(399): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pegawai"', 'APPPATH\\Controllers\\PegawaiController.php', 399)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->savePegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 13:40:25 --> Undefined array key "pegawai"
+in APPPATH\Controllers\PegawaiController.php on line 534.
+ 1 APPPATH\Controllers\PegawaiController.php(534): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pegawai"', 'APPPATH\\Controllers\\PegawaiController.php', 534)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->savePegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-01 13:41:11 --> Duplicate entry '5675674233344445' for key 'nik'
+CRITICAL - 2022-11-01 13:41:11 --> Duplicate entry '5675674233344445' for key 'nik'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'5675674233344445\', \'Salsabila Fauzia\', \'P\', \'Cilacap\', \'21-12-24\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'46\', \'\', \'\', \'7\', \'aktif\', \'pendidik\', \'43\', \'UNS\', \'Informatika\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'5675674233344445\', \'Salsabila Fauzia\', \'P\', \'Cilacap\', \'21-12-24\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'46\', \'\', \'\', \'7\', \'aktif\', \'pendidik\', \'43\', \'UNS\', \'Informatika\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (\'1\', \'5675674233344445\', \'Salsabila Fauzia\', \'P\', \'Cilacap\', \'21-12-24\', \'\', \'\', \'\', \'\', \'0\', \'0\', \'0\', \'0\', \'\', \'\', \'\', \'46\', \'\', \'\', \'7\', \'aktif\', \'pendidik\', \'43\', \'UNS\', \'Informatika\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_sekolah`, `nik`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `email`, `nomor_telp`, `nomor_hp`, `alamat`, `provinsi`, `kabupaten`, `kecamatan`, `kelurahan`, `kode_pos`, `rt`, `rw`, `agama`, `npwp`, `nama_npwp`, `status_perkawinan`, `status_aktif`, `jenis_pegawai`, `pendidikan_terakhir`, `instansi_pendidikan_terakhir`, `bidang_studi`, `file_foto`) VALUES (:id_sekolah:, :nik:, :nama:, :jenis_kelamin:, :tempat_lahir:, :tanggal_lahir:, :email:, :nomor_telp:, :nomor_hp:, :alamat:, :provinsi:, :kabupaten:, :kecamatan:, :kelurahan:, :kode_pos:, :rt:, :rw:, :agama:, :npwp:, :nama_npwp:, :status_perkawinan:, :status_aktif:, :jenis_pegawai:, :pendidikan_terakhir:, :instansi_pendidikan_terakhir:, :bidang_studi:, :file_foto:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PegawaiController.php(504): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->savePegawai('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 14:29:32 --> Cannot access offset of type string on string
+in APPPATH\Views\panelAdmin\dataProfileSekolah.php on line 23.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dataProfileSekolah', [], true)
+ 4 APPPATH\Controllers\Profile.php(39): view('panelAdmin/dataProfileSekolah', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profile('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 14:37:18 --> Invalid file: panelAdmin/editProfilSekolah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panelAdmin/editProfilSekolah.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editProfilSekolah', [], true)
+ 3 APPPATH\Controllers\Profile.php(137): view('panelAdmin/editProfilSekolah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->editProfile('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 14:37:49 --> Undefined variable $sekolah
+in APPPATH\Views\panelAdmin\editProfileSekolah.php on line 12.
+ 1 APPPATH\Views\panelAdmin\editProfileSekolah.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'APPPATH\\Views\\panelAdmin\\editProfileSekolah.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editProfileSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editProfileSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(137): view('panelAdmin/editProfileSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->editProfile('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 14:59:14 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Profile.php on line 220.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->sambutan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 15:00:38 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Profile.php on line 220.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->sambutan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 15:11:00 --> Invalid file: panelAdmin/profil.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panelAdmin/profil.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profil', [], true)
+ 3 APPPATH\Controllers\Profile.php(286): view('panelAdmin/profil', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profil('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 15:12:35 --> Invalid file: panelAdmin/dataProfil.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panelAdmin/dataProfil.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dataProfil', [], true)
+ 3 APPPATH\Controllers\Profile.php(286): view('panelAdmin/dataProfil', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profil('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 15:33:41 --> Undefined variable $profiles
+in APPPATH\Views\panelAdmin\strukturOrganisasi.php on line 15.
+ 1 APPPATH\Views\panelAdmin\strukturOrganisasi.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profiles', 'APPPATH\\Views\\panelAdmin\\strukturOrganisasi.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\strukturOrganisasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/strukturOrganisasi', [], true)
+ 5 APPPATH\Controllers\Profile.php(328): view('panelAdmin/strukturOrganisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->struktur('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-01 15:36:21 --> Invalid file: panelAdmin/strukturOrganisasi.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panelAdmin/strukturOrganisasi.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/strukturOrganisasi', [], true)
+ 3 APPPATH\Controllers\Profile.php(328): view('panelAdmin/strukturOrganisasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->struktur('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

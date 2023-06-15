@@ -1,0 +1,64 @@
+ERROR - 2023-02-28 16:06:31 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-02-28 16:06:31 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (:id_rapot:, :id_pendaftar:, :matematika:, :ipa:, :bahasa_inggris:, :bahasa_indonesia:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(453): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-28 16:07:38 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-02-28 16:07:38 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (:id_rapot:, :id_pendaftar:, :matematika:, :ipa:, :bahasa_inggris:, :bahasa_indonesia:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(453): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-28 16:10:27 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-02-28 16:10:27 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (:id_rapot:, :id_pendaftar:, :matematika:, :ipa:, :bahasa_inggris:, :bahasa_indonesia:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(453): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-28 16:10:54 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-02-28 16:10:54 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'<? $r->id ?>\', 4, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (:id_rapot:, :id_pendaftar:, :matematika:, :ipa:, :bahasa_inggris:, :bahasa_indonesia:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(453): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

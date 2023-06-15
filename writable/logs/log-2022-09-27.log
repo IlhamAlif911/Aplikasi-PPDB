@@ -1,0 +1,37 @@
+CRITICAL - 2022-09-27 02:06:36 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Profile.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->sambutan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 03:41:30 --> unlink(./assets/): Is a directory
+in APPPATH\Controllers\Profile.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(./assets/): Is a directory', 'APPPATH\\Controllers\\Profile.php', 101)
+ 2 APPPATH\Controllers\Profile.php(101): unlink('FCPATH\\assets')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 03:47:53 --> chmod(): No such file or directory
+in APPPATH\Controllers\Profile.php on line 101.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', 'APPPATH\\Controllers\\Profile.php', 101)
+ 2 APPPATH\Controllers\Profile.php(101): chmod('./assets/file_logo10770(1).png', 511)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 21:32:34 --> Undefined variable $profiles
+in APPPATH\Views\panelAdmin\profil.php on line 24.
+ 1 APPPATH\Views\panelAdmin\profil.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profiles', 'APPPATH\\Views\\panelAdmin\\profil.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profil', [], true)
+ 5 APPPATH\Controllers\Profile.php(190): view('panelAdmin/profil')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profil('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

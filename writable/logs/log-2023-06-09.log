@@ -1,0 +1,522 @@
+CRITICAL - 2023-06-09 09:31:51 --> Undefined variable: data_pendaftar
+in APPPATH\Views\Admin\navbar.php on line 3.
+ 1 APPPATH\Views\Admin\navbar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_pendaftar', 'APPPATH\\Views\\Admin\\navbar.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(21): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+10 APPPATH\Controllers\Admin.php(46): view('Admin/dashboard', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:33:20 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\navbar.php on line 3.
+ 1 APPPATH\Views\Admin\navbar.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\navbar.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(21): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+10 APPPATH\Controllers\Admin.php(46): view('Admin/dashboard', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:33:55 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Admin\navbar.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 4 APPPATH\Views\Admin\index.php(21): CodeIgniter\View\View->include('Admin/navbar')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 9 APPPATH\Controllers\Admin.php(79): view('Admin/dashboard_siswa', [...])
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:43:49 --> Trying to get property 'foto' of non-object
+in APPPATH\Controllers\Login.php on line 46.
+ 1 APPPATH\Controllers\Login.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Controllers\\Login.php', 46, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:50:45 --> Unknown column 'data_pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:50:45 --> Unknown column 'data_pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:51:52 --> Unknown column 'data_pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:51:52 --> Unknown column 'data_pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:53:01 --> Unknown column 'data_pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:53:01 --> Unknown column 'data_pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = 12', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = 12')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = 12')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = :pendaftaran.jalur:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:55:02 --> Unknown column 'data_pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:55:02 --> Unknown column 'data_pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = :pendaftaran.jalur:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:55:58 --> Unknown column 'pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:55:58 --> Unknown column 'pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = :pendaftaran.jalur:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-09 09:56:46 --> Unknown column 'pendaftar.id' in 'on clause'
+CRITICAL - 2023-06-09 09:56:46 --> Unknown column 'pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = \'12\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tahap`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `pendaftar`.`id`
+WHERE `pendaftaran`.`jalur` = :pendaftaran.jalur:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin.php(31): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 09:59:07 --> Attempt to assign property 'jenis_kelamin' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 15.
+ 1 APPPATH\Views\Admin\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to assign property \'jenis_kelamin\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(48): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:00:05 --> Trying to get property 'jenis_kelamin' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 15.
+ 1 APPPATH\Views\Admin\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'jenis_kelamin\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(48): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:01:42 --> Undefined variable: data_pendaftar
+in APPPATH\Views\Admin\dashboard.php on line 15.
+ 1 APPPATH\Views\Admin\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_pendaftar', 'APPPATH\\Views\\Admin\\dashboard.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(48): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:03:06 --> Trying to get property 'jenis_kelamin' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 15.
+ 1 APPPATH\Views\Admin\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'jenis_kelamin\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 15, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(48): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:26:46 --> Undefined variable: data_pendaftar
+in APPPATH\Views\Admin\navbar.php on line 10.
+ 1 APPPATH\Views\Admin\navbar.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_pendaftar', 'APPPATH\\Views\\Admin\\navbar.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(21): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+10 APPPATH\Controllers\Admin.php(246): view('Admin/konfirmasi_pembayaran', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('20')
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:53:17 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\Pendaftar.php on line 929.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:54:11 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\Pendaftar.php on line 929.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 10:56:23 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\Pendaftar.php on line 929.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:01:42 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:01:45 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 21.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(246): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('25')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:01:47 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 21.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(246): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('25')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:05:59 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\Pendaftar.php on line 929.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:06:30 --> syntax error, unexpected 'if' (T_IF)
+in APPPATH\Controllers\Pendaftar.php on line 931.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:07:39 --> syntax error, unexpected 'if' (T_IF)
+in APPPATH\Controllers\Pendaftar.php on line 931.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:08:21 --> Class 'App\Controllers\DataPembayaran' not found
+in APPPATH\Controllers\Pendaftar.php on line 925.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:35:54 --> Undefined variable: data_pendaftar
+in APPPATH\Controllers\Pendaftar.php on line 954.
+ 1 APPPATH\Controllers\Pendaftar.php(954): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data_pendaftar', 'APPPATH\\Controllers\\Pendaftar.php', 954, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:36:45 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Views\Admin\data_pendaftar.php on line 7.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 7, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(114): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:39:26 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Views\Admin\data_pendaftar.php on line 7.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 7, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(114): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 11:52:33 --> Trying to get property 'id_pendaftar' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 937.
+ 1 APPPATH\Controllers\Pendaftar.php(937): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_pendaftar\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 937, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 13:25:11 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('pembayaran.id', Object(stdClass), false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->whereIn('pembayaran.id', Object(stdClass))
+ 3 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate(Object(stdClass), [...])
+ 4 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update(Object(stdClass), [...])
+ 5 APPPATH\Controllers\Pendaftar.php(942): CodeIgniter\Model->update(Object(stdClass), [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 13:38:18 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('pembayaran.id', Object(stdClass), false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->whereIn('pembayaran.id', Object(stdClass))
+ 3 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate(Object(stdClass), [...])
+ 4 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update(Object(stdClass), [...])
+ 5 APPPATH\Controllers\Pendaftar.php(942): CodeIgniter\Model->update(Object(stdClass), [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 13:41:05 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('pembayaran.id', Object(stdClass), false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->whereIn('pembayaran.id', Object(stdClass))
+ 3 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate(Object(stdClass), [...])
+ 4 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update(Object(stdClass), [...])
+ 5 APPPATH\Controllers\Pendaftar.php(942): CodeIgniter\Model->update(Object(stdClass), [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 13:50:12 --> syntax error, unexpected '$pd' (T_VARIABLE), expecting ';' or ','
+in APPPATH\Views\Admin\data_pendaftar.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 3 APPPATH\Controllers\Admin.php(117): view('Admin/data_pendaftar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 13:50:57 --> syntax error, unexpected '$pd' (T_VARIABLE), expecting ';' or ','
+in APPPATH\Views\Admin\data_pendaftar.php on line 61.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 3 APPPATH\Controllers\Admin.php(117): view('Admin/data_pendaftar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:27:41 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(946): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:35:16 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(946): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:37:31 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(957): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('20')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:38:06 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(957): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('20')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:38:17 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(946): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:45:17 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(957): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-09 14:45:51 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Pendaftar.php(957): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->status_penerimaan('26')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

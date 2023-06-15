@@ -1,0 +1,174 @@
+CRITICAL - 2023-06-10 09:43:03 --> file_get_contents(F:\xampp\htdocs\ppdbv2\writable\debugbar/debugbar_1686364604.319727.json): failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(F:\\xampp\\htdocs\\ppdbv2\\writable\\debugbar/debugbar_1686364604.319727.json): failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 82, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(82): file_get_contents('ROOTPATH\\writable\\debugbar/debugbar_1686364604.319727.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(495): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1686364974.387310', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(472): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(326): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:45:30 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:47:46 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:47:53 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 21.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(249): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:48:06 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 21.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(249): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:48:09 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 21.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(249): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:48:17 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 137.
+ 1 APPPATH\Controllers\Pendaftar.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 137, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('26')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:48:21 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:48:30 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:50:31 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 09:51:08 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 14.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(89): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 10:25:10 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Pembayaran.php on line 24.
+ 1 APPPATH\Controllers\Pembayaran.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Pembayaran.php', 24, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 22:36:17 --> syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\Admin.php on line 276.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-10 23:18:55 --> Argument 3 passed to PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue() must implement interface PhpOffice\PhpSpreadsheet\Cell\IValueBinder or be null, string given, called in F:\xampp\htdocs\ppdbv2\app\Controllers\Admin.php on line 292
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1167.
+ 1 APPPATH\Controllers\Admin.php(292): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A', 2, 'Ilham Alif Jamaluddin')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-10 23:19:11 --> Argument 3 passed to PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue() must implement interface PhpOffice\PhpSpreadsheet\Cell\IValueBinder or be null, string given, called in F:\xampp\htdocs\ppdbv2\app\Controllers\Admin.php on line 292
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1167.
+ 1 APPPATH\Controllers\Admin.php(292): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A', 2, 'Ilham Alif Jamaluddin')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-10 23:22:00 --> Argument 3 passed to PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue() must implement interface PhpOffice\PhpSpreadsheet\Cell\IValueBinder or be null, string given, called in F:\xampp\htdocs\ppdbv2\app\Controllers\Admin.php on line 292
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1167.
+ 1 APPPATH\Controllers\Admin.php(292): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A', 2, 'Ilham Alif Jamaluddin')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-10 23:25:00 --> Argument 3 passed to PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue() must implement interface PhpOffice\PhpSpreadsheet\Cell\IValueBinder or be null, int given, called in F:\xampp\htdocs\ppdbv2\app\Controllers\Admin.php on line 293
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1167.
+ 1 APPPATH\Controllers\Admin.php(293): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A', 2, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-10 23:27:48 --> Argument 3 passed to PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue() must implement interface PhpOffice\PhpSpreadsheet\Cell\IValueBinder or be null, int given, called in F:\xampp\htdocs\ppdbv2\app\Controllers\Admin.php on line 294
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1167.
+ 1 APPPATH\Controllers\Admin.php(294): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A', 2, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

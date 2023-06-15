@@ -1,0 +1,201 @@
+CRITICAL - 2022-10-03 02:29:51 --> Call to undefined function App\Controllers\codeAll()
+in APPPATH\Controllers\PegawaiController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 02:30:37 --> Undefined constant "App\Controllers\AGAMA"
+in APPPATH\Controllers\PegawaiController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 02:31:30 --> Too few arguments to function App\Controllers\Base::codeAll(), 0 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\app\Controllers\PegawaiController.php on line 51 and exactly 2 expected
+in APPPATH\Controllers\Base.php on line 10.
+ 1 APPPATH\Controllers\PegawaiController.php(51): App\Controllers\Base->codeAll()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:15:49 --> Attempt to read property "status_kepegawaian" on null
+in APPPATH\Views\panelAdmin\editPegawai.php on line 213.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_kepegawaian" on null', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:17:09 --> Attempt to read property "status_kepegawaian" on null
+in APPPATH\Views\panelAdmin\editPegawai.php on line 213.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_kepegawaian" on null', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:19:53 --> Attempt to read property "status_kepegawaian" on null
+in APPPATH\Views\panelAdmin\editPegawai.php on line 213.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_kepegawaian" on null', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:21:42 --> Undefined property: stdClass::$status_kepegawaian
+in APPPATH\Views\panelAdmin\editPegawai.php on line 213.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status_kepegawaian', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:22:21 --> Undefined property: stdClass::$status_kepegawaian
+in APPPATH\Views\panelAdmin\editPegawai.php on line 213.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$status_kepegawaian', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 213)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 03:27:49 --> Undefined variable $sumber_gaji
+in APPPATH\Views\panelAdmin\editPegawai.php on line 284.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sumber_gaji', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 284)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(66): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 22:43:32 --> Undefined variable $pendidikan_terakhir
+in APPPATH\Views\panelAdmin\editPegawai.php on line 133.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pendidikan_terakhir', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(127): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 22:47:13 --> Undefined variable $instansi_pendidikan_terakhir
+in APPPATH\Views\panelAdmin\editPegawai.php on line 151.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $instansi_pendidikan_terakhir', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(128): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:10:35 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Base.php on line 25.
+ 1 APPPATH\Controllers\PegawaiController.php(69): App\Controllers\Base->formatTanggal('1997-08-02')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:32:09 --> Undefined variable $old
+in APPPATH\Controllers\PegawaiController.php on line 100.
+ 1 APPPATH\Controllers\PegawaiController.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $old', 'APPPATH\\Controllers\\PegawaiController.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:33:52 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\PegawaiController.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:33:59 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\PegawaiController.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:35:49 --> Undefined variable $tanggal_lahir
+in APPPATH\Controllers\PegawaiController.php on line 109.
+ 1 APPPATH\Controllers\PegawaiController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_lahir', 'APPPATH\\Controllers\\PegawaiController.php', 109)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:43:15 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 32.
+ 1 APPPATH\Controllers\Base.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 32)
+ 2 APPPATH\Controllers\PegawaiController.php(78): App\Controllers\Base->formatTanggalReverse('02/08/1997')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:48:07 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 32.
+ 1 APPPATH\Controllers\Base.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 32)
+ 2 APPPATH\Controllers\PegawaiController.php(78): App\Controllers\Base->formatTanggalReverse('02-08-1997')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:52:11 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 33.
+ 1 APPPATH\Controllers\Base.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 33)
+ 2 APPPATH\Controllers\PegawaiController.php(78): App\Controllers\Base->formatTanggalReverse('03/08/1997')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:53:11 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 33.
+ 1 APPPATH\Controllers\Base.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 33)
+ 2 APPPATH\Controllers\PegawaiController.php(78): App\Controllers\Base->formatTanggalReverse('05/08/1997')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-03 23:53:51 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 33.
+ 1 APPPATH\Controllers\Base.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 33)
+ 2 APPPATH\Controllers\PegawaiController.php(78): App\Controllers\Base->formatTanggalReverse('13/08/1997')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

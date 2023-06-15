@@ -1,0 +1,12 @@
+CRITICAL - 2022-09-26 03:41:56 --> Undefined array key "sambutan"
+in APPPATH\Views\panelAdmin\sambutan.php on line 18.
+ 1 APPPATH\Views\panelAdmin\sambutan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sambutan"', 'APPPATH\\Views\\panelAdmin\\sambutan.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\sambutan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/sambutan', [], true)
+ 5 APPPATH\Controllers\Profile.php(136): view('panelAdmin/sambutan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->sambutan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -1,0 +1,212 @@
+CRITICAL - 2023-06-12 00:10:33 --> Undefined variable: pd
+in APPPATH\Views\Admin\data_pendaftar.php on line 50.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pd', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(119): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:28:42 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pendaftar.php on line 136.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 136, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(119): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:29:24 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pendaftar.php on line 136.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 136, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(119): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:43:42 --> Undefined offset: 9
+in APPPATH\Controllers\Worksheet.php on line 140.
+ 1 APPPATH\Controllers\Worksheet.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 9', 'APPPATH\\Controllers\\Worksheet.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:46:17 --> Undefined offset: 9
+in APPPATH\Controllers\Worksheet.php on line 141.
+ 1 APPPATH\Controllers\Worksheet.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 9', 'APPPATH\\Controllers\\Worksheet.php', 141, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:46:43 --> Undefined offset: 9
+in APPPATH\Controllers\Worksheet.php on line 141.
+ 1 APPPATH\Controllers\Worksheet.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 9', 'APPPATH\\Controllers\\Worksheet.php', 141, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:49:17 --> Undefined offset: 9
+in APPPATH\Controllers\Worksheet.php on line 141.
+ 1 APPPATH\Controllers\Worksheet.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 9', 'APPPATH\\Controllers\\Worksheet.php', 141, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:53:51 --> Undefined offset: 10
+in APPPATH\Controllers\Worksheet.php on line 141.
+ 1 APPPATH\Controllers\Worksheet.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 10', 'APPPATH\\Controllers\\Worksheet.php', 141, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 00:55:11 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(144): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:01:18 --> Undefined offset: 10
+in APPPATH\Controllers\Worksheet.php on line 141.
+ 1 APPPATH\Controllers\Worksheet.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 10', 'APPPATH\\Controllers\\Worksheet.php', 141, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:02:18 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(144): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:02:55 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(142): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:15:39 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(159): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:18:44 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(159): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:19:00 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(159): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:25:18 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(142): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 01:27:36 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\Worksheet.php(142): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 23:07:42 --> Undefined property: stdClass::$id_tahap
+in APPPATH\Controllers\Admin.php on line 105.
+ 1 APPPATH\Controllers\Admin.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_tahap', 'APPPATH\\Controllers\\Admin.php', 105, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 23:10:41 --> Undefined property: stdClass::$id_tahap
+in APPPATH\Controllers\Admin.php on line 105.
+ 1 APPPATH\Controllers\Admin.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_tahap', 'APPPATH\\Controllers\\Admin.php', 105, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 23:11:23 --> Undefined property: stdClass::$id_periode
+in APPPATH\Controllers\Admin.php on line 108.
+ 1 APPPATH\Controllers\Admin.php(108): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_periode', 'APPPATH\\Controllers\\Admin.php', 108, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 23:12:31 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pendaftar.php on line 44.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 44, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(122): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-12 23:46:40 --> Undefined variable: nomor_pendaftar
+in APPPATH\Views\Admin\data_pendaftar.php on line 49.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nomor_pendaftar', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(122): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

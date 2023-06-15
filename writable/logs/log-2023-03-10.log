@@ -1,0 +1,90 @@
+ERROR - 2023-03-10 13:59:14 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2023-03-10 13:59:14 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_orang_tua` SET `id_siswa` = 0, `jenis_orang_tua` = \'1\', `nama` = \'Anwar\', `nik` = \' 324234234453\', `tahun_lahir` = \'1963\', `pendidikan` = \'50\', `pekerjaan` = \'57\', `penghasilan_bulanan` = \'\', `berkebutuhan_khusus` = \'\', `nomor_hp` = \'123123123123\', `email` = \'\', `alamat` = \'konf_password\'
+WHERE `data_orang_tua`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_orang_tua` SET `id_siswa` = 0, `jenis_orang_tua` = \'1\', `nama` = \'Anwar\', `nik` = \' 324234234453\', `tahun_lahir` = \'1963\', `pendidikan` = \'50\', `pekerjaan` = \'57\', `penghasilan_bulanan` = \'\', `berkebutuhan_khusus` = \'\', `nomor_hp` = \'123123123123\', `email` = \'\', `alamat` = \'konf_password\'
+WHERE `data_orang_tua`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_orang_tua` SET `id_siswa` = 0, `jenis_orang_tua` = \'1\', `nama` = \'Anwar\', `nik` = \' 324234234453\', `tahun_lahir` = \'1963\', `pendidikan` = \'50\', `pekerjaan` = \'57\', `penghasilan_bulanan` = \'\', `berkebutuhan_khusus` = \'\', `nomor_hp` = \'123123123123\', `email` = \'\', `alamat` = \'konf_password\'
+WHERE `data_orang_tua`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_orang_tua` SET `id_siswa` = :id_siswa:, `jenis_orang_tua` = :jenis_orang_tua:, `nama` = :nama:, `nik` = :nik:, `tahun_lahir` = :tahun_lahir:, `pendidikan` = :pendidikan:, `pekerjaan` = :pekerjaan:, `penghasilan_bulanan` = :penghasilan_bulanan:, `berkebutuhan_khusus` = :berkebutuhan_khusus:, `nomor_hp` = :nomor_hp:, `email` = :email:, `alamat` = :alamat:
+WHERE `data_orang_tua`.`id` IN :data_orang_tua.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Pendaftar.php(287): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:00:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 180.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(70): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:00:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 180.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(70): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:00:33 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 180.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 180)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(70): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:01:33 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\profil_zonasi.php on line 180.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 4 APPPATH\Controllers\Pendaftar.php(73): view('Admin/profil_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:01:34 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\profil_zonasi.php on line 180.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 4 APPPATH\Controllers\Pendaftar.php(73): view('Admin/profil_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-10 14:41:37 --> Undefined variable $k
+in APPPATH\Views\Admin\data_pendaftar.php on line 100.
+ 1 APPPATH\Views\Admin\data_pendaftar.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $k', 'APPPATH\\Views\\Admin\\data_pendaftar.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pendaftar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 5 APPPATH\Controllers\Admin.php(58): view('Admin/data_pendaftar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('4')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

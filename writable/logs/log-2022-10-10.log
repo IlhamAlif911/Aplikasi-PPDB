@@ -1,0 +1,94 @@
+ERROR - 2022-10-10 02:24:18 --> Column 'nama_ekstra' cannot be null
+CRITICAL - 2022-10-10 02:24:18 --> Column 'nama_ekstra' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'organisasi \', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'organisasi \', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'organisasi \', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (:id_sekolah:, :nama_ekstra:, :status:, :deskripsi:, :file_gambar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kesiswaan.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->process_ekstra('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-10-10 02:24:39 --> Column 'nama_ekstra' cannot be null
+CRITICAL - 2022-10-10 02:24:39 --> Column 'nama_ekstra' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (:id_sekolah:, :nama_ekstra:, :status:, :deskripsi:, :file_gambar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kesiswaan.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->process_ekstra('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-10-10 02:25:35 --> Column 'nama_ekstra' cannot be null
+CRITICAL - 2022-10-10 02:25:35 --> Column 'nama_ekstra' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'osis\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (:id_sekolah:, :nama_ekstra:, :status:, :deskripsi:, :file_gambar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kesiswaan.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->process_ekstra('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-10-10 02:25:42 --> Column 'nama_ekstra' cannot be null
+CRITICAL - 2022-10-10 02:25:42 --> Column 'nama_ekstra' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (\'1\', NULL, \'aktif\', \'\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ekstrakurikuler` (`id_sekolah`, `nama_ekstra`, `status`, `deskripsi`, `file_gambar`) VALUES (:id_sekolah:, :nama_ekstra:, :status:, :deskripsi:, :file_gambar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kesiswaan.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->process_ekstra('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-10 02:26:41 --> Undefined variable $j
+in APPPATH\Views\panelAdmin\kesiswaan.php on line 66.
+ 1 APPPATH\Views\panelAdmin\kesiswaan.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Views\\panelAdmin\\kesiswaan.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\kesiswaan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kesiswaan', [], true)
+ 5 APPPATH\Controllers\Kesiswaan.php(26): view('panelAdmin/kesiswaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->kesiswaan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-10 23:19:57 --> Invalid file: panelAdmin/add_prestasi.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panelAdmin/add_prestasi.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/add_prestasi', [], true)
+ 3 APPPATH\Controllers\Kesiswaan.php(150): view('panelAdmin/add_prestasi', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->edit_prestasi('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-10 23:30:14 --> Undefined variable $data
+in APPPATH\Controllers\Kesiswaan.php on line 157.
+ 1 APPPATH\Controllers\Kesiswaan.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Kesiswaan.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kesiswaan->add_prestasi('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

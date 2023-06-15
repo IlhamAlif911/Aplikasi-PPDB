@@ -1,0 +1,80 @@
+CRITICAL - 2023-02-10 11:39:00 --> Attempt to read property "nama_kategori" on array
+in APPPATH\Views\Admin\kategori_kode.php on line 25.
+ 1 APPPATH\Views\Admin\kategori_kode.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_kategori" on array', 'APPPATH\\Views\\Admin\\kategori_kode.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\kategori_kode.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/kategori_kode', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('Admin/kategori_kode', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->kategori_kode()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 11:39:58 --> Undefined variable $j
+in APPPATH\Views\Admin\kategori_kode.php on line 42.
+ 1 APPPATH\Views\Admin\kategori_kode.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Views\\Admin\\kategori_kode.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\kategori_kode.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/kategori_kode', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('Admin/kategori_kode', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->kategori_kode()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 14:02:46 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Opsi.php(43): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->update_kategori('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 14:03:39 --> Attempt to read property "id_kategori" on array
+in APPPATH\Controllers\Opsi.php on line 46.
+ 1 APPPATH\Controllers\Opsi.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_kategori" on array', 'APPPATH\\Controllers\\Opsi.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->update_kategori('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 14:04:33 --> Attempt to read property "id" on array
+in APPPATH\Controllers\Opsi.php on line 46.
+ 1 APPPATH\Controllers\Opsi.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH\\Controllers\\Opsi.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->update_kategori('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 14:34:01 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Opsi.php on line 135.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->add_opsi('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 15:09:55 --> Call to undefined function ucword()
+in APPPATH\Views\Admin\kode_aplikasi.php on line 8.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/kode_aplikasi', [], true)
+ 4 APPPATH\Controllers\Opsi.php(20): view('Admin/kode_aplikasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->edit_kategori('1')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-10 15:11:58 --> Undefined variable $id
+in APPPATH\Views\Admin\kode_aplikasi.php on line 8.
+ 1 APPPATH\Views\Admin\kode_aplikasi.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\Admin\\kode_aplikasi.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\kode_aplikasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/kode_aplikasi', [], true)
+ 5 APPPATH\Controllers\Opsi.php(20): view('Admin/kode_aplikasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->edit_kategori('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

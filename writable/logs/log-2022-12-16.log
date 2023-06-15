@@ -1,0 +1,14 @@
+CRITICAL - 2022-12-16 14:59:34 --> Invalid file: landingPage/layout/navbar.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landingPage/layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('landingPage/layout/navbar', null, true)
+ 3 APPPATH\Views\index.php(10): CodeIgniter\View\View->include('landingPage/layout/navbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\index.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('index', [], true)
+ 7 APPPATH\Controllers\Home.php(10): view('index')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

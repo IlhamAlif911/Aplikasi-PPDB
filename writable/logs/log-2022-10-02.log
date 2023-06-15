@@ -1,0 +1,87 @@
+CRITICAL - 2022-10-02 22:28:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Login.php on line 41.
+ 1 APPPATH\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Login.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 22:29:34 --> Undefined variable $sekolah
+in APPPATH\Views\panelAdmin\sidebar.php on line 10.
+ 1 APPPATH\Views\panelAdmin\sidebar.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'APPPATH\\Views\\panelAdmin\\sidebar.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('panelAdmin/sidebar', null, true)
+ 5 APPPATH\Views\panelAdmin\index.php(20): CodeIgniter\View\View->include('panelAdmin/sidebar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('panelAdmin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dashboard', [], true)
+10 APPPATH\Controllers\Admin.php(9): view('panelAdmin/dashboard')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 22:36:02 --> Undefined property: stdClass::$nama
+in APPPATH\Controllers\Login.php on line 43.
+ 1 APPPATH\Controllers\Login.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'APPPATH\\Controllers\\Login.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 22:38:52 --> Undefined property: stdClass::$nama
+in APPPATH\Controllers\Login.php on line 43.
+ 1 APPPATH\Controllers\Login.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'APPPATH\\Controllers\\Login.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 23:01:11 --> chmod(): No such file or directory
+in APPPATH\Controllers\Profile.php on line 259.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', 'APPPATH\\Controllers\\Profile.php', 259)
+ 2 APPPATH\Controllers\Profile.php(259): chmod('./assets/file_struktur_41Z_2106.w009.n001.5B.p8.5.png', 511)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->struktur('1')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 23:39:52 --> Undefined variable $pegawai
+in APPPATH\Views\panelAdmin\dataguru.php on line 21.
+ 1 APPPATH\Views\panelAdmin\dataguru.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'APPPATH\\Views\\panelAdmin\\dataguru.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\dataguru.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/dataguru', [], true)
+ 5 APPPATH\Controllers\Admin.php(21): view('panelAdmin/dataguru')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dataGuru()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 23:41:30 --> Cannot declare class App\Controllers\Pegawai because the name is already in use
+in APPPATH\Controllers\Pegawai.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-10-02 23:55:04 --> syntax error, unexpected end of file
+in APPPATH\Views\panelAdmin\editPegawai.php on line 242.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 3 APPPATH\Controllers\PegawaiController.php(51): view('panelAdmin/editPegawai', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-02 23:55:28 --> Attempt to read property "nama" on string
+in APPPATH\Views\panelAdmin\editPegawai.php on line 22.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on string', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(51): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

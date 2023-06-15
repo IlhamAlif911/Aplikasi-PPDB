@@ -1,0 +1,48 @@
+CRITICAL - 2022-10-05 03:18:28 --> Attempt to read property "file_gambar" on array
+in APPPATH\Controllers\Kurikulum.php on line 142.
+ 1 APPPATH\Controllers\Kurikulum.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_gambar" on array', 'APPPATH\\Controllers\\Kurikulum.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->edit_jur('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-05 03:19:24 --> Attempt to read property "file_gambar" on array
+in APPPATH\Controllers\Kurikulum.php on line 142.
+ 1 APPPATH\Controllers\Kurikulum.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_gambar" on array', 'APPPATH\\Controllers\\Kurikulum.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->edit_jur('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-05 03:26:43 --> Attempt to read property "file_gambar" on array
+in APPPATH\Controllers\Kurikulum.php on line 142.
+ 1 APPPATH\Controllers\Kurikulum.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_gambar" on array', 'APPPATH\\Controllers\\Kurikulum.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->edit_jur('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-05 03:28:38 --> Attempt to read property "file_gambar" on array
+in APPPATH\Controllers\Kurikulum.php on line 142.
+ 1 APPPATH\Controllers\Kurikulum.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "file_gambar" on array', 'APPPATH\\Controllers\\Kurikulum.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->edit_jur('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-05 03:29:58 --> CodeIgniter\Model::insert(): Argument #2 ($returnID) must be of type bool, array given, called in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\app\Controllers\Kurikulum.php on line 165
+in SYSTEMPATH\Model.php on line 652.
+ 1 APPPATH\Controllers\Kurikulum.php(165): CodeIgniter\Model->insert('2', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->edit_jur('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-05 03:47:30 --> Undefined variable $pegawai
+in APPPATH\Controllers\Kurikulum.php on line 201.
+ 1 APPPATH\Controllers\Kurikulum.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'APPPATH\\Controllers\\Kurikulum.php', 201)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Kurikulum->deleteJurusan('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kurikulum))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

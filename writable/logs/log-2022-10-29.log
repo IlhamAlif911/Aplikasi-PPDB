@@ -1,0 +1,50 @@
+CRITICAL - 2022-10-29 10:25:40 --> Undefined variable $kategori
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 9.
+ 1 APPPATH\Views\panelAdmin\kategoriDataOpsi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 5 APPPATH\Controllers\KodeOpsi.php(25): view('panelAdmin/kategoriDataOpsi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1', 'AGAMA')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-29 10:26:17 --> Undefined variable $opsi
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 28.
+ 1 APPPATH\Views\panelAdmin\kategoriDataOpsi.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $opsi', 'APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 5 APPPATH\Controllers\KodeOpsi.php(27): view('panelAdmin/kategoriDataOpsi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1', 'AGAMA')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-29 10:51:42 --> Too few arguments to function App\Controllers\KodeOpsi::dataopsi_kategori(), 1 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\system\CodeIgniter.php on line 896 and exactly 2 expected
+in APPPATH\Controllers\KodeOpsi.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('52')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-29 10:54:31 --> Too few arguments to function App\Controllers\KodeOpsi::dataopsi_kategori(), 1 passed in C:\Salsabila Fauzia S\xampp\htdocs\sekolah\system\CodeIgniter.php on line 896 and exactly 2 expected
+in APPPATH\Controllers\KodeOpsi.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-29 11:13:18 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\panelAdmin\kategoriDataOpsi.php on line 19.
+ 1 APPPATH\Views\panelAdmin\kategoriDataOpsi.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\kategoriDataOpsi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/kategoriDataOpsi', [], true)
+ 5 APPPATH\Controllers\KodeOpsi.php(27): view('panelAdmin/kategoriDataOpsi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\KodeOpsi->dataopsi_kategori('1', 'AGAMA')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KodeOpsi))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

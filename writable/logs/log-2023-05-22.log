@@ -1,0 +1,75 @@
+CRITICAL - 2023-05-22 10:51:52 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 10:51:56 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 10:51:57 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 10:51:59 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 21:56:59 --> syntax error, unexpected '<'
+in APPPATH\Views\Admin\data_pembayaran.php on line 176.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('Admin/data_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 21:57:33 --> Undefined property: stdClass::$nama_bank
+in APPPATH\Views\Admin\data_pembayaran.php on line 181.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(181): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_bank', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 181, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(146): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 22:15:13 --> syntax error, unexpected '}'
+in APPPATH\Views\Admin\data_pembayaran.php on line 210.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('Admin/data_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 23:02:23 --> syntax error, unexpected '}', expecting end of file
+in APPPATH\Views\Admin\data_pembayaran.php on line 217.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('Admin/data_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 23:09:18 --> syntax error, unexpected '}', expecting end of file
+in APPPATH\Views\Admin\data_pembayaran.php on line 215.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('Admin/data_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,736 @@
+CRITICAL - 2023-06-13 00:03:03 --> Trying to get property 'id_tahap' of non-object
+in APPPATH\Controllers\Worksheet.php on line 123.
+ 1 APPPATH\Controllers\Worksheet.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_tahap\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 123, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 00:05:14 --> Undefined variable: pendaftaran
+in APPPATH\Controllers\Worksheet.php on line 164.
+ 1 APPPATH\Controllers\Worksheet.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pendaftaran', 'APPPATH\\Controllers\\Worksheet.php', 164, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-06-13 00:06:07 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-06-13 00:06:07 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pendaftaran` (`id_pendaftar`, `periode`, `tahap`, `jalur`) VALUES (0, \'2\', \'9\', \'15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pendaftaran` (`id_pendaftar`, `periode`, `tahap`, `jalur`) VALUES (0, \'2\', \'9\', \'15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pendaftaran` (`id_pendaftar`, `periode`, `tahap`, `jalur`) VALUES (0, \'2\', \'9\', \'15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pendaftaran` (`id_pendaftar`, `periode`, `tahap`, `jalur`) VALUES (:id_pendaftar:, :periode:, :tahap:, :jalur:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(169): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 00:20:11 --> Undefined variable: user
+in APPPATH\Controllers\Worksheet.php on line 172.
+ 1 APPPATH\Controllers\Worksheet.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Controllers\\Worksheet.php', 172, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:17:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 135.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(178): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:23:03 --> Undefined variable: zonasi
+in APPPATH\Controllers\Pendaftar.php on line 178.
+ 1 APPPATH\Controllers\Pendaftar.php(178): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: zonasi', 'APPPATH\\Controllers\\Pendaftar.php', 178, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:23:16 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 178.
+ 1 APPPATH\Controllers\Pendaftar.php(178): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 178, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:24:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 135.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(178): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:27:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 135.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(178): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:40:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_zonasi.php on line 495.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(495): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 495, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(178): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_ulang_profil('41')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 12:47:01 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 96.
+ 1 APPPATH\Controllers\Pendaftar.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 96, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 13:12:14 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2023-06-13 13:12:14 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (:id_siswa:, :jenis_orang_tua:, :nama:, :pendidikan:, :pekerjaan:, :nomor_hp:, :alamat:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pendaftar.php(384): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('41')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-06-13 13:19:19 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2023-06-13 13:19:19 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (:id_siswa:, :jenis_orang_tua:, :nama:, :pendidikan:, :pekerjaan:, :nomor_hp:, :alamat:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pendaftar.php(385): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('41')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-06-13 13:22:39 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2023-06-13 13:22:39 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`data_orang_tua`, CONSTRAINT `data_orang_tua_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (0, \'3\', \'dummy\', \'42\', \'53\', \'089658176349\', \'Jln Raya Tambak\\r\\nPurwodadi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_orang_tua` (`id_siswa`, `jenis_orang_tua`, `nama`, `pendidikan`, `pekerjaan`, `nomor_hp`, `alamat`) VALUES (:id_siswa:, :jenis_orang_tua:, :nama:, :pendidikan:, :pekerjaan:, :nomor_hp:, :alamat:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pendaftar.php(385): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('41')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 13:23:55 --> Undefined variable: pendaftar_id
+in APPPATH\Controllers\Pendaftar.php on line 379.
+ 1 APPPATH\Controllers\Pendaftar.php(379): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pendaftar_id', 'APPPATH\\Controllers\\Pendaftar.php', 379, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 14:58:28 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 106.
+ 1 APPPATH\Controllers\Admin.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 106, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('15')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:08:31 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:08:47 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:09:33 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:29:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:29:46 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:30:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 133.
+ 1 APPPATH\Views\Admin\profil_siswa.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 133, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:31:13 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 146.
+ 1 APPPATH\Views\Admin\profil_siswa.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:32:59 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 159.
+ 1 APPPATH\Views\Admin\profil_siswa.php(159): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 159, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:34:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\profil_siswa.php on line 157.
+ 1 APPPATH\Views\Admin\profil_siswa.php(157): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\profil_siswa.php', 157, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(96): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('42')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:48:47 --> syntax error, unexpected '{', expecting '('
+in APPPATH\Controllers\Pendaftar.php on line 351.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 15:51:29 --> syntax error, unexpected '{', expecting '('
+in APPPATH\Controllers\Pendaftar.php on line 351.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pendaftar.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pendaftar')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pendaftar')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pendaftar')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Pendaftar', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 16:13:08 --> Trying to get property 'jenis_orang_tua' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 321.
+ 1 APPPATH\Controllers\Pendaftar.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'jenis_orang_tua\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 321, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_profil('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 16:14:58 --> Trying to get property 'jenis_orang_tua' of non-object
+in APPPATH\Controllers\Pendaftar.php on line 321.
+ 1 APPPATH\Controllers\Pendaftar.php(321): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'jenis_orang_tua\' of non-object', 'APPPATH\\Controllers\\Pendaftar.php', 321, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_profil('41')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 17:21:07 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:26:52 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:27:02 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:27:03 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:27:21 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:27:47 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:28:03 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:28:05 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:29:18 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:29:23 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:29:24 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:29:25 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:29:27 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:15 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:18 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:19 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:20 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 140.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 140, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->get()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:34 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:36 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:30:37 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:31:43 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:32:45 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:33:53 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:03 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:04 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:25 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:27 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:28 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:34:30 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:35:21 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:35:28 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 17:37:13 --> syntax error, unexpected '=', expecting ']'
+in APPPATH\Controllers\Dynamic_dependent.php on line 122.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Dynamic_dependent')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 18:41:12 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 31.
+ 1 APPPATH\Views\Admin\dashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(60): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 18:43:09 --> Undefined index: nama_tahap
+in APPPATH\Views\Admin\dashboard.php on line 31.
+ 1 APPPATH\Views\Admin\dashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_tahap', 'APPPATH\\Views\\Admin\\dashboard.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(60): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:21:41 --> Undefined variable: page
+in APPPATH\Views\User\index.php on line 6.
+ 1 APPPATH\Views\User\index.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: page', 'APPPATH\\Views\\User\\index.php', 6, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/list_agenda', [], true)
+ 6 APPPATH\Controllers\User.php(249): view('User/list_agenda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->list_agenda('2')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:36:18 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:36:59 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:19 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:21 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:32 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:32 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:33 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:33 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:33 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:34 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-06-13 23:38:34 --> Trying to get property 'id_ref' of non-object
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_ref\' of non-object', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

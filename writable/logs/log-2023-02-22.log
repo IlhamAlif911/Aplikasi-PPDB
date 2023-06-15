@@ -1,0 +1,136 @@
+CRITICAL - 2023-02-22 11:41:58 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:41:59 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:41:59 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:42:00 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:42:00 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:42:00 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:42:07 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 72.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:55 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:56 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:56 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:56 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:57 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:57 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:57 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:57 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 11:44:58 --> Attempt to read property "status_penerimaan" on array
+in APPPATH\Controllers\Dynamic_dependent.php on line 74.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on array', 'APPPATH\\Controllers\\Dynamic_dependent.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-22 14:38:18 --> Attempt to read property "status_penerimaan" on null
+in APPPATH\Controllers\User.php on line 36.
+ 1 APPPATH\Controllers\User.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status_penerimaan" on null', 'APPPATH\\Controllers\\User.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->pendaftaran_berhasil('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

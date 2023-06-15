@@ -1,0 +1,14 @@
+CRITICAL - 2023-03-09 10:57:09 --> Call to undefined method stdClass::update()
+in APPPATH\Controllers\Pendaftar.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-09 11:01:30 --> Call to undefined method stdClass::update()
+in APPPATH\Controllers\Pendaftar.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->update_zonasi('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

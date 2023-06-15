@@ -1,0 +1,134 @@
+CRITICAL - 2022-09-24 01:54:53 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 14.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(68): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('$1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 01:59:42 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Profile.php(64): redirect('admin-profil-sekolah')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:00:06 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Profile.php(64): redirect('admin-profil-sekolah')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:08:07 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Profile.php(64): redirect('admin-profil-sekolah/1')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:27:14 --> Undefined array key "dis_id"
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 90.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dis_id"', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 90)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(67): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:27:42 --> Undefined variable $district
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 88.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $district', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(67): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:48:03 --> Undefined array key "kecamatan"
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 90.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kecamatan"', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 90)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(67): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 02:58:39 --> Undefined array key "kel"
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 109.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kel"', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(67): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-24 02:59:02 --> Unknown column 'kode_pos' in 'field list'
+CRITICAL - 2022-09-24 02:59:02 --> Unknown column 'kode_pos' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `sekolah` SET `nama` = \'Gumintang\', `tingkat` = \'2\', `npsn` = \'12343\', `kepala_sekolah` = \'Salsabilaaa\', `alamat` = \'\', `provinsi` = \'1\', `kabupaten` = \'230\', `kode_pos` = NULL, `nomor_telp` = \'\', `email` = \'\', `website` = \'\', `nama_cp` = \'Salsa\', `nomor_cp` = \'123456\', `nomor_wa` = \'\', `facebook` = \'salsa\', `instagram` = \'\', `twitter` = \'\'
+WHERE `sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `sekolah` SET `nama` = \'Gumintang\', `tingkat` = \'2\', `npsn` = \'12343\', `kepala_sekolah` = \'Salsabilaaa\', `alamat` = \'\', `provinsi` = \'1\', `kabupaten` = \'230\', `kode_pos` = NULL, `nomor_telp` = \'\', `email` = \'\', `website` = \'\', `nama_cp` = \'Salsa\', `nomor_cp` = \'123456\', `nomor_wa` = \'\', `facebook` = \'salsa\', `instagram` = \'\', `twitter` = \'\'
+WHERE `sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `sekolah` SET `nama` = \'Gumintang\', `tingkat` = \'2\', `npsn` = \'12343\', `kepala_sekolah` = \'Salsabilaaa\', `alamat` = \'\', `provinsi` = \'1\', `kabupaten` = \'230\', `kode_pos` = NULL, `nomor_telp` = \'\', `email` = \'\', `website` = \'\', `nama_cp` = \'Salsa\', `nomor_cp` = \'123456\', `nomor_wa` = \'\', `facebook` = \'salsa\', `instagram` = \'\', `twitter` = \'\'
+WHERE `sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `sekolah` SET `nama` = :nama:, `tingkat` = :tingkat:, `npsn` = :npsn:, `kepala_sekolah` = :kepala_sekolah:, `alamat` = :alamat:, `provinsi` = :provinsi:, `kabupaten` = :kabupaten:, `kode_pos` = :kode_pos:, `nomor_telp` = :nomor_telp:, `email` = :email:, `website` = :website:, `nama_cp` = :nama_cp:, `nomor_cp` = :nomor_cp:, `nomor_wa` = :nomor_wa:, `facebook` = :facebook:, `instagram` = :instagram:, `twitter` = :twitter:
+WHERE `sekolah`.`id` IN :sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Profile.php(62): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 03:01:25 --> Undefined array key "kecamatan"
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 90.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kecamatan"', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 90)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(65): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-24 03:01:33 --> Undefined array key "kecamatan"
+in APPPATH\Views\panelAdmin\profilSekolah.php on line 109.
+ 1 APPPATH\Views\panelAdmin\profilSekolah.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kecamatan"', 'APPPATH\\Views\\panelAdmin\\profilSekolah.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\profilSekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/profilSekolah', [], true)
+ 5 APPPATH\Controllers\Profile.php(65): view('panelAdmin/profilSekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Profile->profilSekolah('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

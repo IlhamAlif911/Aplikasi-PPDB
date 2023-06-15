@@ -1,0 +1,16 @@
+ERROR - 2022-10-18 13:31:30 --> Column 'jenis' cannot be null
+CRITICAL - 2022-10-18 13:31:30 --> Column 'jenis' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `post` (`id_sekolah`, `judul`, `penerbit`, `isi_konten`, `tanggal_terbit`, `tanggal_modifikasi`, `status`, `jenis`, `file_gambar`) VALUES (\'1\', \'abc\', \'1\', \'\', \'2022-10-18\', \'2022-10-18\', \'publish\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `post` (`id_sekolah`, `judul`, `penerbit`, `isi_konten`, `tanggal_terbit`, `tanggal_modifikasi`, `status`, `jenis`, `file_gambar`) VALUES (\'1\', \'abc\', \'1\', \'\', \'2022-10-18\', \'2022-10-18\', \'publish\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `post` (`id_sekolah`, `judul`, `penerbit`, `isi_konten`, `tanggal_terbit`, `tanggal_modifikasi`, `status`, `jenis`, `file_gambar`) VALUES (\'1\', \'abc\', \'1\', \'\', \'2022-10-18\', \'2022-10-18\', \'publish\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `post` (`id_sekolah`, `judul`, `penerbit`, `isi_konten`, `tanggal_terbit`, `tanggal_modifikasi`, `status`, `jenis`, `file_gambar`) VALUES (:id_sekolah:, :judul:, :penerbit:, :isi_konten:, :tanggal_terbit:, :tanggal_modifikasi:, :status:, :jenis:, :file_gambar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pengumuman.php(67): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pengumuman->add_pengumuman('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengumuman))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

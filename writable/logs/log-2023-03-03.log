@@ -1,0 +1,116 @@
+ERROR - 2023-03-03 04:16:06 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2023-03-03 04:16:06 --> Duplicate entry '1' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'1\', 9, \'10\', \'20\', \'30\', \'40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'1\', 9, \'10\', \'20\', \'30\', \'40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (\'1\', 9, \'10\', \'20\', \'30\', \'40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jenis_nilai` (`id_rapot`, `id_pendaftar`, `matematika`, `ipa`, `bahasa_inggris`, `bahasa_indonesia`) VALUES (:id_rapot:, :id_pendaftar:, :matematika:, :ipa:, :bahasa_inggris:, :bahasa_indonesia:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(403): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:01:27 --> Undefined variable $matematika
+in APPPATH\Views\User\coba.php on line 6.
+ 1 APPPATH\Views\User\coba.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $matematika', 'APPPATH\\Views\\User\\coba.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\coba.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/coba', [], true)
+ 5 APPPATH\Controllers\Formulir.php(494): view('User/coba', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-03-03 05:09:56 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`beasiswa`, CONSTRAINT `beasiswa_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2023-03-03 05:09:56 --> Cannot add or update a child row: a foreign key constraint fails (`db_ppdb`.`beasiswa`, CONSTRAINT `beasiswa_id_siswa_foreign` FOREIGN KEY (`id_siswa`) REFERENCES `data_pendaftar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `beasiswa` (`id_siswa`, `keterangan`, `jenis_beasiswa`, `tanggal_mulai`, `tanggal_selesai`) VALUES (\'11\', \'1\', \'82\', \'01/03/2023\', \'01/03/2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `beasiswa` (`id_siswa`, `keterangan`, `jenis_beasiswa`, `tanggal_mulai`, `tanggal_selesai`) VALUES (\'11\', \'1\', \'82\', \'01/03/2023\', \'01/03/2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `beasiswa` (`id_siswa`, `keterangan`, `jenis_beasiswa`, `tanggal_mulai`, `tanggal_selesai`) VALUES (\'11\', \'1\', \'82\', \'01/03/2023\', \'01/03/2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `beasiswa` (`id_siswa`, `keterangan`, `jenis_beasiswa`, `tanggal_mulai`, `tanggal_selesai`) VALUES (:id_siswa:, :keterangan:, :jenis_beasiswa:, :tanggal_mulai:, :tanggal_selesai:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Formulir.php(483): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:13:21 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 39.
+ 1 APPPATH\Controllers\Base.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 39)
+ 2 APPPATH\Controllers\Formulir.php(433): App\Controllers\Base->formatTanggalReverse('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:17:41 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 39.
+ 1 APPPATH\Controllers\Base.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 39)
+ 2 APPPATH\Controllers\Formulir.php(435): App\Controllers\Base->formatTanggalReverse('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:27:42 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 39.
+ 1 APPPATH\Controllers\Base.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 39)
+ 2 APPPATH\Controllers\Formulir.php(435): App\Controllers\Base->formatTanggalReverse('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:35:59 --> Undefined array key 2
+in APPPATH\Controllers\Base.php on line 39.
+ 1 APPPATH\Controllers\Base.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Base.php', 39)
+ 2 APPPATH\Controllers\Formulir.php(435): App\Controllers\Base->formatTanggalReverse('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:42:13 --> Undefined variable $tanggal_mulainya
+in APPPATH\Controllers\Formulir.php on line 437.
+ 1 APPPATH\Controllers\Formulir.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal_mulainya', 'APPPATH\\Controllers\\Formulir.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_prestasi('7')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:52:52 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Formulir.php on line 492.
+ 1 APPPATH\Controllers\Formulir.php(492): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 05:55:35 --> Undefined variable $data
+in APPPATH\Controllers\Formulir.php on line 493.
+ 1 APPPATH\Controllers\Formulir.php(493): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Formulir.php', 493)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->add_test()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-03 07:09:25 --> Undefined variable $jurusan
+in APPPATH\Views\Admin\data_jurusan.php on line 27.
+ 1 APPPATH\Views\Admin\data_jurusan.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jurusan', 'APPPATH\\Views\\Admin\\data_jurusan.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_jurusan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_jurusan', [], true)
+ 5 APPPATH\Controllers\Admin.php(208): view('Admin/data_jurusan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_jurusan()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

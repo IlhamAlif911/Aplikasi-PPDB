@@ -1,0 +1,214 @@
+CRITICAL - 2023-03-07 11:19:17 --> Undefined variable $page
+in APPPATH\Views\Admin\navbar.php on line 58.
+ 1 APPPATH\Views\Admin\navbar.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'APPPATH\\Views\\Admin\\navbar.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(20): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/test', [], true)
+10 APPPATH\Controllers\Formulir.php(680): view('User/test', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Formulir->test()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Formulir))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 11:37:23 --> Unknown column 'pendaftar.id' in 'on clause'
+CRITICAL - 2023-03-07 11:37:23 --> Unknown column 'pendaftar.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `pendaftar`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `pendaftar`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `pendaftar`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `pendaftar`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(50): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('2')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 14:53:32 --> Attempt to read property "jalur" on array
+in APPPATH\Controllers\Pendaftar.php on line 50.
+ 1 APPPATH\Controllers\Pendaftar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jalur" on array', 'APPPATH\\Controllers\\Pendaftar.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('2')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 14:54:08 --> Attempt to read property "jalur" on array
+in APPPATH\Controllers\Pendaftar.php on line 50.
+ 1 APPPATH\Controllers\Pendaftar.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jalur" on array', 'APPPATH\\Controllers\\Pendaftar.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('3')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 14:55:04 --> Undefined variable $jurusan
+in APPPATH\Views\Admin\profil_zonasi.php on line 546.
+ 1 APPPATH\Views\Admin\profil_zonasi.php(546): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jurusan', 'APPPATH\\Views\\Admin\\profil_zonasi.php', 546)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_zonasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(50): view('Admin/profil_zonasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('3')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 14:55:46 --> Undefined variable $page
+in APPPATH\Views\Admin\navbar.php on line 58.
+ 1 APPPATH\Views\Admin\navbar.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'APPPATH\\Views\\Admin\\navbar.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(20): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+10 APPPATH\Controllers\Pendaftar.php(53): view('Admin/profil_zonasi', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('3')
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:02:49 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Admin\profil_zonasi.php on line 22.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_zonasi', [], true)
+ 4 APPPATH\Controllers\Pendaftar.php(54): view('Admin/profil_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('3')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 15:10:09 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2023-03-07 15:10:09 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Pendaftar.php(44): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 15:10:28 --> Column 'id' in where clause is ambiguous
+CRITICAL - 2023-03-07 15:10:28 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = \'8\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_pendaftar`
+JOIN `user` ON `user`.`id_ref` = `data_pendaftar`.`id`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+JOIN `jalur` ON `jalur`.`id` = `pendaftaran`.`jalur`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Pendaftar.php(44): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:11:11 --> Undefined property: stdClass::$opsi_jalur
+in APPPATH\Controllers\Pendaftar.php on line 54.
+ 1 APPPATH\Controllers\Pendaftar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$opsi_jalur', 'APPPATH\\Controllers\\Pendaftar.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:11:53 --> Attempt to read property "opsi_jalur" on null
+in APPPATH\Controllers\Pendaftar.php on line 54.
+ 1 APPPATH\Controllers\Pendaftar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "opsi_jalur" on null', 'APPPATH\\Controllers\\Pendaftar.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:12:14 --> Attempt to read property "opsi_jalur" on null
+in APPPATH\Controllers\Pendaftar.php on line 54.
+ 1 APPPATH\Controllers\Pendaftar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "opsi_jalur" on null', 'APPPATH\\Controllers\\Pendaftar.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:12:23 --> Attempt to read property "opsi_jalur" on null
+in APPPATH\Controllers\Pendaftar.php on line 54.
+ 1 APPPATH\Controllers\Pendaftar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "opsi_jalur" on null', 'APPPATH\\Controllers\\Pendaftar.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 15:15:09 --> Attempt to read property "opsi_jalur" on null
+in APPPATH\Controllers\Pendaftar.php on line 54.
+ 1 APPPATH\Controllers\Pendaftar.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "opsi_jalur" on null', 'APPPATH\\Controllers\\Pendaftar.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('8')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

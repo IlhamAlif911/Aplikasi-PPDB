@@ -1,0 +1,223 @@
+ERROR - 2023-02-23 10:17:21 --> Unknown column 'status_aktif' in 'where clause'
+CRITICAL - 2023-02-23 10:17:21 --> Unknown column 'status_aktif' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `user`
+WHERE `email` = \'\'
+AND `status_aktif` = \'aktif\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `email` = \'\'
+AND `status_aktif` = \'aktif\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `email` = \'\'
+AND `status_aktif` = \'aktif\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `email` = :email:
+AND `status_aktif` = :status_aktif:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Login.php(18): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 10:57:34 --> Invalid file: akun.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('akun.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('akun', [], true)
+ 3 APPPATH\Controllers\Admin.php(101): view('akun', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->akun()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 10:57:49 --> Invalid file: data_akun.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data_akun.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('data_akun', [], true)
+ 3 APPPATH\Controllers\Admin.php(101): view('data_akun', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->akun()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 10:58:00 --> Undefined variable $tahap
+in APPPATH\Views\Admin\data_akun.php on line 61.
+ 1 APPPATH\Views\Admin\data_akun.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahap', 'APPPATH\\Views\\Admin\\data_akun.php', 61)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_akun.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_akun', [], true)
+ 5 APPPATH\Controllers\Admin.php(101): view('Admin/data_akun', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->akun()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 10:58:54 --> Undefined property: stdClass::$nama_jalur
+in APPPATH\Views\Admin\data_akun.php on line 100.
+ 1 APPPATH\Views\Admin\data_akun.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_jalur', 'APPPATH\\Views\\Admin\\data_akun.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_akun.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_akun', [], true)
+ 5 APPPATH\Controllers\Admin.php(101): view('Admin/data_akun', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->akun()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-23 11:00:43 --> Column 'status' cannot be null
+CRITICAL - 2023-02-23 11:00:43 --> Column 'status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `user` (`password`, `nomor_pendaftaran`, `id_ref`, `role`, `status`) VALUES (\'$2y$10$TaRz0WrhYqsy09YBNCo3AuRKvuH02DT7td1ZkyYML5PmkJU6npDO6\', \'0\', \'0\', \'1\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`password`, `nomor_pendaftaran`, `id_ref`, `role`, `status`) VALUES (\'$2y$10$TaRz0WrhYqsy09YBNCo3AuRKvuH02DT7td1ZkyYML5PmkJU6npDO6\', \'0\', \'0\', \'1\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`password`, `nomor_pendaftaran`, `id_ref`, `role`, `status`) VALUES (\'$2y$10$TaRz0WrhYqsy09YBNCo3AuRKvuH02DT7td1ZkyYML5PmkJU6npDO6\', \'0\', \'0\', \'1\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`password`, `nomor_pendaftaran`, `id_ref`, `role`, `status`) VALUES (:password:, :nomor_pendaftaran:, :id_ref:, :role:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Akun.php(47): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Akun->add_akun()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Akun))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 11:07:19 --> Undefined property: stdClass::$jenis_user
+in APPPATH\Controllers\Login.php on line 36.
+ 1 APPPATH\Controllers\Login.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jenis_user', 'APPPATH\\Controllers\\Login.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->process()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 12:04:13 --> Too few arguments to function App\Controllers\Pembayaran::add_konfirmasi(), 0 passed in C:\Salsabila Fauzia S\xampp\htdocs\ppdb\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\Pembayaran.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 12:04:56 --> Undefined property: stdClass::$nama_lengkap
+in APPPATH\Controllers\Pembayaran.php on line 23.
+ 1 APPPATH\Controllers\Pembayaran.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_lengkap', 'APPPATH\\Controllers\\Pembayaran.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-02-23 12:06:25 --> Column 'nama_pemilik_rekening' cannot be null
+CRITICAL - 2023-02-23 12:06:25 --> Column 'nama_pemilik_rekening' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pembayaran` (`id_pendaftar`, `tanggal_transfer`, `nama_pemilik_rekening`, `nama_bank`, `status`, `bukti_transfer`) VALUES (\'1\', \'2023-02-14\', NULL, \'BSI\', \'belum verified\', \'bukti_transfer_41Z_2106.w009.n001.5B.p8.5.png\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pembayaran` (`id_pendaftar`, `tanggal_transfer`, `nama_pemilik_rekening`, `nama_bank`, `status`, `bukti_transfer`) VALUES (\'1\', \'2023-02-14\', NULL, \'BSI\', \'belum verified\', \'bukti_transfer_41Z_2106.w009.n001.5B.p8.5.png\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pembayaran` (`id_pendaftar`, `tanggal_transfer`, `nama_pemilik_rekening`, `nama_bank`, `status`, `bukti_transfer`) VALUES (\'1\', \'2023-02-14\', NULL, \'BSI\', \'belum verified\', \'bukti_transfer_41Z_2106.w009.n001.5B.p8.5.png\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pembayaran` (`id_pendaftar`, `tanggal_transfer`, `nama_pemilik_rekening`, `nama_bank`, `status`, `bukti_transfer`) VALUES (:id_pendaftar:, :tanggal_transfer:, :nama_pemilik_rekening:, :nama_bank:, :status:, :bukti_transfer:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pembayaran.php(56): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 15:29:05 --> Undefined variable $page
+in APPPATH\Views\Admin\navbar.php on line 9.
+ 1 APPPATH\Views\Admin\navbar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'APPPATH\\Views\\Admin\\navbar.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(17): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+10 APPPATH\Controllers\Admin.php(25): view('Admin/data_pendaftar')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 15:34:10 --> Undefined variable $page
+in APPPATH\Views\Admin\navbar.php on line 9.
+ 1 APPPATH\Views\Admin\navbar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'APPPATH\\Views\\Admin\\navbar.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('Admin/navbar', null, true)
+ 5 APPPATH\Views\Admin\index.php(17): CodeIgniter\View\View->include('Admin/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/kode_aplikasi', [], true)
+10 APPPATH\Controllers\Opsi.php(20): view('Admin/kode_aplikasi', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Opsi->edit_kategori('1')
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Opsi))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 16:00:56 -->  is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 314.
+ 1 SYSTEMPATH\Validation\Validation.php(314): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('ROOTPATH\\public')
+ 2 SYSTEMPATH\Validation\Validation.php(173): CodeIgniter\Validation\Validation->processRules('bukti_transfer', 'bukti_transfer', null, [...], [...])
+ 3 APPPATH\Controllers\Pembayaran.php(52): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 16:02:18 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Pembayaran.php(59): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\assets', 'bukti_transfer_')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->add_konfirmasi()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 16:18:53 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Pembayaran.php on line 198.
+ 1 APPPATH\Controllers\Pembayaran.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Pembayaran.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->update_konfirmasi('5')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 23:36:28 --> Invalid file: Admin/dashboard_siswa.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/dashboard_siswa.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 3 APPPATH\Controllers\Admin.php(26): view('Admin/dashboard_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 23:45:35 --> Invalid file: User/konfirmasi_pembayaran.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/konfirmasi_pembayaran.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/konfirmasi_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(151): view('User/konfirmasi_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('1')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-23 23:45:51 --> Attempt to read property "nomor_pendaftaran" on array
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 25.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomor_pendaftaran" on array', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(151): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->konfirmasi_pembayaran('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -1,0 +1,55 @@
+CRITICAL - 2022-10-19 14:52:56 --> Cannot declare class App\Models\DataPegawai, because the name is already in use
+in APPPATH\Models\PNS.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-10-19 15:17:06 --> Undefined variable $pangkat
+in APPPATH\Views\panelAdmin\editPegawai.php on line 400.
+ 1 APPPATH\Views\panelAdmin\editPegawai.php(400): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pangkat', 'APPPATH\\Views\\panelAdmin\\editPegawai.php', 400)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\panelAdmin\\editPegawai.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('panelAdmin/editPegawai', [], true)
+ 5 APPPATH\Controllers\PegawaiController.php(162): view('panelAdmin/editPegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('3')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-19 15:27:23 --> Attempt to read property "tmt_cpns" on null
+in APPPATH\Controllers\PegawaiController.php on line 89.
+ 1 APPPATH\Controllers\PegawaiController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tmt_cpns" on null', 'APPPATH\\Controllers\\PegawaiController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('3')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-19 15:28:26 --> Attempt to read property "tmt_cpns" on null
+in APPPATH\Controllers\PegawaiController.php on line 89.
+ 1 APPPATH\Controllers\PegawaiController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tmt_cpns" on null', 'APPPATH\\Controllers\\PegawaiController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-19 15:40:16 --> Attempt to read property "tmt_cpns" on null
+in APPPATH\Controllers\PegawaiController.php on line 89.
+ 1 APPPATH\Controllers\PegawaiController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tmt_cpns" on null', 'APPPATH\\Controllers\\PegawaiController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('3')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-19 15:41:49 --> Attempt to read property "tmt_cpns" on null
+in APPPATH\Controllers\PegawaiController.php on line 89.
+ 1 APPPATH\Controllers\PegawaiController.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tmt_cpns" on null', 'APPPATH\\Controllers\\PegawaiController.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('3')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-19 15:49:08 --> Undefined variable $tmt_cpns
+in APPPATH\Controllers\PegawaiController.php on line 180.
+ 1 APPPATH\Controllers\PegawaiController.php(180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tmt_cpns', 'APPPATH\\Controllers\\PegawaiController.php', 180)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\PegawaiController->editPegawai('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
