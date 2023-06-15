@@ -6,7 +6,7 @@
 <div class="container-fluid mt-5 mb-4">
     <div class="container">
         <div class="mt-5 mb-3">
-            <h2 class="">Formulir Pendaftaran</h2>
+            <h2 class="">Formulir Pendaftaran <?= $jalur->nama_jalur?></h2>
             <p>Silakan mengisi form yang tersedia dengan lengkap dan benar. <span class="text-start fst-italic mb-1 text-danger">Tanda * wajib diisi.</span></p>
         </div>
         <?php if (session()->has('alert')) : ?>

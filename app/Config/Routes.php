@@ -38,7 +38,7 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 $routes->get('cek-data', 'User::cek_data');
 $routes->get('formulir-pendaftaran-prestasi/(:segment)', 'User::formulir_pendaftaran_prestasi/$1');
-$routes->get('formulir-pendaftaran-zonasi/(:segment)', 'User::formulir_pendaftaran_zonasi/$1');
+$routes->get('formulir-pendaftaran/(:segment)', 'User::formulir_pendaftaran/$1');
 $routes->get('formulir-pendaftaran-afirmasi/(:segment)', 'User::formulir_pendaftaran_afirmasi/$1');
 $routes->get('jalur/(:segment)', 'User::jalur/$1');
 $routes->get('tahap/(:segment)', 'User::tahap/$1');

@@ -12,7 +12,7 @@
             <?php foreach ($jalur as $j) : 
                 if($j->opsi_jalur == $kode_reguler){?>
                 <div class="mt-2 mb-2">
-                    <a href="<?= site_url('formulir-pendaftaran-zonasi/'.$j->id) ?>" class="text-decoration-none">
+                    <a href="<?= site_url('formulir-pendaftaran/'.$j->id) ?>" class="text-decoration-none">
                         <div class="card border-primary btn btn-outline-primary rounded-4" style="width:20rem;height:20rem;">
                             <i class="fa fa-map-marker fa-3x"></i>
                             <h3 class="mt-3 card-title">Jalur <?= $j->nama_jalur ?></h3>

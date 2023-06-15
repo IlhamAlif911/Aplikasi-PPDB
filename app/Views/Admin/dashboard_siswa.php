@@ -4,7 +4,7 @@
 
 <!--Container Main start-->
 <div class="container border-0 pt-4 pb-4 ps-0">
-    <h3 class="mb-4">Dashboard</h3>
+    <h3 class="mb-4">Dashboard Siswa</h3>
     <div class="d-flex justify-content-evenly flex-wrap">
         <div class="dashboard1">
             <div class="card">

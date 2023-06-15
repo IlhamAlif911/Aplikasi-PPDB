@@ -102,63 +102,63 @@ class User extends Base
         return view('User/pendaftaran_berhasil', $data);
     }
 
-    public function formulir_pendaftaran_prestasi($id)
-    {
-        $countryModel = new Provinces();
-        $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
+    // public function formulir_pendaftaran_prestasi($id)
+    // {
+    //     $countryModel = new Provinces();
+    //     $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
 
-        $jalur = new DataJalur();
-        $data['jalur'] = $jalur->where('id', $id)->first();
+    //     $jalur = new DataJalur();
+    //     $data['jalur'] = $jalur->where('id', $id)->first();
 
-        $tahap = new DataTahap();
-        $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
+    //     $tahap = new DataTahap();
+    //     $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
 
-        $periode = new DataPeriode();
-        $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
+    //     $periode = new DataPeriode();
+    //     $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
 
-        $rapot = new Rapot();
-        $data['rapot'] = $rapot->findAll();
+    //     $rapot = new Rapot();
+    //     $data['rapot'] = $rapot->findAll();
 
-        $pendaftar = new DataPendaftar();
-        $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
+    //     $pendaftar = new DataPendaftar();
+    //     $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
 
-        $jurusan = new DataJurusan();
-        $data['jurusan'] = $jurusan->findAll();
+    //     $jurusan = new DataJurusan();
+    //     $data['jurusan'] = $jurusan->findAll();
 
-        $data['jenis_prestasi'] = $this->codeAll('JENIS PRESTASI');
+    //     $data['jenis_prestasi'] = $this->codeAll('JENIS PRESTASI');
 
-        $data['tingkat_prestasi'] = $this->codeAll('TINGKAT PRESTASI');
+    //     $data['tingkat_prestasi'] = $this->codeAll('TINGKAT PRESTASI');
 
-        $data['jenis_beasiswa'] = $this->codeAll('JENIS BEASISWA');
+    //     $data['jenis_beasiswa'] = $this->codeAll('JENIS BEASISWA');
         
-        $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
+    //     $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
 
-        $data['agama'] = $this->codeAll('AGAMA');
+    //     $data['agama'] = $this->codeAll('AGAMA');
 
-        $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
+    //     $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
 
-        $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
+    //     $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
 
-        $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
+    //     $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
 
-        $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
+    //     $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
 
-        $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
+    //     $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
 
-        $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
+    //     $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
 
-        $data['agama'] = $this->codeAll('AGAMA');
+    //     $data['agama'] = $this->codeAll('AGAMA');
 
-        if ($data_pendaftar != null) {
-            $id_pendaftar = $data_pendaftar->id;
-        } else $id_pendaftar = '0';
+    //     if ($data_pendaftar != null) {
+    //         $id_pendaftar = $data_pendaftar->id;
+    //     } else $id_pendaftar = '0';
 
-        $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
+    //     $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
 
-        return view('User/formulir_pendaftaran_prestasi', $data);
-    }
+    //     return view('User/formulir_pendaftaran_prestasi', $data);
+    //}
 
-    public function formulir_pendaftaran_zonasi($id)
+    public function formulir_pendaftaran($id)
     {
         $countryModel = new Provinces();
         $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
@@ -194,54 +194,54 @@ class User extends Base
         $data['page'] = 'Formulir Pendaftaran';
         return view('User/formulir_pendaftaran_zonasi', $data);
     }
-    public function formulir_pendaftaran_afirmasi($id)
-    {
-        $countryModel = new Provinces();
-        $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
+    // public function formulir_pendaftaran_afirmasi($id)
+    // {
+    //     $countryModel = new Provinces();
+    //     $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
 
-        $jalur = new DataJalur();
-        $data['jalur'] = $jalur->where('id', $id)->first();
+    //     $jalur = new DataJalur();
+    //     $data['jalur'] = $jalur->where('id', $id)->first();
 
-        $tahap = new DataTahap();
-        $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
+    //     $tahap = new DataTahap();
+    //     $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
 
-        $periode = new DataPeriode();
-        $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
+    //     $periode = new DataPeriode();
+    //     $data['periode'] = $periode->where('id', $data['tahap']->id_periode)->first();
 
-        $pendaftar = new DataPendaftar();
-        $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
+    //     $pendaftar = new DataPendaftar();
+    //     $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
 
-        $jurusan = new DataJurusan();
-        $data['jurusan'] = $jurusan->findAll();
+    //     $jurusan = new DataJurusan();
+    //     $data['jurusan'] = $jurusan->findAll();
 
-        $data['alasan_layak_pip'] = $this->codeAll('ALASAN LAYAK PIP');
+    //     $data['alasan_layak_pip'] = $this->codeAll('ALASAN LAYAK PIP');
         
-        $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
+    //     $data['berkebutuhan_khusus'] = $this->codeAll('KEBUTUHAN KHUSUS');
 
-        $data['agama'] = $this->codeAll('AGAMA');
+    //     $data['agama'] = $this->codeAll('AGAMA');
 
-        $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
+    //     $data['kewarganegaraan'] = $this->codeAll('KEWARGANEGARAAN');
 
-        $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
+    //     $data['tempat_tinggal'] = $this->codeAll('TEMPAT TINGGAL');
 
-        $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
+    //     $data['moda_transportasi'] = $this->codeAll('MODA TRANSPORTASI');
 
-        $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
+    //     $data['pendidikan'] = $this->codeAll('PENDIDIKAN');
 
-        $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
+    //     $data['pekerjaan'] = $this->codeAll('PEKERJAAN');
 
-        $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
+    //     $data['penghasilan_bulanan'] = $this->codeAll('PENGHASILAN BULANAN');
 
-        $data['agama'] = $this->codeAll('AGAMA');
+    //     $data['agama'] = $this->codeAll('AGAMA');
 
-        if ($data_pendaftar != null) {
-            $id_pendaftar = $data_pendaftar->id;
-        } else $id_pendaftar = '0';
+    //     if ($data_pendaftar != null) {
+    //         $id_pendaftar = $data_pendaftar->id;
+    //     } else $id_pendaftar = '0';
 
-        $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
+    //     $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur']->id . '000' . $id_pendaftar;
 
-        return view('User/formulir_pendaftaran_afirmasi', $data);
-    }
+    //     return view('User/formulir_pendaftaran_afirmasi', $data);
+    // }
     public function list_agenda()
     {
         $agenda = new DataAgenda();
