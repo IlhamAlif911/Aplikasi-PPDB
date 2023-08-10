@@ -28,9 +28,9 @@ class Worksheet extends Base
 
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
-        // merge
+// merge
         $sheet->mergeCells('A1:I1');
-        // nama kolom
+// nama kolom
         $sheet->setCellValue('A1', 'DATA PENDAFTAR SMK YPE KROYA');
         $sheet->setCellValue('A3', 'Nama Lengkap');
         $sheet->setCellValue('B3', 'NISN');
@@ -41,10 +41,10 @@ class Worksheet extends Base
         $sheet->setCellValue('G3', 'Alamat');
         $sheet->setCellValue('H3', 'Email');
         $sheet->setCellValue('I3', 'Asal Sekolah');
-        
+
         $column = 4; //kolom start
         foreach ($data_pendaftar as $key => $value) {
-            // isi kolom 
+        // isi kolom 
             $sheet->setCellValue('A'. $column, $value->nama_lengkap);
             $sheet->setCellValue('B'. $column, $value->nisn);
             $sheet->setCellValue('C'. $column, $value->nik);
@@ -68,7 +68,7 @@ class Worksheet extends Base
         ];
 
         $sheet->getStyle('A3:I3')->applyFromArray($styleArray);
-        
+
         $styleArray1 = [
             'font' => [
                 'bold' => true,
@@ -90,7 +90,7 @@ class Worksheet extends Base
 
         $sheet->getStyle('A3:I'.($column-1))->applyFromArray($styleArray2);
         $sheet->getStyle('A3:I3')
-            ->getBorders()->getBottom()->setBorderStyle(\PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THICK);
+        ->getBorders()->getBottom()->setBorderStyle(\PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THICK);
 
         // auto size kolom    
         $sheet->getColumnDimension('A')->setAutoSize(true);
@@ -116,7 +116,7 @@ class Worksheet extends Base
         $countryModel = new Provinces();
         $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
 
-        // get input nomor pendaftar
+    // get input nomor pendaftar
         $tahap = new DataTahap();
         $jalur = new DataJalur();
         $user = new Users();
@@ -130,12 +130,12 @@ class Worksheet extends Base
         if ($data_pendaftar != null) {
             $id_pendaftar = $data_pendaftar->id;
         } else $id_pendaftar = '0';
-        // get password
+    // get password
         $pass = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
         $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur1']->id . '000' . $id_pendaftar;
-        // end
+    // end
 
-        
+
         $pendaftar = new DataPendaftar();
         $file = $this->request->getFile('fileexcel');
         $extension = $file->getClientExtension();
@@ -179,7 +179,7 @@ class Worksheet extends Base
                     "password" => $pass,
                     "nomor_pendaftaran" => $data['periode']->id . $data['tahap']->id . $data['jalur1']->id . '000' . $pendaftar_id,
                     "email" => $value[8],
-            ]);
+                ]);
 
             }
             session()->setFlashdata('alert', 'Import Data Pendaftar berhasil');
@@ -188,7 +188,7 @@ class Worksheet extends Base
             session()->setFlashdata('error', 'Format file tidak sesuai');
             return redirect()->to('data-pendaftar/' . $id);
         }
-        
+
     }
 }
 ?>
