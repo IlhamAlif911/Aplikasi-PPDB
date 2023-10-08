@@ -19,6 +19,7 @@ use App\Models\DataBeasiswa;
 use App\Models\DataPendaftaran;
 use App\Models\Users;
 use App\Models\Rapot;
+use App\Models\DataSekolah;
 
 class Pendaftar extends Base
 {
@@ -71,6 +72,9 @@ class Pendaftar extends Base
 
         $jurusan = new DataJurusan();
         $data['jurusan'] = $jurusan->findAll();
+
+        $sekolah = new DataSekolah();
+        $data['sekolah'] = $sekolah->findAll();
 
         $postalcode = new Postalcode();
         $data['postalcode'] = $postalcode->where('postal_id', $data['pendaftar']->kode_pos)->first();
@@ -154,6 +158,9 @@ class Pendaftar extends Base
         $jurusan = new DataJurusan();
         $data['jurusan'] = $jurusan->findAll();
 
+        $sekolah = new DataSekolah();
+        $data['sekolah'] = $sekolah->findAll();
+
         $postalcode = new Postalcode();
         $data['postalcode'] = $postalcode->where('postal_id', $data['pendaftar']->kode_pos)->first();
 
@@ -203,39 +210,39 @@ class Pendaftar extends Base
 
         $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
 
-        if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
-            $pendaftar->update($id, [
-                "nisn" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nik') == $data_pendaftar->nik) {
-            $pendaftar->update($id, [
-                "nik" => " ",
-            ]);
-        }
+        // if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
+        //     $pendaftar->update($id, [
+        //         "nisn" => $this->request->getPost('nisn'),
+        //     ]);
+        // }
+        // if ($this->request->getPost('nik') == $data_pendaftar->nik) {
+        //     $pendaftar->update($id, [
+        //         "nik" => $this->request->getPost('nik'),
+        //     ]);
+        // }
         
-        if ($this->request->getPost('email') == $data_pendaftar->email) {
-            $pendaftar->update($id, [
-                "email" => " ",
-            ]);
-        }
+        // if ($this->request->getPost('email') == $data_pendaftar->email) {
+        //     $pendaftar->update($id, [
+        //         "email" => " ",
+        //     ]);
+        // }
         
         // lakukan validasi
         $validation =  \Config\Services::validation();
         if ($this->request->getFile('file_foto') != '') {
             $validation->setRules([
                 'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+                    'rules' => 'min_length[10]',
                     'errors' => [
                         'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+                    'rules' => 'min_length[16]',
                     'errors' => [
                         'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'file_foto' => [
@@ -245,33 +252,22 @@ class Pendaftar extends Base
                         'max_size' => 'Ukuran file maksimal 2 MB',
                     ]
                 ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
+                
             ]);
         } else {
             $validation->setRules([
                 'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+                    'rules' => 'min_length[10]',
                     'errors' => [
                         'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+                    'rules' => 'min_length[16]',
                     'errors' => [
                         'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
+                        
                     ]
                 ],
             ]);
@@ -295,6 +291,12 @@ class Pendaftar extends Base
                 $fileName = $data_pendaftar->foto;
             }
 
+            if ($this->request->getVar('asal_sekolah_check') != '') {
+                $status = 'on';
+            } else {
+                $status = 'off';
+            }
+
             $pendaftar->update($id, [
                 "nik" => $this->request->getPost('nik'),
                 "nisn" => $this->request->getPost('nisn'),
@@ -314,8 +316,10 @@ class Pendaftar extends Base
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
                 "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "jurusan" => $this->request->getPost('jurusan'),
+                "jurusan2" => $this->request->getPost('jurusan2'),
                 "foto" => $fileName,
                 
             ]);
@@ -433,7 +437,7 @@ class Pendaftar extends Base
             return redirect()->to('data-pendaftar/' . $data_pendaftar->tahap);
         } else {
             session()->setFlashdata('error', $validation->listErrors());
-            return redirect()->to('data-pendaftar/' . $data_pendaftar->tahap);
+            return redirect()->to('profil-siswa/' . $id)->withInput();
         }
     }
 
@@ -450,39 +454,39 @@ class Pendaftar extends Base
 
         $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
 
-        if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
-            $pendaftar->update($id, [
-                "nisn" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nik') == $data_pendaftar->nik) {
-            $pendaftar->update($id, [
-                "nik" => " ",
-            ]);
-        }
+        // if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
+        //     $pendaftar->update($id, [
+        //         "nisn" => $this->request->getPost('nisn'),
+        //     ]);
+        // }
+        // if ($this->request->getPost('nik') == $data_pendaftar->nik) {
+        //     $pendaftar->update($id, [
+        //         "nik" => $this->request->getPost('nik'),
+        //     ]);
+        // }
         
-        if ($this->request->getPost('email') == $data_pendaftar->email) {
-            $pendaftar->update($id, [
-                "email" => " ",
-            ]);
-        }
+        // if ($this->request->getPost('email') == $data_pendaftar->email) {
+        //     $pendaftar->update($id, [
+        //         "email" => " ",
+        //     ]);
+        // }
         
         // lakukan validasi
         $validation =  \Config\Services::validation();
         if ($this->request->getFile('file_foto') != '') {
             $validation->setRules([
                 'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+                    'rules' => 'min_length[10]',
                     'errors' => [
                         'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+                    'rules' => 'min_length[16]',
                     'errors' => [
                         'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'file_foto' => [
@@ -492,33 +496,22 @@ class Pendaftar extends Base
                         'max_size' => 'Ukuran file maksimal 2 MB',
                     ]
                 ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
+                
             ]);
         } else {
             $validation->setRules([
                 'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+                    'rules' => 'min_length[10]',
                     'errors' => [
                         'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
+                        
                     ]
                 ],
                 'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+                    'rules' => 'min_length[16]',
                     'errors' => [
                         'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
+                        
                     ]
                 ],
             ]);
@@ -542,6 +535,13 @@ class Pendaftar extends Base
                 $fileName = $data_pendaftar->foto;
             }
 
+            if ($this->request->getVar('asal_sekolah_check') != '') {
+                $status = 'on';
+            } else {
+                $status = 'off';
+            }
+
+
             $pendaftar->update($id, [
                 "nik" => $this->request->getPost('nik'),
                 "nisn" => $this->request->getPost('nisn'),
@@ -561,8 +561,10 @@ class Pendaftar extends Base
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
                 "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "jurusan" => $this->request->getPost('jurusan'),
+                "jurusan2" => $this->request->getPost('jurusan2'),
                 "foto" => $fileName,
                 "status_penerimaan" => '106'
             ]);
@@ -681,568 +683,6 @@ class Pendaftar extends Base
         }
     }
 
-
-    public function update_afirmasi($id)
-    {
-        $pendaftar = new DataPendaftar();
-        $data_pendaftar = $pendaftar->where('id', $id)->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->first();
-
-        $orang_tua = new DataOrangTua();
-        $data_orang_tua = $orang_tua->where('id_siswa', $id)->findAll();
-
-        $afirmasi = new DataAfirmasi();
-        $data_afirmasi = $afirmasi->where('id_pendaftar', $id)->first();
-
-        $user = new Users();
-
-        $data['page'] = 'profil';
-
-        $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
-
-        if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
-            $pendaftar->update($id, [
-                "nisn" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nik') == $data_pendaftar->nik) {
-            $pendaftar->update($id, [
-                "nik" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_akta') == $data_pendaftar->nomor_akta) {
-            $pendaftar->update($id, [
-                "nomor_akta" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_seri_ijazah') == $data_pendaftar->nomor_seri_ijazah) {
-            $pendaftar->update($id, [
-                "nomor_seri_ijazah" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_seri_skhus') == $data_pendaftar->nomor_seri_skhus) {
-            $pendaftar->update($id, [
-                "nomor_seri_skhus" => " ",
-            ]);
-        }
-        if ($this->request->getPost('email') == $data_pendaftar->email) {
-            $pendaftar->update($id, [
-                "email" => " ",
-            ]);
-        }
-
-        // lakukan validasi
-        $validation =  \Config\Services::validation();
-        if ($this->request->getFile('file_foto') != '') {
-            $validation->setRules([
-                'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
-                    'errors' => [
-                        'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
-                    'errors' => [
-                        'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_akta' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_akta]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_ijazah' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_skhus' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
-                    ]
-                ],
-                'file_foto' => [
-                    'rules' => 'mime_in[file_foto,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[file_foto,2048]',
-                    'errors' => [
-                        'mime_in' => 'Format file salah',
-                        'max_size' => 'Ukuran file maksimal 2 MB',
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
-            ]);
-        } else {
-            $validation->setRules([
-                'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
-                    'errors' => [
-                        'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
-                    'errors' => [
-                        'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_akta' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_akta]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_ijazah' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_skhus' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
-            ]);
-        }
-
-        $isDataValid = $validation->withRequest($this->request)->run();
-
-        // jika data valid, simpan ke database
-        if ($isDataValid) {
-            if ($this->request->getFile('file_foto') != '') {
-                $dataBerkas = $this->request->getFile('file_foto');
-                $old_informasi = $data_pendaftar->foto;
-                if (!empty($old_informasi)) {
-                    $path = './assets/' . $old_informasi;
-                    chmod($path, 0777);
-                    unlink($path);
-                }
-                $fileName = 'file_foto_' . $dataBerkas->getName();
-                $dataBerkas->move('./assets/', $fileName);
-            } else {
-                $fileName = $data_pendaftar->foto;
-            }
-
-            $pendaftar->update($id, [
-                "nik" => $this->request->getPost('nik'),
-                "nisn" => $this->request->getPost('nisn'),
-                "nomor_akta" => $this->request->getPost('nomor_akta'),
-                "nama_lengkap" => $this->request->getPost('nama_lengkap'),
-                "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
-                "tempat_lahir" => $this->request->getPost('tempat_lahir'),
-                "tanggal_lahir" => $tanggal_lahir,
-                "email" => $this->request->getPost('email'),
-                "nomor_hp" => $this->request->getPost('nomor_hp'),
-                "alamat" => $this->request->getPost('alamat'),
-                "provinsi" => $this->request->getPost('provinsi'),
-                "kabupaten" => $this->request->getPost('kabupaten'),
-                "kecamatan" => $this->request->getPost('kecamatan'),
-                "kelurahan" => $this->request->getPost('kelurahan'),
-                "kode_pos" => $this->request->getPost('kode_pos'),
-                "rt" => $this->request->getPost('rt'),
-                "rw" => $this->request->getPost('rw'),
-                "agama" => $this->request->getPost('agama'),
-                "tempat_tinggal" => $this->request->getPost('tempat_tinggal'),
-                "moda_transportasi" => $this->request->getPost('moda_transportasi'),
-                "kewarganegaraan" => $this->request->getPost('kewarganegaraan'),
-                "tinggi_badan" => $this->request->getPost('tinggi_badan'),
-                "berat_badan" => $this->request->getPost('berat_badan'),
-                "jarak_tinggal" => $this->request->getPost('jarak_tinggal'),
-                "waktu_tempuh" => $this->request->getPost('waktu_tempuh'),
-                "anak_ke" => $this->request->getPost('anak_ke'),
-                "jumlah_saudara" => $this->request->getPost('jumlah_saudara'),
-                "asal_sekolah" => $this->request->getPost('asal_sekolah'),
-                "nomor_seri_ijazah" => $this->request->getPost('nomor_seri_ijazah'),
-                "nomor_seri_skhus" => $this->request->getPost('nomor_seri_skhus'),
-                "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
-                "jurusan" => $this->request->getPost('jurusan'),
-                "foto" => $fileName,
-            ]);
-
-            foreach ($data_orang_tua as $do) {
-                if ($do->jenis_orang_tua == '1') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '1',
-                        "nama" => $this->request->getPost('nama_ayah'),
-                        "nik" => $this->request->getPost('nik_ayah'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_ayah'),
-                        "pendidikan" => $this->request->getPost('pendidikan_ayah'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_ayah'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ayah'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ayah'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_ayah'),
-                        "email" => $this->request->getPost('email_ayah'),
-                        "alamat" => $this->request->getPost('alamat_ayah'),
-                    ]);
-                }
-                if ($do->jenis_orang_tua == '2') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '2',
-                        "nama" => $this->request->getPost('nama_ibu'),
-                        "nik" => $this->request->getPost('nik_ibu'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_ibu'),
-                        "pendidikan" => $this->request->getPost('pendidikan_ibu'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_ibu'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ibu'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ibu'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_ibu'),
-                        "email" => $this->request->getPost('email_ibu'),
-                        "alamat" => $this->request->getPost('alamat_ibu'),
-                    ]);
-                }
-                if ($do->jenis_orang_tua == '3') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '3',
-                        "nama" => $this->request->getPost('nama_wali'),
-                        "nik" => $this->request->getPost('nik_wali'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_wali'),
-                        "pendidikan" => $this->request->getPost('pendidikan_wali'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_wali'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_wali'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_wali'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_wali'),
-                        "email" => $this->request->getPost('email_wali'),
-                        "alamat" => $this->request->getPost('alamat_wali'),
-                    ]);
-                }
-            }
-
-            if (!empty($data_afirmasi)) {
-                $afirmasi->update($data_afirmasi->id, [
-                    "nomor_kks" => $this->request->getPost('nomor_kks'),
-                    "nomor_kps_pkh" => $this->request->getPost('nomor_kps_pkh'),
-                    "nomor_kip" => $this->request->getPost('nomor_kip'),
-                    "nama_kip" => $this->request->getPost('nama_kip'),
-                    "alasan_layak_pip" => $this->request->getPost('alasan_layak_pip'),
-                ]);
-            }
-
-            return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
-        } else {
-            session()->setFlashdata('error', $validation->listErrors());
-            return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
-        }
-    }
-
-    public function update_prestasi($id)
-    {
-        $pendaftar = new DataPendaftar();
-        $data_pendaftar = $pendaftar->where('id', $id)->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->first();
-
-        $orang_tua = new DataOrangTua();
-        $data_orang_tua = $orang_tua->where('id_siswa', $id)->findAll();
-
-        $prestasi = new DataBeasiswa();
-        $data_prestasi = $prestasi->where('id_siswa', $id)->findAll();
-
-        $beasiswa = new DataPrestasi();
-        $data_beasiswa = $beasiswa->where('id_siswa', $id)->findAll();
-
-        $jenis_nilai = new JenisNilai();
-
-        $jenis_prestasi = $this->request->getPost('jenis_prestasi');
-        $tingkat_prestasi = $this->request->getPost('tingkat_prestasi');
-        $nama_prestasi = $this->request->getPost('nama_prestasi');
-        $tahun_prestasi = $this->request->getPost('tahun_prestasi');
-        $penyelenggara = $this->request->getPost('penyelenggara');
-        $peringkat = $this->request->getPost('peringkat');
-        $jenis_beasiswa = $this->request->getPost('jenis_beasiswa');
-        $keterangan = $this->request->getPost('keterangan');
-        $tanggal_mulai = $this->request->getPost('tanggal_mulai');
-        $tanggal_selesai = $this->request->getPost('tanggal_selesai');
-        $id_prestasi = $this->request->getPost('id_prestasi');
-        $id_beasiswa = $this->request->getPost('id_beasiswa');
-        $rapot = $this->request->getPost('rapot');
-        $jumlah_nilai = count($rapot);
-
-        $user = new Users();
-
-        $data['page'] = 'profil';
-
-        $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
-
-        if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
-            $pendaftar->update($id, [
-                "nisn" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nik') == $data_pendaftar->nik) {
-            $pendaftar->update($id, [
-                "nik" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_akta') == $data_pendaftar->nomor_akta) {
-            $pendaftar->update($id, [
-                "nomor_akta" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_seri_ijazah') == $data_pendaftar->nomor_seri_ijazah) {
-            $pendaftar->update($id, [
-                "nomor_seri_ijazah" => " ",
-            ]);
-        }
-        if ($this->request->getPost('nomor_seri_skhus') == $data_pendaftar->nomor_seri_skhus) {
-            $pendaftar->update($id, [
-                "nomor_seri_skhus" => " ",
-            ]);
-        }
-        if ($this->request->getPost('email') == $data_pendaftar->email) {
-            $pendaftar->update($id, [
-                "email" => " ",
-            ]);
-        }
-
-        // lakukan validasi
-        $validation =  \Config\Services::validation();
-        if ($this->request->getFile('file_foto') != '') {
-            $validation->setRules([
-                'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
-                    'errors' => [
-                        'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
-                    'errors' => [
-                        'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_akta' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_akta]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_ijazah' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_skhus' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
-                    ]
-                ],
-                'file_foto' => [
-                    'rules' => 'mime_in[file_foto,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[file_foto,2048]',
-                    'errors' => [
-                        'mime_in' => 'Format file salah',
-                        'max_size' => 'Ukuran file maksimal 2 MB',
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
-            ]);
-        } else {
-            $validation->setRules([
-                'nisn' => [
-                    'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
-                    'errors' => [
-                        'min_length' => 'NISN Minimal 10 Karakter',
-                        'is_unique' => 'NISN sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nik' => [
-                    'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
-                    'errors' => [
-                        'min_length' => 'NIK Minimal 16 Karakter',
-                        'is_unique' => 'NIK sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_akta' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_akta]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_ijazah' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
-                    ]
-                ],
-                'nomor_seri_skhus' => [
-                    'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
-                    'errors' => [
-                        'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
-                    ]
-                ],
-                'email' => [
-                    'rules' => 'is_unique[user.email]',
-                    'errors' => [
-                        'is_unique' => 'Email sudah digunakan sebelumnya'
-                    ]
-                ],
-            ]);
-        }
-
-        $isDataValid = $validation->withRequest($this->request)->run();
-
-        // jika data valid, simpan ke database
-        if ($isDataValid) {
-            if ($this->request->getFile('file_foto') != '') {
-                $dataBerkas = $this->request->getFile('file_foto');
-                $old_informasi = $data_pendaftar->foto;
-                if (!empty($old_informasi)) {
-                    $path = './assets/' . $old_informasi;
-                    chmod($path, 0777);
-                    unlink($path);
-                }
-                $fileName = 'file_foto_' . $dataBerkas->getName();
-                $dataBerkas->move('./assets/', $fileName);
-            } else {
-                $fileName = $data_pendaftar->foto;
-            }
-
-            $pendaftar->update($id, [
-                "nik" => $this->request->getPost('nik'),
-                "nisn" => $this->request->getPost('nisn'),
-                "nomor_akta" => $this->request->getPost('nomor_akta'),
-                "nama_lengkap" => $this->request->getPost('nama_lengkap'),
-                "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
-                "tempat_lahir" => $this->request->getPost('tempat_lahir'),
-                "tanggal_lahir" => $tanggal_lahir,
-                "email" => $this->request->getPost('email'),
-                "nomor_hp" => $this->request->getPost('nomor_hp'),
-                "alamat" => $this->request->getPost('alamat'),
-                "provinsi" => $this->request->getPost('provinsi'),
-                "kabupaten" => $this->request->getPost('kabupaten'),
-                "kecamatan" => $this->request->getPost('kecamatan'),
-                "kelurahan" => $this->request->getPost('kelurahan'),
-                "kode_pos" => $this->request->getPost('kode_pos'),
-                "rt" => $this->request->getPost('rt'),
-                "rw" => $this->request->getPost('rw'),
-                "agama" => $this->request->getPost('agama'),
-                "tempat_tinggal" => $this->request->getPost('tempat_tinggal'),
-                "moda_transportasi" => $this->request->getPost('moda_transportasi'),
-                "kewarganegaraan" => $this->request->getPost('kewarganegaraan'),
-                "tinggi_badan" => $this->request->getPost('tinggi_badan'),
-                "berat_badan" => $this->request->getPost('berat_badan'),
-                "jarak_tinggal" => $this->request->getPost('jarak_tinggal'),
-                "waktu_tempuh" => $this->request->getPost('waktu_tempuh'),
-                "anak_ke" => $this->request->getPost('anak_ke'),
-                "jumlah_saudara" => $this->request->getPost('jumlah_saudara'),
-                "asal_sekolah" => $this->request->getPost('asal_sekolah'),
-                "nomor_seri_ijazah" => $this->request->getPost('nomor_seri_ijazah'),
-                "nomor_seri_skhus" => $this->request->getPost('nomor_seri_skhus'),
-                "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
-                "jurusan" => $this->request->getPost('jurusan'),
-                "foto" => $fileName,
-            ]);
-
-            foreach ($data_orang_tua as $do) {
-                if ($do->jenis_orang_tua == '1') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '1',
-                        "nama" => $this->request->getPost('nama_ayah'),
-                        "nik" => $this->request->getPost('nik_ayah'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_ayah'),
-                        "pendidikan" => $this->request->getPost('pendidikan_ayah'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_ayah'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ayah'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ayah'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_ayah'),
-                        "email" => $this->request->getPost('email_ayah'),
-                        "alamat" => $this->request->getPost('alamat_ayah'),
-                    ]);
-                }
-                if ($do->jenis_orang_tua == '2') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '2',
-                        "nama" => $this->request->getPost('nama_ibu'),
-                        "nik" => $this->request->getPost('nik_ibu'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_ibu'),
-                        "pendidikan" => $this->request->getPost('pendidikan_ibu'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_ibu'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ibu'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ibu'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_ibu'),
-                        "email" => $this->request->getPost('email_ibu'),
-                        "alamat" => $this->request->getPost('alamat_ibu'),
-                    ]);
-                }
-                if ($do->jenis_orang_tua == '3') {
-                    $orang_tua->update($do->id, [
-                        "jenis_orang_tua" => '3',
-                        "nama" => $this->request->getPost('nama_wali'),
-                        "nik" => $this->request->getPost('nik_wali'),
-                        "tahun_lahir" => $this->request->getPost('tahun_lahir_wali'),
-                        "pendidikan" => $this->request->getPost('pendidikan_wali'),
-                        "pekerjaan" => $this->request->getPost('pekerjaan_wali'),
-                        "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_wali'),
-                        "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_wali'),
-                        "nomor_hp" => $this->request->getPost('nomor_hp_wali'),
-                        "email" => $this->request->getPost('email_wali'),
-                        "alamat" => $this->request->getPost('alamat_wali'),
-                    ]);
-                }
-            }
-
-            for ($i = 0; $i < $jumlah_nilai; $i++) {
-                $jenis_nilai->update($rapot[$i], [
-                    "matematika" => $this->request->getPost($rapot[$i] . 'matematika'),
-                    "ipa" => $this->request->getPost($rapot[$i] . 'ipa'),
-                    "bahasa_inggris" => $this->request->getPost($rapot[$i] . 'bahasa_inggris'),
-                    "bahasa_indonesia" => $this->request->getPost($rapot[$i] . 'bahasa_indonesia'),
-                ]);
-            }
-
-            for ($i = 0; $i < count($id_prestasi); $i++) {
-                    $prestasi->update($id_prestasi[$i],[
-                        'nama_prestasi' => $nama_prestasi[$i],
-                        'jenis_prestasi' => $jenis_prestasi[$i],
-                        'peringkat' => $peringkat[$i],
-                        'tingkat_prestasi' => $tingkat_prestasi[$i],
-                        'penyelenggara' => $penyelenggara[$i],
-                        'tahun' => $tahun_prestasi[$i],
-                    ]);
-            }
-
-            for ($i = 0; $i < count($id_beasiswa); $i++) {
-                if($tanggal_mulai[$i] != '') $tanggal_mulainya = $this->formatTanggalReverse($tanggal_mulai[$i]);
-                if($tanggal_selesai[$i] != '') $tanggal_selesainya = $this->formatTanggalReverse($tanggal_selesai)[$i];
-                $beasiswa->update($id_beasiswa[$i],[
-                    'keterangan' => $keterangan[$i],
-                    'jenis_beasiswa' => $jenis_beasiswa[$i],
-                    'tanggal_mulai' => $tanggal_mulainya,
-                    'tanggal_selesai' => $tanggal_selesainya,
-                ]);
-        }
-
-            return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
-        } else {
-            session()->setFlashdata('error', $validation->listErrors());
-            return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
-        }
-    }
-
     public function status_penerimaan($id)
     {
         $pendaftar = new DataPendaftar();
@@ -1281,4 +721,565 @@ class Pendaftar extends Base
 
         return redirect()->back();
     }
+
+    // public function update_afirmasi($id)
+    // {
+    //     $pendaftar = new DataPendaftar();
+    //     $data_pendaftar = $pendaftar->where('id', $id)->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->first();
+
+    //     $orang_tua = new DataOrangTua();
+    //     $data_orang_tua = $orang_tua->where('id_siswa', $id)->findAll();
+
+    //     $afirmasi = new DataAfirmasi();
+    //     $data_afirmasi = $afirmasi->where('id_pendaftar', $id)->first();
+
+    //     $user = new Users();
+
+    //     $data['page'] = 'profil';
+
+    //     $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
+
+    //     if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
+    //         $pendaftar->update($id, [
+    //             "nisn" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nik') == $data_pendaftar->nik) {
+    //         $pendaftar->update($id, [
+    //             "nik" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_akta') == $data_pendaftar->nomor_akta) {
+    //         $pendaftar->update($id, [
+    //             "nomor_akta" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_seri_ijazah') == $data_pendaftar->nomor_seri_ijazah) {
+    //         $pendaftar->update($id, [
+    //             "nomor_seri_ijazah" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_seri_skhus') == $data_pendaftar->nomor_seri_skhus) {
+    //         $pendaftar->update($id, [
+    //             "nomor_seri_skhus" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('email') == $data_pendaftar->email) {
+    //         $pendaftar->update($id, [
+    //             "email" => " ",
+    //         ]);
+    //     }
+
+    //     // lakukan validasi
+    //     $validation =  \Config\Services::validation();
+    //     if ($this->request->getFile('file_foto') != '') {
+    //         $validation->setRules([
+    //             'nisn' => [
+    //                 'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+    //                 'errors' => [
+    //                     'min_length' => 'NISN Minimal 10 Karakter',
+    //                     'is_unique' => 'NISN sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nik' => [
+    //                 'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+    //                 'errors' => [
+    //                     'min_length' => 'NIK Minimal 16 Karakter',
+    //                     'is_unique' => 'NIK sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_akta' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_akta]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_ijazah' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_skhus' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'file_foto' => [
+    //                 'rules' => 'mime_in[file_foto,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[file_foto,2048]',
+    //                 'errors' => [
+    //                     'mime_in' => 'Format file salah',
+    //                     'max_size' => 'Ukuran file maksimal 2 MB',
+    //                 ]
+    //             ],
+    //             'email' => [
+    //                 'rules' => 'is_unique[user.email]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Email sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //         ]);
+    //     } else {
+    //         $validation->setRules([
+    //             'nisn' => [
+    //                 'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+    //                 'errors' => [
+    //                     'min_length' => 'NISN Minimal 10 Karakter',
+    //                     'is_unique' => 'NISN sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nik' => [
+    //                 'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+    //                 'errors' => [
+    //                     'min_length' => 'NIK Minimal 16 Karakter',
+    //                     'is_unique' => 'NIK sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_akta' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_akta]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_ijazah' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_skhus' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'email' => [
+    //                 'rules' => 'is_unique[user.email]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Email sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //         ]);
+    //     }
+
+    //     $isDataValid = $validation->withRequest($this->request)->run();
+
+    //     // jika data valid, simpan ke database
+    //     if ($isDataValid) {
+    //         if ($this->request->getFile('file_foto') != '') {
+    //             $dataBerkas = $this->request->getFile('file_foto');
+    //             $old_informasi = $data_pendaftar->foto;
+    //             if (!empty($old_informasi)) {
+    //                 $path = './assets/' . $old_informasi;
+    //                 chmod($path, 0777);
+    //                 unlink($path);
+    //             }
+    //             $fileName = 'file_foto_' . $dataBerkas->getName();
+    //             $dataBerkas->move('./assets/', $fileName);
+    //         } else {
+    //             $fileName = $data_pendaftar->foto;
+    //         }
+
+    //         $pendaftar->update($id, [
+    //             "nik" => $this->request->getPost('nik'),
+    //             "nisn" => $this->request->getPost('nisn'),
+    //             "nomor_akta" => $this->request->getPost('nomor_akta'),
+    //             "nama_lengkap" => $this->request->getPost('nama_lengkap'),
+    //             "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
+    //             "tempat_lahir" => $this->request->getPost('tempat_lahir'),
+    //             "tanggal_lahir" => $tanggal_lahir,
+    //             "email" => $this->request->getPost('email'),
+    //             "nomor_hp" => $this->request->getPost('nomor_hp'),
+    //             "alamat" => $this->request->getPost('alamat'),
+    //             "provinsi" => $this->request->getPost('provinsi'),
+    //             "kabupaten" => $this->request->getPost('kabupaten'),
+    //             "kecamatan" => $this->request->getPost('kecamatan'),
+    //             "kelurahan" => $this->request->getPost('kelurahan'),
+    //             "kode_pos" => $this->request->getPost('kode_pos'),
+    //             "rt" => $this->request->getPost('rt'),
+    //             "rw" => $this->request->getPost('rw'),
+    //             "agama" => $this->request->getPost('agama'),
+    //             "tempat_tinggal" => $this->request->getPost('tempat_tinggal'),
+    //             "moda_transportasi" => $this->request->getPost('moda_transportasi'),
+    //             "kewarganegaraan" => $this->request->getPost('kewarganegaraan'),
+    //             "tinggi_badan" => $this->request->getPost('tinggi_badan'),
+    //             "berat_badan" => $this->request->getPost('berat_badan'),
+    //             "jarak_tinggal" => $this->request->getPost('jarak_tinggal'),
+    //             "waktu_tempuh" => $this->request->getPost('waktu_tempuh'),
+    //             "anak_ke" => $this->request->getPost('anak_ke'),
+    //             "jumlah_saudara" => $this->request->getPost('jumlah_saudara'),
+    //             "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+    //             "nomor_seri_ijazah" => $this->request->getPost('nomor_seri_ijazah'),
+    //             "nomor_seri_skhus" => $this->request->getPost('nomor_seri_skhus'),
+    //             "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
+    //             "jurusan" => $this->request->getPost('jurusan'),
+    //             "foto" => $fileName,
+    //         ]);
+
+    //         foreach ($data_orang_tua as $do) {
+    //             if ($do->jenis_orang_tua == '1') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '1',
+    //                     "nama" => $this->request->getPost('nama_ayah'),
+    //                     "nik" => $this->request->getPost('nik_ayah'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_ayah'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_ayah'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_ayah'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ayah'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ayah'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_ayah'),
+    //                     "email" => $this->request->getPost('email_ayah'),
+    //                     "alamat" => $this->request->getPost('alamat_ayah'),
+    //                 ]);
+    //             }
+    //             if ($do->jenis_orang_tua == '2') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '2',
+    //                     "nama" => $this->request->getPost('nama_ibu'),
+    //                     "nik" => $this->request->getPost('nik_ibu'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_ibu'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_ibu'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_ibu'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ibu'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ibu'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_ibu'),
+    //                     "email" => $this->request->getPost('email_ibu'),
+    //                     "alamat" => $this->request->getPost('alamat_ibu'),
+    //                 ]);
+    //             }
+    //             if ($do->jenis_orang_tua == '3') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '3',
+    //                     "nama" => $this->request->getPost('nama_wali'),
+    //                     "nik" => $this->request->getPost('nik_wali'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_wali'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_wali'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_wali'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_wali'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_wali'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_wali'),
+    //                     "email" => $this->request->getPost('email_wali'),
+    //                     "alamat" => $this->request->getPost('alamat_wali'),
+    //                 ]);
+    //             }
+    //         }
+
+    //         if (!empty($data_afirmasi)) {
+    //             $afirmasi->update($data_afirmasi->id, [
+    //                 "nomor_kks" => $this->request->getPost('nomor_kks'),
+    //                 "nomor_kps_pkh" => $this->request->getPost('nomor_kps_pkh'),
+    //                 "nomor_kip" => $this->request->getPost('nomor_kip'),
+    //                 "nama_kip" => $this->request->getPost('nama_kip'),
+    //                 "alasan_layak_pip" => $this->request->getPost('alasan_layak_pip'),
+    //             ]);
+    //         }
+
+    //         return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
+    //     } else {
+    //         session()->setFlashdata('error', $validation->listErrors());
+    //         return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
+    //     }
+    // }
+
+    // public function update_prestasi($id)
+    // {
+    //     $pendaftar = new DataPendaftar();
+    //     $data_pendaftar = $pendaftar->where('id', $id)->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->first();
+
+    //     $orang_tua = new DataOrangTua();
+    //     $data_orang_tua = $orang_tua->where('id_siswa', $id)->findAll();
+
+    //     $prestasi = new DataBeasiswa();
+    //     $data_prestasi = $prestasi->where('id_siswa', $id)->findAll();
+
+    //     $beasiswa = new DataPrestasi();
+    //     $data_beasiswa = $beasiswa->where('id_siswa', $id)->findAll();
+
+    //     $jenis_nilai = new JenisNilai();
+
+    //     $jenis_prestasi = $this->request->getPost('jenis_prestasi');
+    //     $tingkat_prestasi = $this->request->getPost('tingkat_prestasi');
+    //     $nama_prestasi = $this->request->getPost('nama_prestasi');
+    //     $tahun_prestasi = $this->request->getPost('tahun_prestasi');
+    //     $penyelenggara = $this->request->getPost('penyelenggara');
+    //     $peringkat = $this->request->getPost('peringkat');
+    //     $jenis_beasiswa = $this->request->getPost('jenis_beasiswa');
+    //     $keterangan = $this->request->getPost('keterangan');
+    //     $tanggal_mulai = $this->request->getPost('tanggal_mulai');
+    //     $tanggal_selesai = $this->request->getPost('tanggal_selesai');
+    //     $id_prestasi = $this->request->getPost('id_prestasi');
+    //     $id_beasiswa = $this->request->getPost('id_beasiswa');
+    //     $rapot = $this->request->getPost('rapot');
+    //     $jumlah_nilai = count($rapot);
+
+    //     $user = new Users();
+
+    //     $data['page'] = 'profil';
+
+    //     $tanggal_lahir = $this->formatTanggalReverse($this->request->getPost('tanggal_lahir'));
+
+    //     if ($this->request->getPost('nisn') == $data_pendaftar->nisn) {
+    //         $pendaftar->update($id, [
+    //             "nisn" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nik') == $data_pendaftar->nik) {
+    //         $pendaftar->update($id, [
+    //             "nik" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_akta') == $data_pendaftar->nomor_akta) {
+    //         $pendaftar->update($id, [
+    //             "nomor_akta" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_seri_ijazah') == $data_pendaftar->nomor_seri_ijazah) {
+    //         $pendaftar->update($id, [
+    //             "nomor_seri_ijazah" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('nomor_seri_skhus') == $data_pendaftar->nomor_seri_skhus) {
+    //         $pendaftar->update($id, [
+    //             "nomor_seri_skhus" => " ",
+    //         ]);
+    //     }
+    //     if ($this->request->getPost('email') == $data_pendaftar->email) {
+    //         $pendaftar->update($id, [
+    //             "email" => " ",
+    //         ]);
+    //     }
+
+    //     // lakukan validasi
+    //     $validation =  \Config\Services::validation();
+    //     if ($this->request->getFile('file_foto') != '') {
+    //         $validation->setRules([
+    //             'nisn' => [
+    //                 'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+    //                 'errors' => [
+    //                     'min_length' => 'NISN Minimal 10 Karakter',
+    //                     'is_unique' => 'NISN sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nik' => [
+    //                 'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+    //                 'errors' => [
+    //                     'min_length' => 'NIK Minimal 16 Karakter',
+    //                     'is_unique' => 'NIK sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_akta' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_akta]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_ijazah' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_skhus' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'file_foto' => [
+    //                 'rules' => 'mime_in[file_foto,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[file_foto,2048]',
+    //                 'errors' => [
+    //                     'mime_in' => 'Format file salah',
+    //                     'max_size' => 'Ukuran file maksimal 2 MB',
+    //                 ]
+    //             ],
+    //             'email' => [
+    //                 'rules' => 'is_unique[user.email]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Email sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //         ]);
+    //     } else {
+    //         $validation->setRules([
+    //             'nisn' => [
+    //                 'rules' => 'min_length[10]|is_unique[data_pendaftar.nisn]',
+    //                 'errors' => [
+    //                     'min_length' => 'NISN Minimal 10 Karakter',
+    //                     'is_unique' => 'NISN sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nik' => [
+    //                 'rules' => 'min_length[16]|is_unique[data_pendaftar.nik]',
+    //                 'errors' => [
+    //                     'min_length' => 'NIK Minimal 16 Karakter',
+    //                     'is_unique' => 'NIK sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_akta' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_akta]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Akta sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_ijazah' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_ijazah]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri Ijazah sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'nomor_seri_skhus' => [
+    //                 'rules' => 'is_unique[data_pendaftar.nomor_seri_skhus]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Nomor Seri SKHUS sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //             'email' => [
+    //                 'rules' => 'is_unique[user.email]',
+    //                 'errors' => [
+    //                     'is_unique' => 'Email sudah digunakan sebelumnya'
+    //                 ]
+    //             ],
+    //         ]);
+    //     }
+
+    //     $isDataValid = $validation->withRequest($this->request)->run();
+
+    //     // jika data valid, simpan ke database
+    //     if ($isDataValid) {
+    //         if ($this->request->getFile('file_foto') != '') {
+    //             $dataBerkas = $this->request->getFile('file_foto');
+    //             $old_informasi = $data_pendaftar->foto;
+    //             if (!empty($old_informasi)) {
+    //                 $path = './assets/' . $old_informasi;
+    //                 chmod($path, 0777);
+    //                 unlink($path);
+    //             }
+    //             $fileName = 'file_foto_' . $dataBerkas->getName();
+    //             $dataBerkas->move('./assets/', $fileName);
+    //         } else {
+    //             $fileName = $data_pendaftar->foto;
+    //         }
+
+    //         $pendaftar->update($id, [
+    //             "nik" => $this->request->getPost('nik'),
+    //             "nisn" => $this->request->getPost('nisn'),
+    //             "nomor_akta" => $this->request->getPost('nomor_akta'),
+    //             "nama_lengkap" => $this->request->getPost('nama_lengkap'),
+    //             "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
+    //             "tempat_lahir" => $this->request->getPost('tempat_lahir'),
+    //             "tanggal_lahir" => $tanggal_lahir,
+    //             "email" => $this->request->getPost('email'),
+    //             "nomor_hp" => $this->request->getPost('nomor_hp'),
+    //             "alamat" => $this->request->getPost('alamat'),
+    //             "provinsi" => $this->request->getPost('provinsi'),
+    //             "kabupaten" => $this->request->getPost('kabupaten'),
+    //             "kecamatan" => $this->request->getPost('kecamatan'),
+    //             "kelurahan" => $this->request->getPost('kelurahan'),
+    //             "kode_pos" => $this->request->getPost('kode_pos'),
+    //             "rt" => $this->request->getPost('rt'),
+    //             "rw" => $this->request->getPost('rw'),
+    //             "agama" => $this->request->getPost('agama'),
+    //             "tempat_tinggal" => $this->request->getPost('tempat_tinggal'),
+    //             "moda_transportasi" => $this->request->getPost('moda_transportasi'),
+    //             "kewarganegaraan" => $this->request->getPost('kewarganegaraan'),
+    //             "tinggi_badan" => $this->request->getPost('tinggi_badan'),
+    //             "berat_badan" => $this->request->getPost('berat_badan'),
+    //             "jarak_tinggal" => $this->request->getPost('jarak_tinggal'),
+    //             "waktu_tempuh" => $this->request->getPost('waktu_tempuh'),
+    //             "anak_ke" => $this->request->getPost('anak_ke'),
+    //             "jumlah_saudara" => $this->request->getPost('jumlah_saudara'),
+    //             "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+    //             "nomor_seri_ijazah" => $this->request->getPost('nomor_seri_ijazah'),
+    //             "nomor_seri_skhus" => $this->request->getPost('nomor_seri_skhus'),
+    //             "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
+    //             "jurusan" => $this->request->getPost('jurusan'),
+    //             "foto" => $fileName,
+    //         ]);
+
+    //         foreach ($data_orang_tua as $do) {
+    //             if ($do->jenis_orang_tua == '1') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '1',
+    //                     "nama" => $this->request->getPost('nama_ayah'),
+    //                     "nik" => $this->request->getPost('nik_ayah'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_ayah'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_ayah'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_ayah'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ayah'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ayah'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_ayah'),
+    //                     "email" => $this->request->getPost('email_ayah'),
+    //                     "alamat" => $this->request->getPost('alamat_ayah'),
+    //                 ]);
+    //             }
+    //             if ($do->jenis_orang_tua == '2') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '2',
+    //                     "nama" => $this->request->getPost('nama_ibu'),
+    //                     "nik" => $this->request->getPost('nik_ibu'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_ibu'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_ibu'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_ibu'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_ibu'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_ibu'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_ibu'),
+    //                     "email" => $this->request->getPost('email_ibu'),
+    //                     "alamat" => $this->request->getPost('alamat_ibu'),
+    //                 ]);
+    //             }
+    //             if ($do->jenis_orang_tua == '3') {
+    //                 $orang_tua->update($do->id, [
+    //                     "jenis_orang_tua" => '3',
+    //                     "nama" => $this->request->getPost('nama_wali'),
+    //                     "nik" => $this->request->getPost('nik_wali'),
+    //                     "tahun_lahir" => $this->request->getPost('tahun_lahir_wali'),
+    //                     "pendidikan" => $this->request->getPost('pendidikan_wali'),
+    //                     "pekerjaan" => $this->request->getPost('pekerjaan_wali'),
+    //                     "penghasilan_bulanan" => $this->request->getPost('penghasilan_bulanan_wali'),
+    //                     "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus_wali'),
+    //                     "nomor_hp" => $this->request->getPost('nomor_hp_wali'),
+    //                     "email" => $this->request->getPost('email_wali'),
+    //                     "alamat" => $this->request->getPost('alamat_wali'),
+    //                 ]);
+    //             }
+    //         }
+
+    //         for ($i = 0; $i < $jumlah_nilai; $i++) {
+    //             $jenis_nilai->update($rapot[$i], [
+    //                 "matematika" => $this->request->getPost($rapot[$i] . 'matematika'),
+    //                 "ipa" => $this->request->getPost($rapot[$i] . 'ipa'),
+    //                 "bahasa_inggris" => $this->request->getPost($rapot[$i] . 'bahasa_inggris'),
+    //                 "bahasa_indonesia" => $this->request->getPost($rapot[$i] . 'bahasa_indonesia'),
+    //             ]);
+    //         }
+
+    //         for ($i = 0; $i < count($id_prestasi); $i++) {
+    //                 $prestasi->update($id_prestasi[$i],[
+    //                     'nama_prestasi' => $nama_prestasi[$i],
+    //                     'jenis_prestasi' => $jenis_prestasi[$i],
+    //                     'peringkat' => $peringkat[$i],
+    //                     'tingkat_prestasi' => $tingkat_prestasi[$i],
+    //                     'penyelenggara' => $penyelenggara[$i],
+    //                     'tahun' => $tahun_prestasi[$i],
+    //                 ]);
+    //         }
+
+    //         for ($i = 0; $i < count($id_beasiswa); $i++) {
+    //             if($tanggal_mulai[$i] != '') $tanggal_mulainya = $this->formatTanggalReverse($tanggal_mulai[$i]);
+    //             if($tanggal_selesai[$i] != '') $tanggal_selesainya = $this->formatTanggalReverse($tanggal_selesai)[$i];
+    //             $beasiswa->update($id_beasiswa[$i],[
+    //                 'keterangan' => $keterangan[$i],
+    //                 'jenis_beasiswa' => $jenis_beasiswa[$i],
+    //                 'tanggal_mulai' => $tanggal_mulainya,
+    //                 'tanggal_selesai' => $tanggal_selesainya,
+    //             ]);
+    //     }
+
+    //         return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
+    //     } else {
+    //         session()->setFlashdata('error', $validation->listErrors());
+    //         return redirect()->to('data-pendaftar/' . $data_pendaftar->jalur);
+    //     }
+    // }
 }

@@ -20,11 +20,9 @@
 
     <script defer src="<?= base_url('js/solid.js') ?>" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script src="<?= base_url('js/e7578f8e4a.js') ?>" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('js/jquery-3.5.1.js') ?>"></script>
     <script src="<?= base_url('js/bootstrap-datepicker.min.js') ?>"></script>
-    <script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
-    <script src="<?= base_url('js/popper.min.js') ?>"></script>
     <script src="<?= base_url('js/cdb.min.js') ?>"></script>
     <!-- SmoothScroll Plugin JavaScript-->
     <script src="<?= base_url('js/smoothscroll.min.js') ?>"></script>
@@ -69,6 +67,21 @@
             });
 
         });
+    </script>
+    <script type="text/javascript">
+        function showForm(){
+            var y = document.getElementById("asal_sekolah");
+            var z = document.getElementById("asal_sekolah_field");
+            var x = document.getElementById("asal_sekolah_check");
+            if (x.checked === false) {
+                y.disabled = false;
+                z.innerHTML ='';
+            } else {
+                y.disabled = true;
+                z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?php echo set_value('asal_sekolah') ?>" required></div>';
+                
+            }
+        }
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -126,6 +139,18 @@
                 }
             });
 
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                method: "POST",
+                url: "<? echo base_url('dynamic_dependent/provinsi'); ?>",
+                success: function(hasil_provinsi) {
+                    //console.log(hasil_provinsi);
+                    $("select[name=asal_sekolah]").html(hasil_provinsi);
+                }
+            });
         });
     </script>
     <script>

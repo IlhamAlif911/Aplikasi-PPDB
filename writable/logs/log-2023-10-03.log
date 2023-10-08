@@ -1,0 +1,160 @@
+CRITICAL - 2023-10-03 22:46:57 --> Undefined variable: html3
+in APPPATH\Controllers\User.php on line 125.
+ 1 APPPATH\Controllers\User.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: html3', 'APPPATH\\Controllers\\User.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 22:56:10 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\User.php on line 126.
+ 1 APPPATH\Controllers\User.php(126): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\User.php', 126, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 23:00:03 --> Undefined variable: daftar_nav
+in APPPATH\Views\User\navbar.php on line 33.
+ 1 APPPATH\Views\User\navbar.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: daftar_nav', 'APPPATH\\Views\\User\\navbar.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('User/navbar', null, true)
+ 5 APPPATH\Views\User\index.php(17): CodeIgniter\View\View->include('User/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('login', [], true)
+10 APPPATH\Controllers\User.php(138): view('login', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->login()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:21:59 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:22:56 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 13.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(103): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:23:28 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:24:00 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:26:14 --> Trying to get property 'foto' of non-object
+in APPPATH\Views\Admin\dashboard_siswa.php on line 13.
+ 1 APPPATH\Views\Admin\dashboard_siswa.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto\' of non-object', 'APPPATH\\Views\\Admin\\dashboard_siswa.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard_siswa', [], true)
+ 5 APPPATH\Controllers\Admin.php(103): view('Admin/dashboard_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard_siswa()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:33:55 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:34:23 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 00:55:38 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 01:14:51 --> Undefined variable: pendaftar
+in APPPATH\Controllers\Admin.php on line 223.
+ 1 APPPATH\Controllers\Admin.php(223): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pendaftar', 'APPPATH\\Controllers\\Admin.php', 223, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 01:15:04 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pembayaran.php on line 233.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(233): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 233, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(228): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 01:15:21 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pembayaran.php on line 233.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(233): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 233, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(228): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 01:15:44 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\data_pembayaran.php on line 233.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(233): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 233, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(228): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-03 01:31:34 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Admin\data_pembayaran.php on line 235.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 4 APPPATH\Controllers\Admin.php(229): view('Admin/data_pembayaran', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

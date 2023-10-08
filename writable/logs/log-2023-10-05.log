@@ -1,0 +1,65 @@
+CRITICAL - 2023-10-05 23:44:06 --> syntax error, unexpected ';', expecting ')'
+in APPPATH\Controllers\Worksheet.php on line 118.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Worksheet.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Worksheet')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Worksheet')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Worksheet')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Worksheet', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-05 23:44:38 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...], false)
+ 6 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 APPPATH\Controllers\Worksheet.php(118): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export_diterima('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-05 23:46:23 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_pendaftar`
+JOIN `pendaftaran` ON `pendaftaran`.`id_pendaftar` = `data_pendaftar`.`id`
+WHERE `pendaftaran`.`tahap` = :pendaftaran.tahap:
+AND `data_pendaftar`.`status_penerimaan` = :data_pendaftar.status_penerimaan:', [...], false)
+ 6 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 APPPATH\Controllers\Worksheet.php(118): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export_diterima('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

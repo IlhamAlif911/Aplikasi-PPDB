@@ -63,9 +63,9 @@
             <div class="card-body">
               <h5 class="card-title">Mengisi Formulir</h5>
               <p class="card-text">Calon siswa mengisi formulir dan mengupload berkas sesuai syarat dengan benar dan lengkap.</p>
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <?= $isi_jalurbtn?>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -74,9 +74,9 @@
             <div class="card-body border-white">
               <h5 class="card-title">Menunggu Pengumuman</h5>
               <p class="card-text">Silakan untuk mengecek status pendaftaran pada link berikut. Isikan nama lengkap dan nomor pendaftaran.</p>
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('cek-data') ?>" class="btn btn-light">Cek Disini</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -85,9 +85,9 @@
             <div class="card-body">
               <h5 class="card-title">Daftar Ulang</h5>
               <p class="card-text">Apabila calon siswa diterima, lakukan pendaftaran ulang. Calon siswa login ke dalam aplikasi sesuai dengan nomor pendaftaran dan password yang sudah terdaftar sebelumnya, pastikan data yang dimasukkan benar dan lengkap.</p>
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('login') ?>" class="btn btn-light">Klik Disini</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -96,9 +96,9 @@
             <div class="card-body">
               <h5 class="card-title">Melakukan Pembayaran</h5>
               <p class="card-text">Setelah melakukan daftar ulang, calon siswa menyelesaikan pembayaran yang tertera pada invoice. Setelah pembayaran terkirim, lakukan konfirmasi pembayaran dengan login terlebih dahulu maupun kepada penyelenggara PPDB.</p>
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('login') ?>" class="btn btn-light">Klik Disini</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -107,9 +107,9 @@
             <div class="card-body">
               <h5 class="card-title">Verifikasi Admin</h5>
               <p class="card-text">Calon siswa yang sudah menyelesaikan tahap pendaftaran akan diverifikasi oleh admin selama 3x24 jam. Untuk cek status pendaftaran klik link di bawah ini.</p>
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('cek-data') ?>" class="btn btn-light">Cek Disini</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

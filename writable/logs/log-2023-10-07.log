@@ -1,0 +1,894 @@
+CRITICAL - 2023-10-07 08:47:41 --> Trying to get property 'id' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 56.
+ 1 APPPATH\Views\Admin\dashboard.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 56, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 08:49:10 --> Trying to get property 'nama_periode' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 54.
+ 1 APPPATH\Views\Admin\dashboard.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_periode\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 54, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 09:39:20 --> Undefined variable: state3
+in APPPATH\Controllers\Admin.php on line 35.
+ 1 APPPATH\Controllers\Admin.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: state3', 'APPPATH\\Controllers\\Admin.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 11:03:06 --> syntax error, unexpected 'foreach' (T_FOREACH)
+in APPPATH\Controllers\Worksheet.php on line 49.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Worksheet.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Worksheet')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Worksheet')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Worksheet')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Worksheet', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 11:20:56 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 11:20:56 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('12')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 11:22:00 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 11:22:00 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('12')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 11:22:20 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 11:22:20 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('12')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 11:34:03 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 11:34:03 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('12')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 12:52:10 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 12:52:11 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 12:53:32 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 12:53:32 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 12:53:42 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 12:53:42 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 12:55:59 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 12:55:59 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:04:51 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:04:51 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:06:22 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:06:22 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:06:44 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:06:44 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:08:43 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:08:43 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:08:57 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:08:57 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:11:34 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:11:34 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:13:10 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:13:10 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:25:33 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:25:33 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:25:41 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:25:41 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:52:23 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:52:23 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 13:53:36 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2023-10-07 13:53:36 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(271): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:25:33 --> Undefined variable: day_wise
+in APPPATH\Views\Admin\index.php on line 70.
+ 1 APPPATH\Views\Admin\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: day_wise', 'APPPATH\\Views\\Admin\\index.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 6 APPPATH\Controllers\Admin.php(160): view('Admin/data_pendaftar', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:25:54 --> Undefined variable: day_wise
+in APPPATH\Views\Admin\index.php on line 70.
+ 1 APPPATH\Views\Admin\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: day_wise', 'APPPATH\\Views\\Admin\\index.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pendaftar', [], true)
+ 6 APPPATH\Controllers\Admin.php(160): view('Admin/data_pendaftar', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('9')
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:26:01 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\Admin.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:31:49 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\GoogleCharts.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\GoogleCharts->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoogleCharts))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:33:03 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\GoogleCharts.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\GoogleCharts->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoogleCharts))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 15:35:37 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\GoogleCharts.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\GoogleCharts->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoogleCharts))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:09:25 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\GoogleCharts.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\GoogleCharts->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoogleCharts))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:16:01 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::query()
+in APPPATH\Controllers\GoogleCharts.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\GoogleCharts->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GoogleCharts))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:53:48 --> syntax error, unexpected '<'
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:54:21 --> syntax error, unexpected '<'
+in APPPATH\Controllers\Admin.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:54:33 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:56:25 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:56:36 --> Array to string conversion
+in APPPATH\Views\Admin\dashboard.php on line 11.
+ 1 APPPATH\Views\Admin\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\Admin\\dashboard.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(85): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:56:51 --> Undefined variable: day_wise
+in APPPATH\Views\Admin\index.php on line 70.
+ 1 APPPATH\Views\Admin\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: day_wise', 'APPPATH\\Views\\Admin\\index.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 6 APPPATH\Controllers\Admin.php(85): view('Admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 16:58:24 --> Undefined variable: day_wise
+in APPPATH\Views\Admin\index.php on line 70.
+ 1 APPPATH\Views\Admin\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: day_wise', 'APPPATH\\Views\\Admin\\index.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/index.php', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 6 APPPATH\Controllers\Admin.php(85): view('Admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:00:14 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 262.
+ 1 APPPATH\Controllers\Worksheet.php(262): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 262, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:11:29 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:18:24 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:18:43 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:18:54 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:22:50 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:31:32 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:42:59 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 17:50:27 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:32:45 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:33:38 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 259.
+ 1 APPPATH\Controllers\Worksheet.php(259): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 259, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:38:48 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 262.
+ 1 APPPATH\Controllers\Worksheet.php(262): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 262, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:39:17 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 262.
+ 1 APPPATH\Controllers\Worksheet.php(262): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 262, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:46:29 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 267.
+ 1 APPPATH\Controllers\Worksheet.php(267): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 267, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 18:47:43 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 267.
+ 1 APPPATH\Controllers\Worksheet.php(267): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 267, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 19:05:13 --> Trying to get property 'nisn' of non-object
+in APPPATH\Controllers\Worksheet.php on line 264.
+ 1 APPPATH\Controllers\Worksheet.php(264): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nisn\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 264, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 19:09:19 --> Undefined variable: value
+in APPPATH\Controllers\Worksheet.php on line 258.
+ 1 APPPATH\Controllers\Worksheet.php(258): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: value', 'APPPATH\\Controllers\\Worksheet.php', 258, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:22:31 --> syntax error, unexpected 'as' (T_AS), expecting ')'
+in APPPATH\Controllers\Admin.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:27:37 --> syntax error, unexpected 'as' (T_AS)
+in APPPATH\Controllers\Admin.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:28:49 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:29:55 --> syntax error, unexpected 'as' (T_AS), expecting ')'
+in APPPATH\Controllers\Admin.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:30:17 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:30:35 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:30:52 --> syntax error, unexpected 'as' (T_AS)
+in APPPATH\Controllers\Admin.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:31:07 --> Call to undefined method App\Models\DataPendaftaran::count
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('count', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 23:39:14 --> Unknown column 'total' in 'field list'
+CRITICAL - 2023-10-07 23:39:14 --> Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+GROUP BY `tahap`.`id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:41:42 --> Empty statement is given for the field `Select`
+in SYSTEMPATH\Database\BaseBuilder.php on line 487.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(487): CodeIgniter\Database\Exceptions\DataException::forEmptyInputGiven('Select')
+ 2 SYSTEMPATH\Database\BaseBuilder.php(458): CodeIgniter\Database\BaseBuilder->maxMinAvgSum('ROOTPATH\\public', 'ROOTPATH\\public', 'COUNT')
+ 3 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->selectCount()
+ 4 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('selectCount', [])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:43:30 --> Undefined property: stdClass::$total
+in APPPATH\Views\Admin\dashboard.php on line 11.
+ 1 APPPATH\Views\Admin\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$total', 'APPPATH\\Views\\Admin\\dashboard.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(86): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:44:50 --> Trying to get property 'total' of non-object
+in APPPATH\Views\Admin\dashboard.php on line 11.
+ 1 APPPATH\Views\Admin\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'total\' of non-object', 'APPPATH\\Views\\Admin\\dashboard.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(86): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:46:17 --> Undefined property: stdClass::$nama_tahap
+in APPPATH\Views\Admin\dashboard.php on line 11.
+ 1 APPPATH\Views\Admin\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_tahap', 'APPPATH\\Views\\Admin\\dashboard.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(86): view('Admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 23:47:03 --> Unknown column 'total' in 'field list'
+CRITICAL - 2023-10-07 23:47:03 --> Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+GROUP BY `tahap`.`id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:56:04 --> syntax error, unexpected '*'
+in APPPATH\Controllers\Admin.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin')
+ 5 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 6 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 23:56:27 --> Unknown column 'pendaftaran' in 'field list'
+CRITICAL - 2023-10-07 23:56:27 --> Unknown column 'pendaftaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`pendaftaran`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`pendaftaran`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`pendaftaran`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`pendaftaran`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+GROUP BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-10-07 23:56:41 --> Unknown column 'total' in 'field list'
+CRITICAL - 2023-10-07 23:56:41 --> Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`total`) AS `total`
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+GROUP BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-07 23:57:58 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::selectCount() must be of the type string, array given, called in F:\xampp\htdocs\ppdbv2\system\Model.php on line 771
+in SYSTEMPATH\Database\BaseBuilder.php on line 456.
+ 1 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->selectCount('*', [...])
+ 2 APPPATH\Controllers\Admin.php(47): CodeIgniter\Model->__call('selectCount', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

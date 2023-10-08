@@ -57,6 +57,10 @@
                         <i class='bx bxs-user nav_icon'></i>
                         <span class="nav_name">Akun</span>
                     </a>
+                    <a href="<?= site_url('data-sekolah') ?>" class="nav_link <?php if ($page == 'sekolah') echo 'active' ?>">
+                        <i class='bx bxs-school nav_icon'></i>
+                        <span class="nav_name">Data Sekolah</span>
+                    </a>
                     <a href="<?= site_url('kategori-kode') ?>" class="nav_link <?php if ($page == 'kategori') echo 'active' ?>">
                         <i class='bx bx-code nav_icon'></i>
                         <span class="nav_name">Kode Opsi</span>

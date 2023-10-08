@@ -26,15 +26,17 @@ class Home extends BaseController
         $data['agenda'] = $agenda->findAll();
         $date = date('Y-m-d');
 
-        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date, 'status' => 'aktif'])->first();
+        
         if (!$data_tahap) {
             $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->orderBy('id', 'DESC')->first();
             $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
             $data['daftar_nav'] = $html3;
-            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+            $data['jalur'] = $jalur->findAll();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
             $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
@@ -68,7 +70,7 @@ class Home extends BaseController
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
-            $data['daftar_nav'] = $html3;
+            
             $data['jalur'] = $jalur->where('id_tahap',$id)->findall();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';

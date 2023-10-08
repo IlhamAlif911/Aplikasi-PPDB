@@ -1,0 +1,21 @@
+CRITICAL - 2023-10-06 11:34:44 --> syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ','
+in APPPATH\Views\User\index.php on line 78.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/formulir_pendaftaran_zonasi', [], true)
+ 4 APPPATH\Controllers\User.php(262): view('User/formulir_pendaftaran_zonasi', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->formulir_pendaftaran('20')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-06 22:46:47 --> syntax error, unexpected 'count' (T_STRING), expecting ';' or ','
+in APPPATH\Views\Admin\dashboard.php on line 9.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/dashboard', [], true)
+ 3 APPPATH\Controllers\Admin.php(65): view('Admin/dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

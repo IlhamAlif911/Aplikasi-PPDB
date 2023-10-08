@@ -182,15 +182,16 @@
     </div>
 
     <div class="row mb-3">
-      <label for="NoHP" class="col-sm-2 col-form-label">No. HP</label>
+      <label for="NoHP" class="col-sm-2 col-form-label">No. HP<span class="text-danger">*</span></label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="nomor_hp" name="nomor_hp" value="<?= $pendaftar->nomor_hp ?>" maxlength="20">
       </div>
     </div>
     <div class="row mb-3">
-      <label for="Email" class="col-sm-2 col-form-label">Email<span class="text-danger">*</span></label>
+      <label for="Email" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="email" name="email" value="<?= $pendaftar->email ?>" maxlength="50" disabled>
+        <input type="email" class="form-control" id="email" name="email" value="<?= $pendaftar->email ?>" maxlength="50" hidden>
       </div>
     </div>
     <h4 class="mt-3">Data Orang Tua</h4>
@@ -360,14 +361,35 @@
       </div>
     </div>
     <h5 class="mt-3 border-top pt-3 text-start">Data Registrasi</h5>
-    <div class="row mb-3">
-      <label for="AsalSekolah" class="col-sm-2 col-form-label">Asal Sekolah<span class="text-danger">*</span></label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" value="<?= $pendaftar->asal_sekolah ?>" maxlength="30" required>
-      </div>
+    <div class="row mb-3" id="asal_sekolah_fieldselect">
+       <label for="AsalSekolah" class="col-sm-2 col-form-label">Asal Sekolah<span class="text-danger">*</span></label>
+       <div class="col-sm-10" >
+          <select class="form-select" aria-label="Default select example" name="asal_sekolah" id="asal_sekolah" required>
+             <?php
+              foreach ($sekolah as $row) { 
+                $stat = ($pendaftar->asal_sekolah == $row->nama_sekolah) ? 'selected' : '';
+                echo '<option value="' . $row->nama_sekolah . '" ' . $stat . '>' . $row->nama_sekolah . '</option>';
+              }
+              ?>
+          </select>
+       </div>
+    </div>
+    <div class="row" id="asal_sekolah_field">
+       
+    </div>
+    <div class="row mb-3 text-left">
+       <label for="asal_sekolah_check" class="col-sm-2 col-form-label"></label>
+       <div class="col-sm-4">
+        <div class="form-check form-switch">
+           <input class="form-check-input" type="checkbox" role="switch" value="on" id="asal_sekolah_check" name="  asal_sekolah_check" onclick="showForm()" <?php echo ($pendaftar->type_asal_sekolah == 'on') ? 'checked' : ''; ?>>
+           <label class="form-check-label" for="asal_sekolah_check">
+            <span class="text-danger">*</span>Aktifkan Jika Asal Sekolah Dari Luar Cilacap
+           </label>
+        </div>
+       </div>
     </div>
     <div class="row mb-3">
-      <label for="Jurusan" class="col-sm-2 col-form-label">Jurusan/Keahlian</label>
+      <label for="jurusan" class="col-sm-2 col-form-label">Jurusan/Keahlian</label>
       <div class="col-sm-10">
         <select class="form-select" aria-label="Default select example" name="jurusan" id="jurusan" required>
           <?php
@@ -379,8 +401,21 @@
         </select>
       </div>
     </div>
+    <div class="row mb-3">
+      <label for="Jurusan" class="col-sm-2 col-form-label"></label>
+      <div class="col-sm-10">
+        <select class="form-select" aria-label="Default select example" name="jurusan2" id="jurusan2" required>
+          <?php
+          foreach ($jurusan as $row) { 
+            $stat = ($pendaftar->jurusan2 == $row->id) ? 'selected' : '';
+            echo '<option value="' . $row->id . '" ' . $stat . '>' . $row->nama_jurusan . '</option>';
+          }
+          ?>
+        </select>
+      </div>
+    </div>
     <div class="d-flex justify-content-end mb-3">
-      <a href="<?= site_url('data-pendaftar/' . $pendaftar->jalur) ?>" name="simpan" id="simpan" class="btn btn-secondary mt-3 me-2">Batalkan</a>
+      <a href="<?= site_url('data-pendaftar/' . $pendaftar->tahap) ?>" name="simpan" id="simpan" class="btn btn-secondary mt-3 me-2">Batalkan</a>
       <a class="btn btn-primary mt-3 me-2" data-bs-toggle="modal" data-bs-target="#alertModalEdit">Simpan</a>
     </div>
     <div class="modal fade" id="alertModalEdit" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
@@ -404,6 +439,33 @@
 
 
 </div>
-
+<script type="text/javascript">
+  function showForm(){
+      var y = document.getElementById("asal_sekolah");
+      var z = document.getElementById("asal_sekolah_field");
+      var x = document.getElementById("asal_sekolah_check");
+      if (x.checked === false) {
+          y.disabled = false;
+          z.innerHTML ='';
+      } else {
+          y.disabled = true;
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah ?>" required></div>';
+          
+      }
+  }
+  function showInput(){
+      var y = document.getElementById("asal_sekolah");
+      var z = document.getElementById("asal_sekolah_field");
+      var x = document.getElementById("asal_sekolah_check");
+      if (x.checked === false) {
+          y.disabled = false;
+          z.innerHTML ='';
+      } else {
+          y.disabled = true;
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah ?>" required></div>';
+          
+      }
+  }
+</script>
 
 <?= $this->endSection() ?>

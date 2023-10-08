@@ -21,7 +21,7 @@
             <?php endif ?>
             <form method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/masuk">
                 <div class="form-outline mb-4">
-                    <input type="text" id="akun" name="akun" class="form-control form-control-lg" required />
+                    <input type="text" id="akun" name="akun" class="form-control form-control-lg" value="<?= set_value('akun')?>" required />
                     <label class="form-label" for="form2Example17">Masukkan e-mail/nomor pendaftaran</label>
                 </div>
                 <div class="form-outline mb-4">

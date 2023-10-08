@@ -1,0 +1,11 @@
+CRITICAL - 2023-09-30 09:39:03 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Validation\Validation.php on line 25.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-30 10:36:09 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 APPPATH\Controllers\Admin.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Admin.php', 133, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pendaftar('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

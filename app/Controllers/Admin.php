@@ -15,6 +15,10 @@ use App\Models\DataPendaftaran;
 use App\Models\DataAgenda;
 use App\Models\Provinces;
 use App\Models\Periode;
+use App\Models\DataSekolah;
+use App\Models\Pendaftaran;
+
+use CodeIgniter\Database\RawSql;
 
 class Admin extends Base
 {    
@@ -25,27 +29,52 @@ class Admin extends Base
             session()->setFlashdata('error', 'Anda Belum Login !');
             return redirect()->to('/login');
         }
+        // <pre> 
+        //     function tampil_kota(){ 
+        //         $this->db->select('id, kota, provinsi, COUNT(provinsi) as total'); 
+        //         $this->db->group_by('provinsi'); 
+        //         $this->db->order_by('total', 'desc'); 
+        //         $hasil = $this->db->get('tablename'); 
+        //         return $hasil; 
+        //     } 
+        // </pre>
+
+        // <pre> function index(){ 
+        //     $b['data'] = $this->m_model->tampil_kota(); 
+        //     $this-->load->view('view_tampil',$b); 
+        // } 
+        // </pre>
         $pendaftaran = new DataPendaftaran();
+        $_pendaftar = new Pendaftaran();
         $tahap = new DataTahap();
-        $data['state'] = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',$this->request->getVar('id'))->findAll();
-        $state3 = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',$this->request->getVar('id'))->countAll();
-        $state2 = $tahap->where('id_periode', $this->request->getVar('id'))->findAll();
+        $data['state'] = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',2)->findAll();
+        $data['query'] = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', 2)->groupBy('id')->findAll();
+        
+        $data['query_l'] = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, tahap.id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->join('data_pendaftar', 'data_pendaftar.id = pendaftaran.id_pendaftar')->where('pendaftaran.periode', 2)->where('data_pendaftar.jenis_kelamin','l')->groupBy('tahap.id')->findAll();
+        $data['query_p'] = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, tahap.id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->join('data_pendaftar', 'data_pendaftar.id = pendaftaran.id_pendaftar')->where('pendaftaran.periode', 2)->where('data_pendaftar.jenis_kelamin','p')->groupBy('tahap.id')->findAll();
+        // $data['state3'] = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->groupBy('id')->where('pendaftaran.periode',2)->selectCount('total')->findAll();
+        $data['state2'] = $tahap->where('id_periode', 2)->orderBy('id', 'ASC')->findAll();
         $state1 = $pendaftaran->findAll();
-        $statedata = ['jumlah_pendaftar' => $state3];
+        
         $stateModel = new Periode();
-        $data['statedata'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', $this->request->getVar('id'))->findAll();
+        $data['statedata'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', 2)->findAll();
+        $data['jml_'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', 2)->findAll();
+        // SELECT pendaftaran.id_pendaftar, tahap.nama_tahap, id, COUNT( * ) as total FROM pendaftaran JOIN tahap ON tahap.id = pendaftaran.tahap where pendaftaran.periode = 2 GROUP BY id
+        // $db = \Config\Database::connect();
+        // // $builder->select('(SELECT SUM(payments.amount) FROM payments WHERE payments.invoice_id=4) AS amount_paid', false);
+        // // $query = $builder->get();
+        // $builder = $db->table('pendaftaran');
+            
+        
+
         // $periode = new DataPeriode();
+
         $tahap = new DataTahap();
         $pendaftar = new DataPendaftar();
         $data['pendaftar_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->findAll();
         $data['pendaftar_laki_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->where('data_pendaftar.jenis_kelamin','l')->findAll();
         $data['pendaftar_p_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->where('data_pendaftar.jenis_kelamin','p')->findAll();
-        $data['pendaftar_afirmasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '13')->findAll();
-        $data['pendaftar_laki_afirmasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '13')->where('data_pendaftar.jenis_kelamin','l')->findAll();
-        $data['pendaftar_p_afirmasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '13')->where('data_pendaftar.jenis_kelamin','p')->findAll();
-        $data['pendaftar_prestasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '14')->findAll();
-        $data['pendaftar_laki_prestasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '14')->where('data_pendaftar.jenis_kelamin','l')->findAll();
-        $data['pendaftar_p_prestasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '14')->where('data_pendaftar.jenis_kelamin','p')->findAll();
+        
         
         $data['pendaftar'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->findAll();
         $data['pendaftar_laki'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('data_pendaftar.jenis_kelamin','l')->findAll();
@@ -57,12 +86,15 @@ class Admin extends Base
         // $data['periode'] = $periode->where('status', 'aktif')->first();
         // $data['periode2'] = $periode->findAll();
         // $data['periode1'] = $periode->where('status', 'tidak_aktif')->findAll();
-        
+
+
         $data['page'] = 'dashboard';
         $data['title'] = 'Dashboard';
 
         $periodeModel = new Periode();
         $data['periode'] = $periodeModel->orderBy('id', 'ASC')->findAll();
+        $data['periode_get'] = $periodeModel->orderBy('id', 'ASC')->where('status','tidak_aktif')->findAll();
+        $data['get_periode'] = $periodeModel->where('status','aktif')->first();
         $countryModel = new Provinces();
         $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
         
@@ -129,18 +161,23 @@ class Admin extends Base
             $id_pendaftar = $data_pendaftar->id;
         } else $id_pendaftar = '0';
 
-        $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur1']->id . '000' . $id_pendaftar;
+        if ($data['jalur1']) {
+            $data['nomor_pendaftar'] = $data['periode']->id . $data['tahap']->id . $data['jalur1']->id . '000' . $id_pendaftar;
+            $data['pendaftar'] = $pendaftar->join('user', 'user.id_ref = data_pendaftar.id')->findAll();
+            $id_pendaftar = $pembayaran->join('data_pendaftar', 'data_pendaftar.id = pembayaran.id_pendaftar')->where('pembayaran.id_pendaftar',$id)->first();
+            $data['id'] = $id_pendaftar;
+            
+            $data['jalur'] = $jalur->where('id_tahap',$id)->findAll();
+        }
+        
+        
         // end
 
         $data['stat']=$this->codeAll('STATUS PENERIMAAN');
 
         $data['pendaftaran'] = $pendaftaran->findAll();
 
-        $data['pendaftar'] = $pendaftar->join('user', 'user.id_ref = data_pendaftar.id')->findAll();
-        $id_pendaftar = $pembayaran->join('data_pendaftar', 'data_pendaftar.id = pembayaran.id_pendaftar')->where('pembayaran.id_pendaftar',$id)->first();
-        $data['id'] = $id_pendaftar;
         
-        $data['jalur'] = $jalur->where('id_tahap',$id)->findAll();
         
         $data['page'] = 'pendaftar';
         $data['title'] = 'Data Pendaftar';
@@ -213,6 +250,9 @@ class Admin extends Base
         $user = new Users();
         $data['user'] = $user->findAll();
         $data['pembayaran'] = $pembayaran->findAll();
+        $stat = $this->codeWithName('Daftar Ulang Berhasil');
+        // $data['data_pendaftar'] = $pendaftar->where('status_penerimaan', $stat->id)->findAll();
+        $data['data_pendaftar'] = $user->join('data_pendaftar', 'data_pendaftar.id = user.id_ref')->where('data_pendaftar.status_penerimaan',$stat->id)->findAll();
         $data['page'] = 'pembayaran';
         $data['title'] = 'Data Pembayaran';
 
@@ -245,12 +285,28 @@ class Admin extends Base
         }
         $periode = new DataPeriode();
 
-        $data['page'] = 'tahap';
+        $data['page'] = 'periode';
         $data['title'] = 'Periode';
 
 		$data['periode'] = $periode->findall();
         
         return view('Admin/data_periode',$data);
+    }
+    public function datasekolah()
+    {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+        $sekolah = new DataSekolah();
+
+        $data['page'] = 'sekolah';
+        $data['title'] = 'Data Sekolah';
+
+        $data['sekolah'] = $sekolah->findall();
+        
+        return view('Admin/data_sekolah',$data);
     }
     public function tahap()
     {
@@ -375,6 +431,43 @@ class Admin extends Base
         $data['title'] = 'Data Agenda';
 
         return view('Admin/data_agenda', $data);
+    }
+    public function update_sekolah($id)
+    {
+        $sekolah = new DataSekolah();
+
+        if (!$this->validate([
+            'nama_sekolah' => [
+                'rules' => 'required|max_length[255]',
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'max_length' => '{field} Maksimal 255 Karakter',
+                ]
+            ],
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        } else {
+            session()->setFlashdata('alert', 'Data berhasil diedit');
+        }
+        
+        $sekolah->update($id, [
+            'nama_sekolah' => $this->request->getVar('nama_sekolah'),
+            
+        ]);
+
+        return redirect()->to('data-sekolah');
+    }
+
+    public function delete_sekolah($id)
+    {
+        $sekolah = new DataSekolah();
+
+        $sekolah->delete($id);
+
+        session()->setFlashdata('error', 'Data berhasil dihapus');
+
+        return redirect()->to('data-sekolah');
     }
     
 }

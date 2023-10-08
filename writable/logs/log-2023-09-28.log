@@ -1,0 +1,208 @@
+CRITICAL - 2023-09-28 00:08:16 --> Undefined variable: periode
+in APPPATH\Views\Admin\data_sekolah.php on line 28.
+ 1 APPPATH\Views\Admin\data_sekolah.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: periode', 'APPPATH\\Views\\Admin\\data_sekolah.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_sekolah', [], true)
+ 5 APPPATH\Controllers\Admin.php(270): view('Admin/data_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->datasekolah()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 00:15:52 --> Undefined variable: kategori
+in APPPATH\Views\Admin\data_sekolah.php on line 96.
+ 1 APPPATH\Views\Admin\data_sekolah.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kategori', 'APPPATH\\Views\\Admin\\data_sekolah.php', 96, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_sekolah', [], true)
+ 5 APPPATH\Controllers\Admin.php(270): view('Admin/data_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->datasekolah()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 00:26:15 --> Too few arguments to function App\Controllers\WorksheetSekolah::import(), 0 passed in F:\xampp\htdocs\ppdbv2\system\CodeIgniter.php on line 896 and exactly 1 expected
+in APPPATH\Controllers\WorksheetSekolah.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\WorksheetSekolah->import()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorksheetSekolah))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 00:26:48 --> Undefined property: stdClass::$nama_opsi
+in APPPATH\Views\Admin\data_sekolah.php on line 76.
+ 1 APPPATH\Views\Admin\data_sekolah.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_opsi', 'APPPATH\\Views\\Admin\\data_sekolah.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_sekolah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_sekolah', [], true)
+ 5 APPPATH\Controllers\Admin.php(270): view('Admin/data_sekolah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->datasekolah()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:42:54 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:42:54 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:44:40 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:44:40 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSN 1 CILACA\'
+WHERE `data_sekolah`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSN 1 CILACA\'
+WHERE `data_sekolah`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSN 1 CILACA\'
+WHERE `data_sekolah`.`id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('7', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('7')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:50:14 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:50:14 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:52:30 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:52:30 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:52:47 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:52:47 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 00:55:46 --> Undefined variable: id
+in APPPATH\Controllers\Admin.php on line 415.
+ 1 APPPATH\Controllers\Admin.php(415): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id', 'APPPATH\\Controllers\\Admin.php', 415, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 00:56:14 --> Unknown column 'data_sekolah.id' in 'where clause'
+CRITICAL - 2023-09-28 00:56:14 --> Unknown column 'data_sekolah.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `data_sekolah` SET `nama_sekolah` = \'MTSS SYI`ARUL HUDA DAYEUHLUH\'
+WHERE `data_sekolah`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2046): CodeIgniter\Database\BaseConnection->query('UPDATE `data_sekolah` SET `nama_sekolah` = :nama_sekolah:
+WHERE `data_sekolah`.`id` IN :data_sekolah.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(337): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Admin.php(416): CodeIgniter\Model->update('1', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->update_sekolah('1')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 01:01:05 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2334.
+ 1 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 3 APPPATH\Controllers\Admin.php(427): CodeIgniter\BaseModel->delete(null)
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->delete_sekolah(null)
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-09-28 01:01:39 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2023-09-28 01:01:39 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `data_sekolah`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `data_sekolah`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `data_sekolah`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2358): CodeIgniter\Database\BaseConnection->query('DELETE FROM `data_sekolah`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\Admin.php(427): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->delete_sekolah('1')
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-28 10:19:04 --> Trying to get property 'status_penerimaan' of non-object
+in APPPATH\Controllers\User.php on line 188.
+ 1 APPPATH\Controllers\User.php(188): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'status_penerimaan\' of non-object', 'APPPATH\\Controllers\\User.php', 188, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\User->pendaftaran_berhasil('49')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

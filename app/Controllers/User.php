@@ -11,6 +11,7 @@ use App\Models\Users;
 use App\Models\Rapot;
 use App\Models\DataJurusan;
 use App\Models\DataAgenda;
+use App\Models\DataSekolah;
 
 class User extends Base
 {
@@ -59,8 +60,9 @@ class User extends Base
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
             $data['daftar_nav'] = $html3;
-            $data['jalur'] = $jalur->where('id_tahap',$id)->findall();
+            $data['jalur'] = $jalur->findAll();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
             $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
@@ -121,8 +123,9 @@ class User extends Base
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
             $data['daftar_nav'] = $html3;
-            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+            $data['jalur'] = $jalur->findAll();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
             $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
@@ -153,6 +156,7 @@ class User extends Base
         $jalur = new DataJalur();
         $agenda = new DataAgenda();
         $pendaftar = new DataPendaftar();
+
         $user = new Users();
         $data['page'] = 'Beranda';
         $data['periode'] = $periode->where('status', 'aktif')->first();
@@ -167,8 +171,9 @@ class User extends Base
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
             $data['daftar_nav'] = $html3;
-            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+            $data['jalur'] = $jalur->findAll();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
             $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
@@ -199,6 +204,7 @@ class User extends Base
         $agenda = new DataAgenda();
         $pendaftar = new DataPendaftar();
         $countryModel = new Provinces();
+        $sekolah = new DataSekolah();
         $data['periode1'] = $periode->where('status', 'aktif')->first();
         $date = date('Y-m-d');
 
@@ -208,7 +214,10 @@ class User extends Base
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
-            $data['daftar_nav'] = $html3;
+            // $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
+            // $data['daftar_nav'] = $html3;
+            // $data['jalur'] = $jalur->findAll();
+            
             $data['jalur'] = $jalur->where('id', $id)->first();
 
             $data['tahap'] = $tahap->where('id', $data['jalur']->id_tahap)->first();
@@ -218,6 +227,7 @@ class User extends Base
             $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
 
             $data['jurusan'] = $jurusan->findAll();
+            $data['sekolah'] = $sekolah->findAll();
         } else {
             $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
             $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
@@ -234,6 +244,7 @@ class User extends Base
             $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
 
             $data['jurusan'] = $jurusan->findAll();
+            $data['sekolah'] = $sekolah->findAll();
         }
 
         $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();

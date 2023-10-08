@@ -1,0 +1,169 @@
+ERROR - 2023-09-01 11:00:52 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-09-01 11:00:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `periode`
+WHERE `status` = :status:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:17:57 --> Undefined variable: html3
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: html3', 'APPPATH\\Controllers\\Home.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:20:07 --> Undefined variable: html3
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: html3', 'APPPATH\\Controllers\\Home.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:20:13 --> Undefined variable: html3
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: html3', 'APPPATH\\Controllers\\Home.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:20:57 --> Undefined variable: html3
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: html3', 'APPPATH\\Controllers\\Home.php', 36, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:21:21 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Home.php', 37, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:23:33 --> Undefined variable: jalur
+in APPPATH\Views\User\home.php on line 146.
+ 1 APPPATH\Views\User\home.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: jalur', 'APPPATH\\Views\\User\\home.php', 146, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/home', [], true)
+ 5 APPPATH\Controllers\Home.php(49): view('User/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:27:07 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Home.php', 37, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 11:32:59 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Home.php', 37, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:05:27 --> Undefined variable: daftar_nav
+in APPPATH\Views\User\navbar.php on line 32.
+ 1 APPPATH\Views\User\navbar.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: daftar_nav', 'APPPATH\\Views\\User\\navbar.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('User/navbar', null, true)
+ 5 APPPATH\Views\User\index.php(17): CodeIgniter\View\View->include('User/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/home', [], true)
+10 APPPATH\Controllers\Home.php(49): view('User/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:07:01 --> Undefined variable: daftar_nav
+in APPPATH\Views\User\navbar.php on line 32.
+ 1 APPPATH\Views\User\navbar.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: daftar_nav', 'APPPATH\\Views\\User\\navbar.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('User/navbar', null, true)
+ 5 APPPATH\Views\User\index.php(17): CodeIgniter\View\View->include('User/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/home', [], true)
+10 APPPATH\Controllers\Home.php(49): view('User/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:09:29 --> syntax error, unexpected '}'
+in APPPATH\Views\User\navbar.php on line 34.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('User/navbar', null, true)
+ 3 APPPATH\Views\User\index.php(17): CodeIgniter\View\View->include('User/navbar')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/home', [], true)
+ 8 APPPATH\Controllers\Home.php(49): view('User/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:10:07 --> Undefined variable: daftar_nav
+in APPPATH\Views\User\navbar.php on line 33.
+ 1 APPPATH\Views\User\navbar.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: daftar_nav', 'APPPATH\\Views\\User\\navbar.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('User/navbar', null, true)
+ 5 APPPATH\Views\User\index.php(17): CodeIgniter\View\View->include('User/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\User\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('User/index.php', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('User/home', [], true)
+10 APPPATH\Controllers\Home.php(49): view('User/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:13:22 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Home.php on line 34.
+ 1 APPPATH\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Home.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-09-01 13:15:37 --> Trying to get property 'id' of non-object
+in APPPATH\Controllers\Home.php on line 40.
+ 1 APPPATH\Controllers\Home.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Controllers\\Home.php', 40, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

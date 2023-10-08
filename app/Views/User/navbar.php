@@ -29,7 +29,10 @@
         <div class="d-flex justify-content-end" role="search">
             <?php if (session()->get('id_ref') == '') { ?>
                 <a class="btn btn-outline-primary" href="<?= site_url('login')?>">Login</a>
-                <?= $daftar_nav ?>
+                <?php if ($tahap) { ?>
+                    <?= $daftar_nav ?>
+                <?php } ?>
+                
             <?php } else { ?>
                 <?php if (session()->get('role') == '1') {?>
                     <a class="btn btn-outline-primary" href="<?= site_url('dashboard')?>">Dashboard</a>

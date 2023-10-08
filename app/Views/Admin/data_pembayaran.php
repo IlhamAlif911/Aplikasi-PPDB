@@ -78,14 +78,14 @@
                         <div class="modal-dialog modal-dialog-scrollable modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="kalenderModalLabel">Edit Periode</h5>
+                                    <h5 class="modal-title" id="kalenderModalLabel">Edit Data Pembayaran</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form class="row g-3 mt-2" method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/update-konfirmasi/<?= $k->id ?>">
                                         <div class="row mb-3">
-                                            <label for="NomorPendaftaran" class="col-3 col-form-label">Nomor Pendaftaran<span class="text-danger">*</span></label>
-                                            <div class="col-9">
+                                            <label for="NomorPendaftaran" class="col-sm-3 col-form-label">Nomor Pendaftaran<span class="text-danger">*</span></label>
+                                            <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="nomor_pendaftaran" name="nomor_pendaftaran" value="<?php foreach ($user as $u) { 
                                                     if ($u->id_ref == $k->id_pendaftar) { 
                                                         echo $u->nomor_pendaftaran;
@@ -94,8 +94,8 @@
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <label for="TanggalTransfer" class="col-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
-                                            <div class="col-9">
+                                            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
+                                            <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" value="<?= $tanggal_transfer ?>" required>
                                                     <div class="input-group-text"><i class="fa fa-calendar"></i></div>
@@ -103,27 +103,27 @@
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <label for="NamaPemilik" class="col-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
-                                            <div class="col-9">
+                                            <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
+                                            <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="nama_pemilik_rekening" name="nama_pemilik_rekening" value="<?= $k->nama_pemilik_rekening ?>" required>
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <label for="NamaBank" class="col-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
-                                            <div class="col-9">
+                                            <label for="NamaBank" class="col-sm-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
+                                            <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="nama_bank" name="nama_bank" value="<?= $k->nama_bank ?>" required>
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <label for="NominalTransfer" class="col-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
-                                            <div class="col-9">
+                                            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
+                                            <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="nominal_transfer" name="nominal_transfer" value="<?= $k->nominal_transfer ?>" required>
                                                 <span class="text-danger">Angka saja tanpa titik atau koma. Contoh : 200000</span>
                                             </div>
                                         </div>
                                         <div class="row mb-2">
-                                            <label for="BuktiTransfer" class="col-3 col-form-label">Bukti Transfer</label>
-                                            <div class="col-9">
+                                            <label for="BuktiTransfer" class="col-sm-3 col-form-label">Bukti Transfer</label>
+                                            <div class="col-sm-9">
                                                 <img id="gambar_load2" src="<?= base_url('assets/' . $k->bukti_transfer); ?>" class="img-fluid pad" />
                                                 <input type="file" class="form-control" id="bukti_transfer2" name="bukti_transfer" placeholder="Bukti Transfer">
                                             </div>
@@ -226,20 +226,26 @@
             <div class="modal-body">
                 <form class="row g-3 mt-2" method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/add-konfirmasi">
                     <div class="row mb-3">
-                        <label for="NomorPendaftaran" class="col-3 col-form-label">Nomor Pendaftaran<span class="text-danger">*</span></label>
-                        <div class="col-9">
-                            <input type="text" class="form-control" id="nomor_pendaftaran" name="nomor_pendaftaran" placeholder="Nomor Pendaftaran" required>
+                        <label for="NomorPendaftaran" class="col-sm-3 col-form-label">Nomor Pendaftaran<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
+                          <select class="form-select" aria-label="Default select example" id="nomor_pendaftaran" name="nomor_pendaftaran" required>
+                             <option selected value="">.:Pilih Nomor Pendaftaran:.</option>
+                             <?php foreach ($data_pendaftar as $row) { ?>
+                                <option value="<?= $row->nomor_pendaftaran ?>" <?= set_select('nomor_pendaftaran', $row->nomor_pendaftaran, false) ?>><?= $row->nomor_pendaftaran ?> - <?= $row->nama_lengkap ?> </option>;
+                             <?php } ?>
+                          </select>
                         </div>
                     </div>
+                    
                     <div class="row mb-2">
-                        <label for="NamaLengkap" class="col-3 col-form-label">Nama Lengkap<span class="text-danger">*</span></label>
-                        <div class="col-9">
+                        <label for="NamaLengkap" class="col-sm-3 col-form-label">Nama Lengkap<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required>
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <label for="TanggalTransfer" class="col-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
-                        <div class="col-9">
+                        <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <div class="input-group">
                                 <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" required>
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
@@ -247,29 +253,29 @@
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <label for="NamaPemilik" class="col-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
-                        <div class="col-9">
+                        <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="nama_pemilik_rekening" name="nama_pemilik_rekening" placeholder="Nama Pemilik Rekening" required>
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <label for="NamaBank" class="col-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
-                        <div class="col-9">
+                        <label for="NamaBank" class="col-sm-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="nama_bank" name="nama_bank" placeholder="Nama Bank" required>
                         </div>
                     </div>
                     <div class="row mb-2">
-                        <label for="NominalTransfer" class="col-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
-                        <div class="col-9">
+                        <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="nominal_transfer" name="nominal_transfer" placeholder="Nominal Transfer" required>
                             <span class="text-danger">Angka saja tanpa titik atau koma. Contoh : 200000</span>
                         </div>
                     </div>
-                    <div class="row">
-                        <label for="BuktiTransfer" class="col-3 col-form-label">Bukti Transfer</label>
-                        <div class="col-9 mt-2">
+                    <div class="row mb-2">
+                        <label for="BuktiTransfer" class="col-sm-3 col-form-label">Bukti Transfer<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
                             <img id="gambar_load" width="400px">
-                            <input type="file" class="form-control" id="bukti_transfer" name="bukti_transfer" placeholder="Bukti Transfer">
+                            <input type="file" class="form-control" id="bukti_transfer" name="bukti_transfer" placeholder="Bukti Transfer" required>
                         </div>
                     </div>
                     

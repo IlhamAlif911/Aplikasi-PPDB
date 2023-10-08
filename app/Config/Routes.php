@@ -36,11 +36,13 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+    
+$routes->get('chart', 'GoogleCharts::index');
 $routes->get('formulir-pendaftaran/(:segment)', 'User::formulir_pendaftaran/$1');
 $routes->get('jalur/(:segment)', 'User::jalur/$1');
 $routes->get('tahap/(:segment)', 'User::tahap/$1');
 $routes->get('list-agenda/(:segment)', 'User::list_agenda/$1');
-$routes->get('cek', 'User::cek');
+$routes->get('cek-data', 'User::cek_data');
 $routes->post('cek-data-result', 'User::action');
 $routes->get('pendaftaran-berhasil/(:segment)', 'User::pendaftaran_berhasil/$1');
 $routes->post('dynamic_dependent/action', 'Dynamic_dependent::action');
@@ -59,6 +61,7 @@ $routes->get('dashboard-siswa', 'Admin::dashboard_siswa');
 $routes->get('pilih-tahap/(:segment)', 'Admin::pilih_tahap/$1');
 $routes->get('data-pendaftar/(:segment)', 'Admin::data_pendaftar/$1');
 $routes->get('export/(:segment)', 'Worksheet::export/$1');
+$routes->get('export-accepted/(:segment)', 'Worksheet::export_diterima/$1');
 $routes->post('import/(:segment)', 'Worksheet::import/$1');
 $routes->post('delete-pendaftar/(:segment)', 'Pendaftar::delete_pendaftar/$1');
 $routes->post('status-penerimaan/(:segment)', 'Pendaftar::status_penerimaan/$1');
@@ -78,6 +81,10 @@ $routes->get('data-periode', 'Admin::periode');
 $routes->post('add-periode', 'TahapSeleksi::add_periode');
 $routes->post('update-periode/(:segment)', 'TahapSeleksi::update_periode/$1');
 $routes->post('delete-periode/(:segment)', 'TahapSeleksi::delete_periode/$1');
+$routes->get('data-sekolah', 'Admin::datasekolah');
+$routes->post('update-sekolah/(:segment)', 'Admin::update_sekolah/$1');
+$routes->post('delete-sekolah/(:segment)', 'Admin::delete_sekolah/$1');
+$routes->post('import', 'WorksheetSekolah::import');
 $routes->get('data-tahap', 'Admin::tahap');
 $routes->post('add-tahap', 'TahapSeleksi::add_tahap');
 $routes->post('update-tahap/(:segment)', 'TahapSeleksi::update_tahap/$1');

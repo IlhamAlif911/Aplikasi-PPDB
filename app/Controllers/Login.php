@@ -38,22 +38,33 @@ class Login extends Base
                 } else {
                     $nama_user = 'Admin';
                 }
-                session()->set([
-                    'id' => $data_user->id,
-                    'id_ref' => $data_user->id_ref,
-                    'role' => $data_user->role,
-                    'data_pendaftar' => $data_pendaftar,
-                    
-                    'nama_user' => $nama_user,
-                    'periode' => $data_periode->id,
-                    'logged_in' => TRUE
-                ]);
+                
                 
                 if ($data_user->role == '1') {
+                    session()->set([
+                        'id' => $data_user->id,
+                        'id_ref' => $data_user->id_ref,
+                        'role' => $data_user->role,
+                        'data_pendaftar' => $data_pendaftar,
+                        
+                        'nama_user' => $nama_user,
+                        'periode' => $data_periode->id,
+                        'logged_in' => TRUE
+                    ]);
                     return redirect()->to('dashboard');
                 }
                 if ($data_user->role == '2') {
                     if ($data_pendaftar->status_penerimaan == $stat1->id || $data_pendaftar->status_penerimaan == $stat2->id || $data_pendaftar->status_penerimaan == $stat3->id || $data_pendaftar->status_penerimaan == $stat4->id) {
+                        session()->set([
+                            'id' => $data_user->id,
+                            'id_ref' => $data_user->id_ref,
+                            'role' => $data_user->role,
+                            'data_pendaftar' => $data_pendaftar,
+                            
+                            'nama_user' => $nama_user,
+                            'periode' => $data_periode->id,
+                            'logged_in' => TRUE
+                        ]);
                         return redirect()->to('dashboard-siswa');
                     }else {
                         session()->setFlashdata('error', 'Permintaan Anda Ditolak');
@@ -62,7 +73,7 @@ class Login extends Base
                 }
             } else {
                 session()->setFlashdata('error', 'E-mail/Nomor Pendaftaran atau Password Salah');
-                return redirect()->back();
+                return redirect()->back()->withInput();
             }
         } else {
             session()->setFlashdata('error', 'E-mail/Nomor Pendaftaran belum terdaftar atau belum aktif');

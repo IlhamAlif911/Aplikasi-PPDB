@@ -14,6 +14,7 @@ class Opsi extends BaseController
         $kategori = new KategoriKode();
 
         $data['page'] = 'kategori';
+        $data['title'] = 'Kategori';
 
         $data['kategori'] = $kategori->where('id',$id)->first();
 

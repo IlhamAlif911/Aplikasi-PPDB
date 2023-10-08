@@ -82,6 +82,10 @@ class Formulir extends Base
 
             $pass = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
 
+            if ($this->request->getVar('asal_sekolah_check') == '') {
+                $status = 'off';
+            } else $status = 'on';
+
             $pendaftar->insert([
                 "nik" => $this->request->getPost('nik'),
                 "nisn" => $this->request->getPost('nisn'),
@@ -101,10 +105,13 @@ class Formulir extends Base
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
                 "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "foto" => $fileName,
+                "jurusan" => $this->request->getPost('jurusan'),
+                "jurusan2" => $this->request->getPost('jurusan2'),
                 "status_penerimaan" => $status_pendaftaran->id,
-                "type_registration" => 1,
+                "type_registration" => 1
             ]);
             $pendaftar_id = $pendaftar->getInsertID();
 
