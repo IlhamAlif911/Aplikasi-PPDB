@@ -308,6 +308,13 @@ class Pendaftar extends Base
             } else {
                 $status = 'off';
             }
+            if ($this->request->getVar('asal_sekolah') == '') {
+                $results = null;
+            } else $results = $this->request->getVar('asal_sekolah');
+
+            if ($this->request->getVar('asal_sekolah_manual') == '') {
+                $results_manual = null;
+            } else $results_manual = $this->request->getVar('asal_sekolah_manual');
 
             $pendaftar->update($id, [
                 "nik" => $this->request->getPost('nik'),
@@ -327,7 +334,8 @@ class Pendaftar extends Base
                 "rt" => $this->request->getPost('rt'),
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
-                "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "asal_sekolah" => $results,
+                "asal_sekolah_manual" => $results_manual,
                 "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "jurusan" => $this->request->getPost('jurusan'),
@@ -552,6 +560,13 @@ class Pendaftar extends Base
             } else {
                 $status = 'off';
             }
+            if ($this->request->getVar('asal_sekolah') == '') {
+                $results = null;
+            } else $results = $this->request->getVar('asal_sekolah');
+
+            if ($this->request->getVar('asal_sekolah_manual') == '') {
+                $results_manual = null;
+            } else $results_manual = $this->request->getVar('asal_sekolah_manual');
 
 
             $pendaftar->update($id, [
@@ -572,7 +587,8 @@ class Pendaftar extends Base
                 "rt" => $this->request->getPost('rt'),
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
-                "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "asal_sekolah" => $results,
+                "asal_sekolah_manual" => $results_manual,
                 "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "jurusan" => $this->request->getPost('jurusan'),

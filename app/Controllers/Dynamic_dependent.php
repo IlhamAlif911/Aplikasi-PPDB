@@ -16,6 +16,7 @@ use App\Models\Pendaftaran;
 use App\Models\Users;
 use App\Models\DataTahap;
 use App\Models\DataJalur;
+use App\Models\DataSekolah;
 
 class Dynamic_dependent extends Base
 {
@@ -93,6 +94,13 @@ class Dynamic_dependent extends Base
 				$stateModel = new DataJalur();
 
 				$statedata = $stateModel->where('id_tahap', $this->request->getVar('prov_id'))->findAll();
+
+				echo json_encode($statedata);
+			}
+			if ($action == 'get_sekolah') {
+				$stateModel = new DataSekolah();
+
+				$statedata = $stateModel->orderBy('id','ASC')->findAll();
 
 				echo json_encode($statedata);
 			}

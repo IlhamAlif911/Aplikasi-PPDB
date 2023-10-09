@@ -8,6 +8,6 @@ class DataPendaftar extends Model
     protected $primaryKey = 'id';
     protected $returnType = "object";
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id','nama_lengkap','nisn', 'nik','tempat_lahir','tanggal_lahir','jenis_kelamin','agama','berkebutuhan_khusus','alamat','kelurahan','kecamatan','kabupaten','provinsi','kode_pos','rt','rw','nomor_hp','email','asal_sekolah','type_asal_sekolah','status_penerimaan','foto','jurusan','jurusan2','type_registration'];
+    protected $allowedFields = ['id','nama_lengkap','nisn', 'nik','tempat_lahir','tanggal_lahir','jenis_kelamin','agama','berkebutuhan_khusus','alamat','kelurahan','kecamatan','kabupaten','provinsi','kode_pos','rt','rw','nomor_hp','email','asal_sekolah','asal_sekolah_manual','type_asal_sekolah','status_penerimaan','foto','jurusan','jurusan2','type_registration'];
  
 }

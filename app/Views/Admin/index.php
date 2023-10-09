@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SMK YPE KROYA | <?= $title ?></title>
-  <meta name="description" content="The small framework with powerful features">
+  <meta name="description" content="Aplikasi PPDB SMK YPE KROYA">
   <link rel="icon" href="<?= base_url('assets/' . 'Logo-YPE.png'); ?>" type="image/png">
   <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>" />
@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="<?= base_url('css/dataTables.bootstrap5.min.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('css/bootstrap-datepicker.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('css/custom-sidebar.css') ?>" />
+  
+  
 
   <!-- GRAFIK -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
@@ -62,6 +64,8 @@
     $('table.display').DataTable();
   } );
 </script>
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -318,6 +322,7 @@
   });
 
 </script>
+
 <script>
   $(document).ready(function() {
     $('#provinsi').change(function() {

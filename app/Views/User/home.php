@@ -73,7 +73,7 @@
           <div class="card border-0 bg-transparent text-center">
             <div class="card-body border-white">
               <h5 class="card-title">Menunggu Pengumuman</h5>
-              <p class="card-text">Silakan untuk mengecek status pendaftaran pada link berikut. Isikan nama lengkap dan nomor pendaftaran.</p>
+              <p class="card-text">Calon siswa menunggu untuk diverifikasi oleh admin, calon siswa dapat mengetahui status pendaftaran pada link cek data diatas.</p>
               <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('cek-data') ?>" class="btn btn-light">Cek Disini</a>
               </div> -->
@@ -106,7 +106,7 @@
           <div class="card border-0 bg-transparent text-center">
             <div class="card-body">
               <h5 class="card-title">Verifikasi Admin</h5>
-              <p class="card-text">Calon siswa yang sudah menyelesaikan tahap pendaftaran akan diverifikasi oleh admin selama 3x24 jam. Untuk cek status pendaftaran klik link di bawah ini.</p>
+              <p class="card-text">Calon siswa yang sudah menyelesaikan tahap pendaftaran akan diverifikasi oleh admin selama 3x24 jam.</p>
               <!-- <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="<?= site_url('cek-data') ?>" class="btn btn-light">Cek Disini</a>
               </div> -->

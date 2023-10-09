@@ -363,14 +363,22 @@
     <h5 class="mt-3 border-top pt-3 text-start">Data Registrasi</h5>
     <div class="row mb-3" id="asal_sekolah_fieldselect">
        <label for="AsalSekolah" class="col-sm-2 col-form-label">Asal Sekolah<span class="text-danger">*</span></label>
-       <div class="col-sm-10" >
+       <div class="col-sm-10" id="get-sekolah">
           <select class="form-select" aria-label="Default select example" name="asal_sekolah" id="asal_sekolah" required>
+             <option id="opsi_sekolah" selected value="">.:Pilih Asal Sekolah:.</option>
              <?php
               foreach ($sekolah as $row) { 
-                $stat = ($pendaftar->asal_sekolah == $row->nama_sekolah) ? 'selected' : '';
-                echo '<option value="' . $row->nama_sekolah . '" ' . $stat . '>' . $row->nama_sekolah . '</option>';
-              }
-              ?>
+                if ($pendaftar->asal_sekolah != null) { 
+                  if ($pendaftar->asal_sekolah == $row->nama_sekolah) {
+                    $stat = 'selected';
+                  }else { 
+                    $stat = '';
+                  }
+                } else { 
+                  $stat = ""; 
+                } ?>
+                  <option id="opsi_sekolah" value="<?= $row->nama_sekolah ?>" <?= $stat ?>><?= $row->nama_sekolah ?></option>
+              <?php } ?>
           </select>
        </div>
     </div>
@@ -378,11 +386,11 @@
        
     </div>
     <div class="row mb-3 text-left">
-       <label for="asal_sekolah_check" class="col-sm-2 col-form-label"></label>
+       <label for="" class="col-sm-2 col-form-label"></label>
        <div class="col-sm-4">
         <div class="form-check form-switch">
-           <input class="form-check-input" type="checkbox" role="switch" value="on" id="asal_sekolah_check" name="  asal_sekolah_check" onclick="showForm()" <?php echo ($pendaftar->type_asal_sekolah == 'on') ? 'checked' : ''; ?>>
-           <label class="form-check-label" for="asal_sekolah_check">
+           <input class="form-check-input" type="checkbox" role="switch" value="on" id="asal_sekolah_check" name="asal_sekolah_check" onclick="showForm()" <?php echo ($pendaftar->type_asal_sekolah == 'on') ? 'checked' : ''; ?>>
+           <label class="form-check-label" for="">
             <span class="text-danger">*</span>Aktifkan Jika Asal Sekolah Dari Luar Cilacap
            </label>
         </div>
@@ -442,27 +450,41 @@
 <script type="text/javascript">
   function showForm(){
       var y = document.getElementById("asal_sekolah");
+      var q = document.getElementById("opsi_sekolah");
+      var r = document.getElementById("get-sekolah");
       var z = document.getElementById("asal_sekolah_field");
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
           y.disabled = false;
           z.innerHTML ='';
       } else {
+        if (q.value == '') {
           y.disabled = true;
-          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah ?>" required></div>';
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah_manual ?>" required></div>';
+        } else {
+
+        }
+          
           
       }
   }
   function showInput(){
       var y = document.getElementById("asal_sekolah");
+      var q = document.getElementById("opsi_sekolah");
+      var r = document.getElementById("get-sekolah");
       var z = document.getElementById("asal_sekolah_field");
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
           y.disabled = false;
           z.innerHTML ='';
       } else {
+        if (q.value == '') {
           y.disabled = true;
-          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah ?>" required></div>';
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah_manual ?>" required></div>';
+        } else {
+
+        }
+          
           
       }
   }

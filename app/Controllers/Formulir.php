@@ -82,9 +82,18 @@ class Formulir extends Base
 
             $pass = password_hash($this->request->getVar('password'), PASSWORD_BCRYPT);
 
-            if ($this->request->getVar('asal_sekolah_check') == '') {
+            if ($this->request->getVar('asal_sekolah_check') != '') {
+                $status = 'on';
+            } else {
                 $status = 'off';
-            } else $status = 'on';
+            }
+            if ($this->request->getVar('asal_sekolah') == '') {
+                $results = null;
+            } else $results = $this->request->getVar('asal_sekolah');
+
+            if ($this->request->getVar('asal_sekolah_manual') == '') {
+                $results_manual = null;
+            } else $results_manual = $this->request->getVar('asal_sekolah_manual');
 
             $pendaftar->insert([
                 "nik" => $this->request->getPost('nik'),
@@ -104,7 +113,8 @@ class Formulir extends Base
                 "rt" => $this->request->getPost('rt'),
                 "rw" => $this->request->getPost('rw'),
                 "agama" => $this->request->getPost('agama'),
-                "asal_sekolah" => $this->request->getPost('asal_sekolah'),
+                "asal_sekolah" => $results,
+                "asal_sekolah_manual" => $results_manual,
                 "type_asal_sekolah" => $status,
                 "berkebutuhan_khusus" => $this->request->getPost('berkebutuhan_khusus'),
                 "foto" => $fileName,

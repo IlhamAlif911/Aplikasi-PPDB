@@ -413,11 +413,11 @@
                                        
                                     </div>
                                     <div class="row mb-3 text-left">
-                                       <label for="asal_sekolah_check" class="col-sm-2 col-form-label"></label>
+                                       <label for="" class="col-sm-2 col-form-label"></label>
                                        <div class="col-sm-4">
                                           <div class="form-check form-switch">
                                              <input class="form-check-input" type="checkbox" role="switch" value="on" name="asal_sekolah_check" id="asal_sekolah_check" onclick="showForm()">
-                                             <label class="form-check-label" for="asal_sekolah_check">
+                                             <label class="form-check-label" for="">
                                                 <span class="text-danger">*</span>Aktifkan Jika Asal Sekolah Dari Luar Cilacap
                                              </label>
                                           </div>

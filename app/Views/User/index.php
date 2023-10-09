@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>SMK YPE Kroya | <?= $page?></title>
     <link rel="icon" href="<?= base_url('assets/' . 'Logo-YPE.png'); ?>" type="image/png">
-    <meta name="description" content="The small framework with powerful features">
+    <meta name="description" content="Aplikasi PPDB SMK YPE KROYA">
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('css/bootstrap-datepicker.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>" />
@@ -78,7 +78,7 @@
                 z.innerHTML ='';
             } else {
                 y.disabled = true;
-                z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah" placeholder="Asal Sekolah" value="<?php echo set_value('asal_sekolah') ?>" required></div>';
+                z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?php echo set_value('asal_sekolah_manual') ?>" required></div>';
                 
             }
         }
@@ -153,6 +153,7 @@
             });
         });
     </script>
+    
     <script>
         $(document).ready(function() {
             $('#provinsi').change(function() {
