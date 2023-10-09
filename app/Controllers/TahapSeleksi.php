@@ -11,6 +11,11 @@ class TahapSeleksi extends Base
 {
     public function add_periode()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $tahap = new DataTahap();
@@ -44,6 +49,11 @@ class TahapSeleksi extends Base
 
     public function add_tahap()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $tahap = new DataTahap();
 
         $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
@@ -76,6 +86,11 @@ class TahapSeleksi extends Base
 
     public function add_jalur()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jalur = new DataJalur();
 
         $data_jalur = $this->request->getVar('nama_jalur');
@@ -95,6 +110,11 @@ class TahapSeleksi extends Base
 
     public function update_periode($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $data_periode = $periode->findAll();
@@ -140,6 +160,11 @@ class TahapSeleksi extends Base
 
     public function update_tahap($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $tahap = new DataTahap();
 
         $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
@@ -172,6 +197,11 @@ class TahapSeleksi extends Base
 
     public function update_jalur($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jalur = new DataJalur();
 
         if (!$this->validate([
@@ -201,6 +231,11 @@ class TahapSeleksi extends Base
 
     public function delete_periode($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
 
         $periode->delete($id);
@@ -212,6 +247,11 @@ class TahapSeleksi extends Base
 
     public function delete_tahap($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $tahap = new DataTahap();
 
         $tahap->delete($id);
@@ -223,6 +263,11 @@ class TahapSeleksi extends Base
 
     public function delete_jalur($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jalur = new DataJalur();
 
         $jalur->delete($id);

@@ -9,6 +9,11 @@ class Opsi extends BaseController
 {
     public function edit_kategori($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kode_aplikasi = new KodeAplikasi();
 
         $kategori = new KategoriKode();
@@ -25,6 +30,11 @@ class Opsi extends BaseController
 
     public function update_kategori($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kategori = new KategoriKode();
 
         $data['kategori'] = $kategori->where('id',$id)->findall();
@@ -54,6 +64,11 @@ class Opsi extends BaseController
     }
 
     public function add_kategori(){
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kategori=new KategoriKode();
 
         if (!$this->validate([
@@ -82,6 +97,11 @@ class Opsi extends BaseController
 
     public function update_opsi($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kode_aplikasi = new KodeAplikasi();
 
         $data['kode_aplikasi'] = $kode_aplikasi->where('id',$id)->first();
@@ -111,6 +131,11 @@ class Opsi extends BaseController
     }
 
     public function add_opsi($id){
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kode_aplikasi=new KodeAplikasi();
 
         if (!$this->validate([
@@ -139,6 +164,11 @@ class Opsi extends BaseController
     }
 
     public function delete_opsi($id){
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $kode_aplikasi=new KodeAplikasi();
 
         $data['kode_aplikasi']=$kode_aplikasi->where(['id'=>$id])->first();

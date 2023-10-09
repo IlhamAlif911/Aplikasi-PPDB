@@ -25,6 +25,12 @@ class Pendaftar extends Base
 {
     public function edit_profil($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+
         $reguler = $this->codeWithName('Reguler');
         $afirmasi = $this->codeWithName('Afirmasi');
         $prestasi = $this->codeWithName('Prestasi');
@@ -108,6 +114,12 @@ class Pendaftar extends Base
     }
     public function edit_ulang_profil($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+        
         $reguler = $this->codeWithName('Reguler');
         $afirmasi = $this->codeWithName('Afirmasi');
         $prestasi = $this->codeWithName('Prestasi');

@@ -10,6 +10,11 @@ class Pembayaran extends Base
 {
     public function add_konfirmasi()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pendaftar = new DataPendaftar();
 
         $pembayaran = new DataPembayaran();
@@ -105,6 +110,11 @@ class Pembayaran extends Base
 
     public function add_konfirmasi_siswa()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pendaftar = new DataPendaftar();
 
         $pembayaran = new DataPembayaran();
@@ -199,6 +209,11 @@ class Pembayaran extends Base
 
     public function update_konfirmasi($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pembayaran = new DataPembayaran();
 
         $user = new Users();
@@ -268,6 +283,11 @@ class Pembayaran extends Base
 
     public function status_pembayaran($id,$id_pendaftar)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pembayaran = new DataPembayaran();
         $pendaftar = new DataPendaftar();
         $stat = $this->codeWithName('Pembayaran Berhasil');
@@ -284,6 +304,11 @@ class Pembayaran extends Base
 
     public function delete_pembayaran($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pembayaran = new DataPembayaran();
 
         $pembayaran->delete($id);

@@ -25,6 +25,11 @@ class Worksheet extends Base
 
     public function export($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pendaftar = new DataPendaftar();
         $data_pendaftar = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.tahap', $id)->findAll();
 
@@ -123,6 +128,11 @@ class Worksheet extends Base
     }
     public function export_diterima($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $pendaftar = new DataPendaftar();
         $stat = $this->codeWithName('Pembayaran Berhasil');
         $data_pendaftar = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.tahap', $id)->where('data_pendaftar.status_penerimaan', $stat->id)->findAll();
@@ -222,6 +232,11 @@ class Worksheet extends Base
     }
     public function import($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $countryModel = new Provinces();
         $data['country'] = $countryModel->orderBy('prov_name', 'ASC')->findAll();
 

@@ -8,6 +8,11 @@ class Akun extends Base
 {
     public function add_akun()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $user = new Users();
 
         $data['user'] = $user->findall();
@@ -52,6 +57,11 @@ class Akun extends Base
     
     public function update_akun($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $user = new Users();
 
         $data['user'] = $user->where('id', $id)->first();

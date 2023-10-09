@@ -434,6 +434,11 @@ class Admin extends Base
     }
     public function update_sekolah($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $sekolah = new DataSekolah();
 
         if (!$this->validate([
@@ -461,6 +466,12 @@ class Admin extends Base
 
     public function delete_sekolah($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+
         $sekolah = new DataSekolah();
 
         $sekolah->delete($id);

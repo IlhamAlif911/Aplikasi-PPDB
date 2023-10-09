@@ -17,6 +17,11 @@ class User extends Base
 {
     public function index()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $periode = new DataPeriode();
         $data['periode'] = $periode->where('status', 'aktif')->first();
 
@@ -41,6 +46,7 @@ class User extends Base
 
     public function jalur($id)
     {
+        
         $jalur = new DataJalur();
         $tahap = new DataTahap();
         $periode = new DataPeriode();

@@ -8,6 +8,11 @@ class Jurusan extends Base
 {
     public function add_jurusan()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jurusan = new DataJurusan();
 
         if (!$this->validate([
@@ -41,6 +46,11 @@ class Jurusan extends Base
 
     public function delete_jurusan($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jurusan = new DataJurusan();
 
         $jurusan->delete($id);
@@ -52,6 +62,11 @@ class Jurusan extends Base
 
     public function update_Jurusan($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $jurusan = new DataJurusan();
         $data_jurusan = $jurusan->where(['id' => $id])->first();
 

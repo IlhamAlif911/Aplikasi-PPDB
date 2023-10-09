@@ -8,6 +8,11 @@ class Agenda extends Base
 {
     public function add_agenda()
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $agenda = new DataAgenda();
 
         $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
@@ -29,6 +34,11 @@ class Agenda extends Base
 
     public function delete_agenda($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $agenda = new DataAgenda();
 
         $agenda->delete($id);
@@ -40,6 +50,11 @@ class Agenda extends Base
 
     public function update_agenda($id)
     {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
         $agenda = new DataAgenda();
         $data_agenda = $agenda->where(['id' => $id])->first();
 
