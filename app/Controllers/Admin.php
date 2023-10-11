@@ -425,7 +425,11 @@ class Admin extends Base
             return redirect()->to('/login');
         }
         $agenda = new DataAgenda();
+        $periode = new DataPeriode();
+
         $data['agenda'] = $agenda->findAll();
+        
+        $data['periode'] = $periode->findAll();
 
         $data['page'] = 'agenda';
         $data['title'] = 'Data Agenda';

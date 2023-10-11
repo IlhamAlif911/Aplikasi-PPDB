@@ -381,7 +381,7 @@
               </select>
            </div>
           </div>
-          <div class="row" id="asal_sekolah_field">
+          <div class="row mb-2" id="asal_sekolah_field">
              
           </div>
           <div class="row mb-3 text-left">
@@ -758,7 +758,7 @@
               </select>
            </div>
           </div>
-          <div class="row" id="asal_sekolah_field">
+          <div class="row mb-2" id="asal_sekolah_field">
              
           </div>
           <div class="row mb-3 text-left">
@@ -849,7 +849,7 @@
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
           y.disabled = false;
-          z.innerHTML ='';
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="" disabled></div>';
       } else {
         if (q.value == '') {
           y.disabled = true;
@@ -869,7 +869,7 @@
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
           y.disabled = false;
-          z.innerHTML ='';
+          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="" disabled></div>';
       } else {
         if (q.value == '') {
           y.disabled = true;

@@ -1,0 +1,54 @@
+CRITICAL - 2023-10-11 02:29:06 --> syntax error, unexpected '?'
+in APPPATH\Views\Admin\profil_siswa.php on line 444.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 3 APPPATH\Controllers\Pendaftar.php(106): view('Admin/profil_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('23')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 02:29:48 --> syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting ';' or ','
+in APPPATH\Views\Admin\profil_siswa.php on line 444.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 3 APPPATH\Controllers\Pendaftar.php(106): view('Admin/profil_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('23')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 07:35:52 --> syntax error, unexpected 'opsi_sekolah' (T_STRING), expecting ';' or ','
+in APPPATH\Views\Admin\profil_siswa.php on line 444.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 3 APPPATH\Controllers\Pendaftar.php(106): view('Admin/profil_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('23')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 07:38:48 --> Undefined property: stdClass::$nama_sekolah
+in APPPATH\Views\Admin\profil_siswa.php on line 444.
+ 1 APPPATH\Views\Admin\profil_siswa.php(444): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nama_sekolah', 'APPPATH\\Views\\Admin\\profil_siswa.php', 444, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(106): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('23')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 07:48:56 --> A non-numeric value encountered
+in APPPATH\Views\Admin\profil_siswa.php on line 444.
+ 1 APPPATH\Views\Admin\profil_siswa.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\Admin\\profil_siswa.php', 444, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\profil_siswa.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/profil_siswa', [], true)
+ 5 APPPATH\Controllers\Pendaftar.php(106): view('Admin/profil_siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pendaftar->edit_profil('23')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendaftar))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

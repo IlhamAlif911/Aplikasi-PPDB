@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 
-<div class="container border-0 pt-4 pb-4 ps-0">
+<div class="container border-0 pt-4 pb-4 ps-0" >
   <div class="pb-3">
     <h3 class="border-bottom pb-3">Ubah Data Pendaftar</h3>
   </div>
@@ -361,7 +361,7 @@
       </div>
     </div>
     <h5 class="mt-3 border-top pt-3 text-start">Data Registrasi</h5>
-    <div class="row mb-3" id="asal_sekolah_fieldselect">
+    <div class="row mb-2" id="asal_sekolah_fieldselect">
        <label for="AsalSekolah" class="col-sm-2 col-form-label">Asal Sekolah<span class="text-danger">*</span></label>
        <div class="col-sm-10" id="get-sekolah">
           <select class="form-select" aria-label="Default select example" name="asal_sekolah" id="asal_sekolah" required>
@@ -375,14 +375,14 @@
                     $stat = '';
                   }
                 } else { 
-                  $stat = ""; 
+                  $stat = ''; 
                 } ?>
                   <option id="opsi_sekolah" value="<?= $row->nama_sekolah ?>" <?= $stat ?>><?= $row->nama_sekolah ?></option>
               <?php } ?>
           </select>
        </div>
     </div>
-    <div class="row" id="asal_sekolah_field">
+    <div class="row mb-2" id="asal_sekolah_field">
        
     </div>
     <div class="row mb-3 text-left">
@@ -455,15 +455,13 @@
       var z = document.getElementById("asal_sekolah_field");
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
-          y.disabled = false;
-          z.innerHTML ='';
-      } else {
-        if (q.value == '') {
-          y.disabled = true;
-          z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah_manual ?>" required></div>';
-        } else {
-
-        }
+        y.disabled = false;
+        z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="" disabled></div>';
+      } else {        
+        y.disabled = true;
+        y.value= '';
+        z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah_manual ?>" required></div>';
+        
           
           
       }
@@ -475,15 +473,13 @@
       var z = document.getElementById("asal_sekolah_field");
       var x = document.getElementById("asal_sekolah_check");
       if (x.checked === false) {
-          y.disabled = false;
-          z.innerHTML ='';
+        y.disabled = false;
+        z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="" disabled></div>';
       } else {
-        if (q.value == '') {
           y.disabled = true;
+          y.value= '';
           z.innerHTML ='<label for="AsalSekolah" class="col-sm-2 col-form-label"></label><div class="col-sm-10"><input type="text" class="form-control" name="asal_sekolah_manual" placeholder="Asal Sekolah" value="<?= $pendaftar->asal_sekolah_manual ?>" required></div>';
-        } else {
-
-        }
+        
           
           
       }

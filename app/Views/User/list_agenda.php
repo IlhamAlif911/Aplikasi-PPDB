@@ -6,7 +6,7 @@
     <div class="container">
         <div class="mt-5 mb-5">
             <h2 class="">Daftar Agenda</h2>
-            <p>Daftar Agenda PPDB 2023/2024.</p>
+            <p>Daftar Agenda PPDB Periode <b><?=$periode->nama_periode?></b>.</p>
         </div>
         <div class="card">
             <?php

@@ -268,11 +268,41 @@ class User extends Base
         return view('User/formulir_pendaftaran_zonasi', $data);
     }
     
-    public function list_agenda()
+    public function list_agenda($id)
     {
         $agenda = new DataAgenda();
         $data['agenda'] = $agenda->findAll();
         $data['page'] = "List Agenda";
+
+        $periode = new DataPeriode();
+        $tahap = new DataTahap();
+        $jurusan = new DataJurusan();
+        $jalur = new DataJalur();
+        $data['periode'] = $periode->where('status', 'aktif')->first();
+        $data['jurusan'] = $jurusan->where('status', 'aktif')->findAll();
+        $date = date('Y-m-d');
+
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date, 'status' => 'aktif'])->first();
+        
+        if (!$data_tahap) {
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->orderBy('id', 'DESC')->first();
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->findAll();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['tahap'] = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+            $data['jalur'] = $jalur->where('id_tahap', $data_tahap->id)->findAll();
+        }     
 
         return view('User/list_agenda', $data);
     }

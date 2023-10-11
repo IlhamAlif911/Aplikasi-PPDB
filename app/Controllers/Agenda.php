@@ -21,6 +21,7 @@ class Agenda extends Base
         session()->setFlashdata('alert', 'Data berhasil ditambahkan');
 
         $agenda->insert([
+            'periode_id' => $this->request->getVar('periode_id'),
             'nama_agenda' => $this->request->getVar('nama_agenda'),
             'sub_nama' => $this->request->getVar('sub_nama'),
             'keterangan' => $this->request->getVar('keterangan'),
@@ -64,6 +65,7 @@ class Agenda extends Base
         session()->setFlashdata('alert', 'Data berhasil diedit');
 
         $agenda->update($id, [
+            'periode_id' => $this->request->getVar('periode_id'),
             'nama_agenda' => $this->request->getVar('nama_agenda'),
             'sub_nama' => $this->request->getVar('sub_nama'),
             'keterangan' => $this->request->getVar('keterangan'),
