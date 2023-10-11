@@ -32,6 +32,10 @@ class Worksheet extends Base
         }
         $pendaftar = new DataPendaftar();
         $data_pendaftar = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.tahap', $id)->findAll();
+        
+        $tahap = new DataTahap;
+
+        $tahapan = $tahap->where('id', $id)->first();
 
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -55,6 +59,14 @@ class Worksheet extends Base
         $i = 1;
         foreach ($data_pendaftar as $key => $value) {
         // isi kolom 
+            if ($value->type_asal_sekolah == 'off') {
+                $asal = $value->asal_sekolah;
+            } else {
+                $asal = $value->asal_sekolah_manual;
+            }
+            
+
+
             $sheet->setCellValue('A'. $column, $i++);
             $sheet->setCellValue('B'. $column, $value->nama_lengkap);
             $sheet->setCellValue('C'. $column, $value->nisn);
@@ -65,7 +77,7 @@ class Worksheet extends Base
             $sheet->setCellValue('H'. $column, $value->alamat);
             $sheet->setCellValue('I'. $column, $value->nomor_hp);
             $sheet->setCellValue('J'. $column, $value->email);
-            $sheet->setCellValue('K'. $column, $value->asal_sekolah);
+            $sheet->setCellValue('K'. $column, $asal);
             $column++;
         }
         //style
@@ -118,7 +130,7 @@ class Worksheet extends Base
         $sheet->getColumnDimension('K')->setAutoSize(true);
 
         $writer = new Xlsx($spreadsheet);
-        $filename = date('Y-m-d-H-i-s'). '-All-Data-Pendaftar';
+        $filename = date('Y-m-d-H-i-s') .'-All Data Pendaftar-'.$tahapan->nama_tahap ;
         // auto download
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename=' . $filename . '.xlsx');
@@ -136,6 +148,10 @@ class Worksheet extends Base
         $pendaftar = new DataPendaftar();
         $stat = $this->codeWithName('Pembayaran Berhasil');
         $data_pendaftar = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.tahap', $id)->where('data_pendaftar.status_penerimaan', $stat->id)->findAll();
+        
+        $tahap = new DataTahap;
+
+        $tahapan = $tahap->where('id', $id)->first();
 
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
@@ -159,6 +175,14 @@ class Worksheet extends Base
         $i = 1;
         foreach ($data_pendaftar as $key => $value) {
         // isi kolom 
+            if ($value->type_asal_sekolah == 'off') {
+                $asal = $value->asal_sekolah;
+            } else {
+                $asal = $value->asal_sekolah_manual;
+            }
+            
+
+
             $sheet->setCellValue('A'. $column, $i++);
             $sheet->setCellValue('B'. $column, $value->nama_lengkap);
             $sheet->setCellValue('C'. $column, $value->nisn);
@@ -169,7 +193,7 @@ class Worksheet extends Base
             $sheet->setCellValue('H'. $column, $value->alamat);
             $sheet->setCellValue('I'. $column, $value->nomor_hp);
             $sheet->setCellValue('J'. $column, $value->email);
-            $sheet->setCellValue('K'. $column, $value->asal_sekolah);
+            $sheet->setCellValue('K'. $column, $asal);
             $column++;
         }
         //style
@@ -222,7 +246,7 @@ class Worksheet extends Base
         $sheet->getColumnDimension('K')->setAutoSize(true);
 
         $writer = new Xlsx($spreadsheet);
-        $filename = date('Y-m-d-H-i-s'). '-Data-Pendaftar-Diterima';
+        $filename = date('Y-m-d-H-i-s') .'-Data Pendaftar Diterima-'.$tahapan->nama_tahap ;
         // auto download
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename=' . $filename . '.xlsx');
@@ -286,6 +310,13 @@ class Worksheet extends Base
                 } else {
                     $state = 'on';
                 }
+                if ($value[10] == $getsekolah->nama_sekolah) {
+                    $asal_sekolah = $value[10];
+                    $asal_sekolah_manual = null;
+                } else {
+                    $asal_sekolah = null;
+                    $asal_sekolah_manual = $value[10];
+                }
                 
 
                 if (!$email) {
@@ -301,7 +332,8 @@ class Worksheet extends Base
                                 "alamat" =>$value[7],
                                 "nomor_hp" =>$value[8],
                                 "email" =>$value[9],
-                                "asal_sekolah" =>$value[10],
+                                "asal_sekolah" => $asal_sekolah,
+                                "asal_sekolah_manual" => $asal_sekolah_manual,
                                 "type_asal_sekolah" => $state,
                                 "status_penerimaan" => 101,
                                 "type_registration" => 2,

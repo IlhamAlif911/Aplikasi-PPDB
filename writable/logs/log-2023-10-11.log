@@ -52,3 +52,58 @@ in APPPATH\Views\Admin\profil_siswa.php on line 444.
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 14:53:08 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Worksheet.php on line 122.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export('12')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 15:00:49 --> Undefined variable: stat
+in APPPATH\Controllers\Worksheet.php on line 35.
+ 1 APPPATH\Controllers\Worksheet.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: stat', 'APPPATH\\Controllers\\Worksheet.php', 35, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export('12')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 16:49:57 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Worksheet.php on line 227.
+ 1 APPPATH\Controllers\Worksheet.php(227): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 227, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export_diterima('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 16:51:09 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Worksheet.php on line 227.
+ 1 APPPATH\Controllers\Worksheet.php(227): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 227, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export_diterima('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 16:53:14 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Worksheet.php on line 227.
+ 1 APPPATH\Controllers\Worksheet.php(227): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 227, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export_diterima('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 17:38:00 --> Trying to get property 'nama_tahap' of non-object
+in APPPATH\Controllers\Worksheet.php on line 122.
+ 1 APPPATH\Controllers\Worksheet.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nama_tahap\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-10-11 17:50:12 --> Trying to get property 'type_asal_sekolah' of non-object
+in APPPATH\Controllers\Worksheet.php on line 61.
+ 1 APPPATH\Controllers\Worksheet.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'type_asal_sekolah\' of non-object', 'APPPATH\\Controllers\\Worksheet.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->export('9')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
