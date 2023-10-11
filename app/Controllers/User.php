@@ -150,7 +150,40 @@ class User extends Base
 
     public function cek_data()
     {
+        $jalur = new DataJalur();
+        $tahap = new DataTahap();
+        $periode = new DataPeriode();
+        $jurusan = new DataJurusan();
+        $agenda = new DataAgenda();
+
+        $data['periode'] = $periode->where('status', 'aktif')->first();
+        $opsi_jalur = $this->codeAll('JALUR');
+        $data['jurusan'] = $jurusan->where('status', 'aktif')->findAll();
+        $data['agenda'] = $agenda->findAll();
+        $date = date('Y-m-d');
+
+        $data_tahap = $tahap->where(['id_periode' => $data['periode']->id, 'tanggal_mulai <=' => $date, 'tanggal_selesai >=' => $date])->first();
+        if (!$data_tahap) {
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->findall();
+            $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
+            $data['isi_jalur'] = $html1;
+            $data['isi_jalurbtn'] = $html2;
+            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
+            $data['daftar_nav'] = $html3;
+            $data['jalur'] = $jalur->findAll();
+        } else {
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
+            $data['isi_jalur'] = $html2;
+            $data['isi_jalurbtn'] = $html1;
+            $data['daftar_nav'] = $html3;
+            $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->findall();
+            
+        }
         $data['page'] = 'Cek Data';
+        
         return view('User/cek_data',$data);
     }
 
