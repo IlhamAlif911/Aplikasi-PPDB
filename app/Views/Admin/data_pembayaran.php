@@ -26,6 +26,7 @@
       <tr>
         <th>No.</th>
         <th>Nomor Pendaftaran</th>
+        <th>Order ID</th>
         <th>Tanggal Transfer</th>
         <th>Nama Bank</th>
         <th>Status</th>
@@ -49,6 +50,7 @@
             ?>
 
           </td>
+          <td><?= $k->order_id ?></td>
           <td>
             <?php
             if ($k->tanggal_transfer != "") {
@@ -60,16 +62,17 @@
           </td>
           <td><?= $k->nama_bank ?></td>
           <td class="text-center">
-            <?php if ($k->status == 'belum verified') { ?>
-              <span class="badge badge-primary">Belum Terverifikasi</span>
-            <?php } else { ?>
-              <span class="badge badge-success">Terverifikasi</span>
+            <?php if ($k->status == 'pending') { ?>
+              <span class="badge badge-warning">Pending</span>
+            <?php } else if($k->status == 'expire') { ?>
+              <span class="badge badge-danger">Kadaluarsa</span>
+            <?php }else if ($k->status == 'settlement'){ ?>
+              <span class="badge badge-success">Sukses</span>
             <?php } ?>
           </td>
           <td class="text-center">
-            <?php if ($k->status == 'belum verified') { ?>
-              <a href="#" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#alertModalVerifikasi<?= $k->id ?>">Verifikasi</a>
-            <?php } ?>
+            
+            <button class="btn btn-success btn-sm" type="button" onclick="cek_status('<?= $k->id; ?>', '<?= $k->id_pendaftar; ?>')">Cek Status</button>
             <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" value="<?= $k->id ?>" id="edit_jurusan" name="edit_jurusan" data-bs-target="#kalenderModalEdit<?= $k->id ?>">Edit</a>
             <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#alertModalEdit<?= $k->id ?>">Hapus</a>
           </td>

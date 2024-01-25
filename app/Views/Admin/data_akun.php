@@ -105,11 +105,11 @@
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="kalenderModalLabel">Hapus Periode</h5>
+                                    <h5 class="modal-title" id="kalenderModalLabel">Hapus Akun</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="row g-3 mt-2" method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/delete-jalur/<?= $k->id ?>">
+                                    <form class="row g-3 mt-2" method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/delete-akun/<?= $k->id ?>">
                                         <p class="">Apakah anda yakin menghapus akun '<?= $k->email ?>'?</p>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>

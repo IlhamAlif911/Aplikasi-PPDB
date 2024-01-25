@@ -1,0 +1,30 @@
+CRITICAL - 2023-10-16 06:39:29 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:40:21 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:40:34 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:40:50 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:41:44 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:41:46 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:41:47 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:41:49 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:42:37 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-16 06:44:11 --> Call to undefined function CodeIgniter\locale_set_default()
+in SYSTEMPATH\CodeIgniter.php on line 193.
+ 1 ROOTPATH\spark(71): CodeIgniter\CodeIgniter->initialize()

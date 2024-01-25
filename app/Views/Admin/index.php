@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>SMK YPE KROYA | <?= $title ?></title>
-  <meta name="description" content="Aplikasi PPDB SMK YPE KROYA">
-  <link rel="icon" href="<?= base_url('assets/' . 'Logo-YPE.png'); ?>" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMK WIDYA MANDALA TAMBAK | <?= $title ?></title>
+  <meta name="description" content="Aplikasi PPDB SMK WIDYA MANDALA TAMBAK">
+  <link rel="icon" href="<?= base_url('assets/' . 'Logo.png'); ?>" type="image/png">
   <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>" />
   <link rel="stylesheet" href="<?= base_url('css/boxicons.min.css') ?>" />
@@ -64,8 +65,6 @@
     $('table.display').DataTable();
   } );
 </script>
-
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -193,6 +192,12 @@
   }
 </script>
 <script>
+
+  function cek_status(id,idPendaftar){
+    window.location.href='/midtrans/status/'+ id + '/' + idPendaftar;
+  }
+
+
   function bacaGambar(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -460,4 +465,79 @@
     });
   }, 3000)
 </script>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-3en3w2N96ye9B7D6"></script>
+<script type="text/javascript">
+    $('#pay-button').click(function(e) {
+        e.preventDefault();
+        $(this).attr("disabled", "disabled");
+
+        const first_name = $('#first_name').val();
+        const nomor_pendaftaran = $('#nomor_pendaftaran').val();
+        const email = $('#email').val();
+        const address = $('#address').val();
+        const city = $('#city').val();
+        const kodepos = $('#kodepos').val();
+        const phone = $('#phone').val();
+        const nominal_bayar = $('#nominal_bayar').val();
+        const nama_pembayaran = $('#nama_pembayaran').val();
+
+        $.ajax({
+            url: '<?= base_url('midtrans/token') ?>',
+            type: "POST",
+            data: {
+                first_name: first_name,
+                nomor_pendaftaran: nomor_pendaftaran,
+                email: email,
+                address: address,
+                city: city,
+                kodepos: kodepos,
+                phone: phone,
+                nominal_bayar: nominal_bayar,
+                nama_pembayaran: nama_pembayaran
+            },
+            cache: false,
+
+            success: function(data) {
+                //location = data;
+                console.log(data);
+                console.log('token = ' + data);
+                $('#pay-button').removeAttr('disabled');
+
+                var resultType = document.getElementById('result-type');
+                var resultData = document.getElementById('result-data');
+
+                function changeResult(type, data) {
+                    $("#result-type").val(type);
+                    $("#result-data").val(JSON.stringify(data));
+                    //resultType.innerHTML = type;
+                    //resultData.innerHTML = JSON.stringify(data);
+                }
+
+                snap.pay(data, {
+                    onSuccess: function(result) {
+                        changeResult('success', result);
+                        console.log(result.status_message);
+                        
+                        $("#payment-form").submit();
+
+                    },
+                    onPending: function(result) {
+                        changeResult('pending', result);
+                        console.log(result.status_message);
+                        $("#payment-form").submit();
+
+                    },
+                    onError: function(result) {
+                        changeResult('error', result);
+                        console.log(result.status_message);
+                        $("#payment-form").submit();
+                    }
+                });
+            }
+        });
+    })
+</script>
+
 </html>

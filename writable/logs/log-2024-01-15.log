@@ -1,0 +1,16 @@
+ERROR - 2024-01-15 13:53:06 --> Column 'nama_lengkap' cannot be null
+CRITICAL - 2024-01-15 13:53:06 --> Column 'nama_lengkap' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `asal_sekolah_manual`, `type_asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'on\', 101, 2)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `asal_sekolah_manual`, `type_asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'on\', 101, 2)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `asal_sekolah_manual`, `type_asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'on\', 101, 2)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_pendaftar` (`nama_lengkap`, `nisn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `email`, `asal_sekolah`, `asal_sekolah_manual`, `type_asal_sekolah`, `status_penerimaan`, `type_registration`) VALUES (:nama_lengkap:, :nisn:, :nik:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :email:, :asal_sekolah:, :asal_sekolah_manual:, :type_asal_sekolah:, :status_penerimaan:, :type_registration:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Worksheet.php(325): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Worksheet->import('9')
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Worksheet))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

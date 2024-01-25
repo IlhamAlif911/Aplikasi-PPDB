@@ -7,7 +7,7 @@
     <div class="d-flex flex-wrap home align-items-center bg-white">
       <div class="flex-1">
         <h2 class="ms-3 mt-4">Penerimaan Peserta Didik Baru Online </h2>
-        <p class="ms-3">SMK YPE Kroya menerima siswa baru periode <?= $periode->nama_periode ?>. Pendaftaran dilakukan secara online pada website ini.</p><br>
+        <p class="ms-3">SMK Widya Mandala Tambak menerima siswa baru periode <?= $periode->nama_periode ?>. Pendaftaran dilakukan secara online pada website ini.</p><br>
         <?=$isi_jalur?>
         
       </div>
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="container bg-primary pt-5 pb-5 rounded-5 shadow mb-5 border-bottom border-top border-4 border-warning" id="alur">
+  <div class="container pt-5 pb-5 rounded-5 shadow mb-5 border-bottom border-top border-4 border-success" style="background-color: #4D7C0F;" id="alur" >
     <div class="text-center text-white">
       <h2 class="">Alur Pendaftaran</h2>
       <p>Langkah pendaftaran calon siswa mengikuti alur berikut.</p>
@@ -117,7 +117,7 @@
     </div>
   </div>
 
-  <div class="container bg-white pt-5" id="jurusan">
+  <div class="container pt-5"  id="jurusan">
     <div class="pt-5 pb-5 mb-5 text-center ">
       <h2 class="">Jurusan PPDB Periode <?= $periode->nama_periode ?></h2>
       <p>Terdapat <?= count($jurusan) ?> jurusan yang dibuka pada periode ini.</p>
@@ -141,7 +141,7 @@
   </div>
 
   <div class="container pt-5" id="jalur">
-    <div class="pt-5 pb-5 text-center bg-primary text-white rounded-bottom" style="border-radius: 25px;">
+    <div class="pt-5 pb-5 text-center text-white rounded-bottom" style="border-radius: 25px;background-color: #4D7C0F;">
       <h2 class="">Jalur dan Syarat</h2>
       <p>Terdapat <?= count($jalur) ?> jalur pada PPDB <?= $periode->nama_periode ?> beserta dengan syarat dan ketentuan yang harus disiapkan.</p>
     </div>
@@ -152,10 +152,10 @@
           $nomor = 1;
           foreach ($jalur as $k) :
             if ($nomor == 1) { ?>
-              <button class="nav-link active" id="v-pills-button-<?= $k->id ?>" data-bs-toggle="pill" data-bs-target="#v-pills-<?= $k->id ?>" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><?= $k->nama_jalur ?></button>
+              <button class="nav-link active" id="v-pills-button-<?= $k->id ?>" data-bs-toggle="pill" data-bs-target="#v-pills-<?= $k->id ?>" type="button" style="background-color: #4D7C0F;" role="tab" aria-controls="v-pills-home" aria-selected="true"><?= $k->nama_jalur ?></button>
             <?php } else {
               ?>
-              <button class="nav-link" id="v-pills-button-<?= $k->id ?>" data-bs-toggle="pill" data-bs-target="#v-pills-<?= $k->id ?>" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false"><?= $k->nama_jalur ?></button>
+              <button class="nav-link" id="v-pills-button-<?= $k->id ?>" data-bs-toggle="pill" data-bs-target="#v-pills-<?= $k->id ?>" type="button" style="background-color: #4D7C0F;" role="tab" aria-controls="v-pills-home" aria-selected="false"><?= $k->nama_jalur ?></button>
             <?php }
             $nomor++;
           endforeach ?>
@@ -183,13 +183,13 @@
   </div>
 
   <div class="container pt-5 mt-5" id="agenda">
-    <div class="d-flex flex-wrap align-items-center justify-content-center bg-blue rounded-5 p-5 mt-3">
+    <div class="d-flex flex-wrap align-items-center justify-content-center rounded-5 p-5 mt-3" style="background-color: #4D7C0F;">
       <div class="agenda-1">
         <img src="<?= base_url('assets/' . '6494.png'); ?>" class="d-block img-agenda" style="object-fit: contain;" alt="Wild Landscape" />
       </div>
       <div class="text-white agenda-2">
         <h2 class="text-white">Agenda PPDB <?= $periode->nama_periode ?></h2>
-        <p class="text-white">SMK YPE Kroya menerima siswa baru periode <?= $periode->nama_periode ?>. Pendaftaran dilakukan secara online pada website ini.</p><br>
+        <p class="text-white">SMK Widya Mandala Tambak menerima siswa baru periode <?= $periode->nama_periode ?>. Pendaftaran dilakukan secara online pada website ini.</p><br>
         <div class="card justify-content-center bg-transparent border-white">
           <div class="card-body overflow-auto p-0">
             <?php
@@ -230,8 +230,8 @@
 </div>
 
 <div class="sticky-lg-bottom d-flex justify-content-end">
-  <a href="#home" class="btn btn-primary m-4 p-2 text-decoration-none shadow">
-    <i class="fa fa-arrow-up fa-2x"></i>
+  <a href="#home" class="btn m-4 p-2 text-decoration-none shadow" style="background-color:#4D7C0F;">
+    <i class="fa fa-arrow-up fa-2x text-white"></i>
   </a>
 </div>
 

@@ -1,0 +1,175 @@
+CRITICAL - 2024-01-24 13:58:25 --> Class "App\Controllers\Users" not found
+in APPPATH\Controllers\Midtrans.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('26')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 14:02:12 --> Call to undefined method App\Controllers\Midtrans::codeWithName()
+in APPPATH\Controllers\Midtrans.php on line 102.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('26')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 14:04:04 --> Undefined variable $token
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 9.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $token', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Midtrans.php(112): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('26')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 14:34:49 --> Cannot use empty array elements in arrays
+in APPPATH\Controllers\Midtrans.php on line 387.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-24 14:35:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 365.
+ 1 APPPATH\Controllers\Midtrans.php(365): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 365)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 14:36:54 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 14:38:13 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:27:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:28:03 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:33:00 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:41:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:48:17 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 366.
+ 1 APPPATH\Controllers\Midtrans.php(366): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 366)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 15:54:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 361.
+ 1 APPPATH\Controllers\Midtrans.php(361): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 361)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:01:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 360.
+ 1 APPPATH\Controllers\Midtrans.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:14:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 360.
+ 1 APPPATH\Controllers\Midtrans.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:17:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 360.
+ 1 APPPATH\Controllers\Midtrans.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:21:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 360.
+ 1 APPPATH\Controllers\Midtrans.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:23:23 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["item_details Price is required","item_details Price is not a number","transaction_details.gross_amount harus sama atau lebih besar dari 0.01","transaction_details.gross_amount is not equal to the sum of item_details"]}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...], 'POST')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...])
+ 3 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\Midtrans.php(188): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->token()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 16:28:28 --> Undefined array key "va_numbers"
+in APPPATH\Controllers\Midtrans.php on line 381.
+ 1 APPPATH\Controllers\Midtrans.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "va_numbers"', 'APPPATH\\Controllers\\Midtrans.php', 381)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 18:05:10 --> Call to undefined function datetime()
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 4 APPPATH\Controllers\Midtrans.php(98): view('Admin/konfirmasi_pembayaran', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('27')
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-24 18:05:47 --> date() expects at least 1 argument, 0 given
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 7.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(7): date()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Midtrans.php(98): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('27')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

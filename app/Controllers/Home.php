@@ -32,14 +32,14 @@ class Home extends BaseController
             $data['tahap'] = $tahap->where('id_periode', $data['periode']->id)->orderBy('id', 'DESC')->first();
             $html1 = '<a class="ms-3 mt-3 btn btn-lg btn-warning btn-daftar" href="#">Belum ada pendaftaran pada saat ini</a>';
             $html2 = '<a class="btn btn-warning" href="#">Belum ada pendaftaran pada saat ini</a>';
-            $html3 = '<a class="btn btn-primary disabled" href="#">Daftar</a>';
+            $html3 = '<a class="btn btn-primary disabled" style="background-color: #4D7C0F;" href="#">Daftar</a>';
             $data['isi_jalur'] = $html1;
             $data['isi_jalurbtn'] = $html2;
             $data['daftar_nav'] = $html3;
             $data['jalur'] = $jalur->findAll();
         } else {
-            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
-            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" style="background-color: #4D7C0F;" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" style="background-color: #4D7C0F;" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
             $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
             $data['isi_jalur'] = $html2;
             $data['isi_jalurbtn'] = $html1;
@@ -73,8 +73,8 @@ class Home extends BaseController
             
             $data['jalur'] = $jalur->where('id_tahap',$id)->findall();
         } else {
-            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
-            $html3 = '<a class="btn btn-primary" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
+            $html2 = '<a class="ms-3 btn btn-lg btn-primary mt-3 btn-daftar" style="background-color: #4D7C0F;" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar Disini</a>';
+            $html3 = '<a class="btn btn-primary" style="background-color: #4D7C0F;" href="'.site_url('jalur/' . $data_tahap->id).'">Daftar</a>';
             $html1 = '<a class="btn btn-light" href="'.site_url('jalur/' . $data_tahap->id).'">Isi Disini</a>';
             $data['isi_jalur'] = $html2;
             $data['isi_jalurbtn'] = $html1;

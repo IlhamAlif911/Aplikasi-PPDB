@@ -16,7 +16,7 @@
 </header>
 <div class="l-navbar border-end show-side" id="nav-bar">
     <nav class="nav-side">
-        <div> <a href="<?= site_url('/') ?>" class="nav_logo"> <i class='bx bxs-school nav_logo-icon'></i> <span class="nav_logo-name">SMK YPE KROYA</span> </a>
+        <div> <a href="<?= site_url('/') ?>" class="nav_logo"> <i class='bx bxs-school nav_logo-icon'></i> <span class="nav_logo-name">SMK WIDYA MANDALA</span> </a>
             <?php if (session()->get('role') == '1') { ?>
                 <div class="nav_list">
                     <a href="<?= site_url('dashboard') ?>" class="nav_link <?php if ($page == 'dashboard') echo 'active' ?>">

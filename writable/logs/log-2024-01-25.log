@@ -1,0 +1,120 @@
+CRITICAL - 2024-01-25 00:30:17 --> syntax error, unexpected identifier "logged_in", expecting ")"
+in APPPATH\Controllers\Midtrans.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Midtrans.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Midtrans')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Midtrans')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Midtrans', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 00:30:35 --> syntax error, unexpected identifier "logged_in", expecting ")"
+in APPPATH\Controllers\Midtrans.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Midtrans.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Midtrans')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Midtrans')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Midtrans', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 00:32:44 --> syntax error, unexpected identifier "logged_in", expecting ")"
+in APPPATH\Controllers\Midtrans.php on line 139.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Midtrans.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Midtrans')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Midtrans')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Midtrans', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 02:06:18 --> Undefined variable $transaction
+in APPPATH\Controllers\Midtrans.php on line 376.
+ 1 APPPATH\Controllers\Midtrans.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaction', 'APPPATH\\Controllers\\Midtrans.php', 376)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 02:08:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 389.
+ 1 APPPATH\Controllers\Midtrans.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 389)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->update_status()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 02:11:20 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 389.
+ 1 APPPATH\Controllers\Midtrans.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 389)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->update_status()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 02:11:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 389.
+ 1 APPPATH\Controllers\Midtrans.php(389): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 389)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->update_status()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 13:13:43 --> Undefined variable $transaction_details
+in APPPATH\Controllers\Midtrans.php on line 376.
+ 1 APPPATH\Controllers\Midtrans.php(376): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaction_details', 'APPPATH\\Controllers\\Midtrans.php', 376)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('1706092126')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:51:00 --> Undefined variable $status
+in APPPATH\Controllers\Midtrans.php on line 311.
+ 1 APPPATH\Controllers\Midtrans.php(311): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $status', 'APPPATH\\Controllers\\Midtrans.php', 311)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:55:09 --> Midtrans API is returning API error. HTTP status code: 500 API response: {"status_code":"500","status_message":"Sorry. Our system is recovering from unexpected issues. Please retry.","id":"c4cfc9da-8ce3-4293-8643-250425eaf9ae"}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 165.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000126-20240125145041/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000126-20240125145041/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(401): Midtrans\Transaction::status('PPDB-2122000126-20240125145041')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('15', '27')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:55:46 --> Undefined variable $result
+in APPPATH\Controllers\Midtrans.php on line 403.
+ 1 APPPATH\Controllers\Midtrans.php(403): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Midtrans.php', 403)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('15', '27')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:55:49 --> Undefined variable $result
+in APPPATH\Controllers\Midtrans.php on line 403.
+ 1 APPPATH\Controllers\Midtrans.php(403): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Midtrans.php', 403)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('15', '27')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:57:22 --> Undefined variable $result
+in APPPATH\Controllers\Midtrans.php on line 403.
+ 1 APPPATH\Controllers\Midtrans.php(403): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Midtrans.php', 403)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('17', '27')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-25 14:58:40 --> Undefined variable $result
+in APPPATH\Controllers\Midtrans.php on line 405.
+ 1 APPPATH\Controllers\Midtrans.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Controllers\\Midtrans.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('17', '27')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -246,6 +246,16 @@ class Admin extends Base
             session()->setFlashdata('error', 'Anda Belum Login !');
             return redirect()->to('/login');
         }
+
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5';
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+
         $pembayaran = new DataPembayaran();
         $user = new Users();
         $data['user'] = $user->findAll();
@@ -385,6 +395,29 @@ class Admin extends Base
             session()->setFlashdata('error', 'Anda Belum Login !');
             return redirect()->to('/login');
         }
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5';
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => rand(),
+                'gross_amount' => 10000,
+            ),
+            'customer_details' => array(
+                'first_name' => 'budi',
+                'last_name' => 'pratama',
+                'email' => 'budi.pra@example.com',
+                'phone' => '08111222333',
+            ),
+        );
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+        //view
         $pendaftar = new DataPendaftar();
         $pembayaran = new DataPembayaran();
         $data['pembayaran'] = $pembayaran->where('id_pendaftar',$id)->first();
@@ -397,8 +430,25 @@ class Admin extends Base
         
         $data['page'] = 'pembayaran';
         $data['title'] = 'Konfirmasi Pembayaran';
+        $data['token'] = $snapToken;
 
         return view('Admin/konfirmasi_pembayaran',$data);
+    }
+    public function pembayaran_selesai()
+    {
+        
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+        
+        
+        $data['page'] = 'pembayaran';
+        $data['title'] = 'Pembayaran Berhasil';
+        
+
+        return view('Admin/pembayaran_selesai',$data);
     }
 
     public function data_jurusan()

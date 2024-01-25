@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>SMK YPE Kroya | <?= $page?></title>
-    <link rel="icon" href="<?= base_url('assets/' . 'Logo-YPE.png'); ?>" type="image/png">
-    <meta name="description" content="Aplikasi PPDB SMK YPE KROYA">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMK WIDYA MANDALA TAMBAK | <?= $page?></title>
+    <link rel="icon" href="<?= base_url('assets/' . 'logo.png'); ?>" type="image/png">
+    <meta name="description" content="Aplikasi PPDB SMK WIDYA MANDALA TAMBAK">
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('css/bootstrap-datepicker.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('css/custom.css') ?>" />

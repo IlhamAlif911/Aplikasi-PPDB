@@ -25,7 +25,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-$routes->setAutoRoute(false);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -70,6 +70,7 @@ $routes->get('edit-siswa', 'Admin::edit_siswa');
 $routes->get('profil-siswa/(:segment)', 'Pendaftar::edit_profil/$1');
 $routes->get('registrasi-ulang/(:segment)', 'Pendaftar::edit_ulang_profil/$1');
 $routes->get('profil-pendaftar', 'Admin::profil_pendaftar');
+
 $routes->get('kategori-kode', 'Admin::kategori_kode'); 
 $routes->get('edit-kategori/(:segment)', 'Opsi::edit_kategori/$1');
 $routes->post('add-kategori', 'Opsi::add_kategori');
@@ -77,36 +78,53 @@ $routes->post('update-kategori/(:segment)', 'Opsi::update_kategori/$1');
 $routes->post('add-opsi/(:segment)', 'Opsi::add_opsi/$1');
 $routes->post('update-opsi/(:segment)', 'Opsi::update_opsi/$1');
 $routes->post('delete-opsi/(:segment)', 'Opsi::delete_opsi/$1');
+
 $routes->get('data-periode', 'Admin::periode');
 $routes->post('add-periode', 'TahapSeleksi::add_periode');
 $routes->post('update-periode/(:segment)', 'TahapSeleksi::update_periode/$1');
 $routes->post('delete-periode/(:segment)', 'TahapSeleksi::delete_periode/$1');
+
 $routes->get('data-sekolah', 'Admin::datasekolah');
 $routes->post('update-sekolah/(:segment)', 'Admin::update_sekolah/$1');
 $routes->post('delete-sekolah/(:segment)', 'Admin::delete_sekolah/$1');
 $routes->post('import', 'WorksheetSekolah::import');
+
 $routes->get('data-tahap', 'Admin::tahap');
 $routes->post('add-tahap', 'TahapSeleksi::add_tahap');
 $routes->post('update-tahap/(:segment)', 'TahapSeleksi::update_tahap/$1');
 $routes->post('delete-tahap/(:segment)', 'TahapSeleksi::delete_tahap/$1');
+
 $routes->get('data-jalur', 'Admin::jalur');
 $routes->post('add-jalur', 'TahapSeleksi::add_jalur');
 $routes->post('update-jalur/(:segment)', 'TahapSeleksi::update_jalur/$1');
 $routes->post('delete-jalur/(:segment)', 'TahapSeleksi::delete_jalur/$1');
+
 $routes->get('data-akun', 'Admin::akun');
 $routes->post('add-akun', 'Akun::add_akun');
 $routes->post('update-akun/(:segment)', 'Akun::update_akun/$1');
+$routes->post('delete-akun/(:segment)', 'Akun::delete_akun/$1');
+
 $routes->get('data-pembayaran', 'Admin::data_pembayaran');
 $routes->post('add-konfirmasi', 'Pembayaran::add_konfirmasi');
+
 $routes->post('add-konfirmasi-siswa', 'Pembayaran::add_konfirmasi_siswa');
+$routes->get('konfirmasi-pembayaran/(:segment)', 'Midtrans::konfirmasi_pembayaran/$1');
+$routes->post('/midtrans/token', 'Midtrans::token');
+
+$routes->get('pembayaran-selesai', 'Admin::pembayaran_selesai');
+
+
+
 $routes->post('delete-pembayaran/(:segment)', 'Pembayaran::delete_pembayaran/$1');
 $routes->post('update-konfirmasi/(:segment)', 'Pembayaran::update_konfirmasi/$1');
+
 $routes->post('status-pembayaran/(:segment)/(:segment)', 'Pembayaran::status_pembayaran/$1/$2');
-$routes->get('konfirmasi-pembayaran/(:segment)', 'Admin::konfirmasi_pembayaran/$1');
+
 $routes->get('data-jurusan', 'Admin::data_jurusan');
 $routes->post('add-jurusan', 'Jurusan::add_jurusan');
 $routes->post('update-jurusan/(:segment)', 'Jurusan::update_jurusan/$1');
 $routes->post('delete-jurusan/(:segment)', 'Jurusan::delete_jurusan/$1');
+
 $routes->get('data-agenda', 'Admin::data_agenda');
 $routes->post('add-agenda', 'Agenda::add_agenda');
 $routes->post('update-agenda/(:segment)', 'Agenda::update_agenda/$1');

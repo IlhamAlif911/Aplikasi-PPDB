@@ -17,7 +17,7 @@
                     <input type="text" id="nomor_pendaftaran" name="nomor_pendaftaran" class="form-control form-control-lg" placeholder="Nomor Pendaftaran" value="" required>
                 </div>
                 <div class="">
-                    <button class="btn btn-primary btn-lg col-12" type="button" id="cek_data" name="cek_data">Cek Data</button>
+                    <button class="btn btn-primary btn-lg col-12" style="background-color: #4D7C0F;" type="button" id="cek_data" name="cek_data">Cek Data</button>
                 </div>
             </form>
         </div>

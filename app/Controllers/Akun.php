@@ -159,5 +159,21 @@ class Akun extends Base
 
         return redirect()->to('data-akun');
     }
+    public function delete_akun($id)
+    {
+        // proteksi halaman
+        if (! session()->get('logged_in')) {
+            session()->setFlashdata('error', 'Anda Belum Login !');
+            return redirect()->to('/login');
+        }
+
+        $user = new Users();
+
+        $user->delete($id);
+
+        session()->setFlashdata('error', 'Data berhasil dihapus');
+
+        return redirect()->to('data-akun');
+    }
 }
 ?>

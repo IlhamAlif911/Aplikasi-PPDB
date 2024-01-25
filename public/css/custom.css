@@ -82,6 +82,9 @@
 .btn-daftar{
     width: 300px;
 }
+.btn-custom-bg{
+    background-color: #4D7C0F;
+}
 .img-agenda{
     width: 600px;
     height: 400px;

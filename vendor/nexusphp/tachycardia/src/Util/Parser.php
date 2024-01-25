@@ -28,9 +28,7 @@ final class Parser
     /**
      * @codeCoverageIgnore
      */
-    private function __construct()
-    {
-    }
+    private function __construct() {}
 
     public static function getInstance(): self
     {
@@ -45,6 +43,7 @@ final class Parser
 
         preg_match(self::REGEX_TEST_CASE_NAME, $test, $matches);
 
+        /** @phpstan-var array{class: class-string, name: string, dataname?: string} $matches */
         return new TestCase($matches['class'], $matches['name'], $matches['dataname'] ?? '');
     }
 }
