@@ -56,9 +56,6 @@ class TahapSeleksi extends Base
         }
         $tahap = new DataTahap();
 
-        $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
-        $tanggal_selesai = $this->formatTanggalReverse($this->request->getPost('tanggal_selesai'));
-
         if (!$this->validate([
             'nama_tahap' => [
                 'rules' => 'required|max_length[50]',
@@ -77,8 +74,8 @@ class TahapSeleksi extends Base
         $tahap->insert([
             'id_periode' => $this->request->getVar('periode'),
             'nama_tahap' => $this->request->getVar('nama_tahap'),
-            'tanggal_mulai' => $tanggal_mulai,
-            'tanggal_selesai' => $tanggal_selesai,
+            'tanggal_mulai' => $this->request->getPost('tanggal_mulai'),
+            'tanggal_selesai' => $this->request->getPost('tanggal_selesai'),
         ]);
 
         return redirect()->to('data-tahap');
@@ -167,8 +164,7 @@ class TahapSeleksi extends Base
         }
         $tahap = new DataTahap();
 
-        $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
-        $tanggal_selesai = $this->formatTanggalReverse($this->request->getPost('tanggal_selesai'));
+        
 
         if (!$this->validate([
             'nama_tahap' => [
@@ -188,8 +184,8 @@ class TahapSeleksi extends Base
         $tahap->update($id, [
                 'id_periode' => $this->request->getVar('periode'),
                 'nama_tahap' => $this->request->getVar('nama_tahap'),
-                'tanggal_mulai' => $tanggal_mulai,
-                'tanggal_selesai' => $tanggal_selesai,
+                'tanggal_mulai' => $this->request->getPost('tanggal_mulai'),
+                'tanggal_selesai' => $this->request->getPost('tanggal_selesai'),
         ]);
 
         return redirect()->to('data-tahap');

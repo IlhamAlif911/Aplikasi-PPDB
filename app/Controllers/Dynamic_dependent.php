@@ -105,19 +105,13 @@ class Dynamic_dependent extends Base
 				echo json_encode($statedata);
 			}
 			if ($action == 'get_pendaftar') {
-				$pendaftaran = new DataPendaftaran();
-				$tahap = new DataTahap();
-				$stateModel = new Periode();
-				$statedata = $tahap->where('id_periode', $this->request->getVar('periode'))->findAll();
-				$query = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', $this->request->getVar('periode'))->groupBy('id')->findAll();
-				$data['statedata'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', 2)->findAll();
-				// $state = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',$this->request->getVar('id'))->findAll();
-				// $state3 = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',$this->request->getVar('id'))->countAll();
-				$state2 = $tahap->where('id_periode', $this->request->getVar('id'))->findAll();
-				$state1 = $pendaftaran->findAll();
-				// $statedata = ['jumlah_pendaftar' => $state3];
+				$pendaftar = new DataPendaftar();
+				$periodeModel = new Periode();
+				$getPeriode = $periodeModel->where('status', 'aktif')->first();
+				$query = $pendaftar->select('sum(jenis_kelamin = "p") total_p, sum(jenis_kelamin = "l") total_l, tahap.nama_tahap')->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', $getPeriode->id)->groupBy('tahap.nama_tahap')->findAll();
 				echo json_encode($query);
 			}
+			
 
 			if ($action == 'prestasi') {
 				$jenis_prestasi = $this->codeAll('JENIS PRESTASI');
@@ -133,34 +127,5 @@ class Dynamic_dependent extends Base
 				$statedata = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.tahap = tahap.id')->where('periode.id', $this->request->getVar('id'))->findAll();
 			}
 		}
-	}
-	
-	function get()
-	{
-		
-		
-		// $statedata = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->where('periode.id', $this->request->getVar('id'))->findAll();
-		// $data = $pendaftar->join('user', 'user.id_ref = data_pendaftar.id')->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('jalur', 'jalur.id = pendaftaran.jalur')->where('data_pendaftar.id', $id)->first();
-		//$statedata = $stateModel->where('id', $this->request->getVar('id'))->findAll();
-		// $data_user = $user->where('nomor_pendaftaran', $this->request->getVar('nomor'))->first();
-
-		// $data_pendaftar = $stateModel->where('id', $data_user->id_ref)->first();
-
-		// $status = $this->code($data_pendaftar->status_penerimaan);
-
-		// $statedata = ['nama_lengkap' => $data_pendaftar->nama_lengkap, 'status' => $status->nama_opsi];
-		
-
-
-		// $stateModel = new DataTahap();
-
-		// $state = $stateModel->join('pendaftaran', 'pendaftaran.tahap = tahap.id')->where('pendaftaran.periode', $this->request->getVar('periode'))->findAll();
-		// $state1 = $stateModel->join('pendaftaran', 'pendaftaran.tahap = tahap.id')->where('pendaftaran.periode', $this->request->getVar('periode'))->first();
-		// $statedata = ['jumlah_pendaftar'=> count($state), 'nama_tahap'=> $state1->nama_tahap];
-		
-        $stateModel = new Periode();
-        $data['statedata'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', $this->request->getVar('periode'))->findAll();
-
-		// echo json_encode($statedata);
 	}
 }

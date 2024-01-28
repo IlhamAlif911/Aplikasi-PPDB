@@ -1,0 +1,513 @@
+ERROR - 2024-01-27 11:32:33 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2024-01-27 11:32:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_setting`
+WHERE `status` = :status:
+AND `name` = :name:
+AND `is_global` = :is_global:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\BaseController.php(107): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\BaseController.php(64): App\Controllers\BaseController->getSettings()
+ 7 SYSTEMPATH\CodeIgniter.php(859): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 14:54:04 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 4 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 14:57:49 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [...], true)
+ 4 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:00:11 --> Undefined variable $get_periode
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $get_periode', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:00:16 --> Undefined variable $get_periode
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $get_periode', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:00:25 --> Undefined variable $get_periode
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $get_periode', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [...], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:00:46 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:07:24 --> Cannot use [] for reading
+in APPPATH\Controllers\Admin.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-27 15:07:48 --> Cannot use [] for reading
+in APPPATH\Controllers\Admin.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-27 15:07:58 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:19:48 --> Call to undefined method App\Controllers\Admin::getCode()
+in APPPATH\Controllers\Admin.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:20:29 --> CodeIgniter\View\View::extend(): Argument #1 ($layout) must be of type string, null given, called in F:\xampp\htdocs\Aplikasi-PPDB\app\Views\Admin\index.php on line 1
+in SYSTEMPATH\View\View.php on line 363.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\View\View->extend(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:21:40 --> Attempt to read property "layout" on null
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "layout" on null', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:21:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:22:33 --> CodeIgniter\View\View::extend(): Argument #1 ($layout) must be of type string, null given, called in F:\xampp\htdocs\Aplikasi-PPDB\app\Views\Admin\index.php on line 1
+in SYSTEMPATH\View\View.php on line 363.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\View\View->extend(null)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:25:35 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(66): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:26:52 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(66): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:27:43 --> Undefined variable $app_name
+in APPPATH\Views\layouts\default.php on line 7.
+ 1 APPPATH\Views\layouts\default.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $app_name', 'APPPATH\\Views\\layouts\\default.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\default.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/default', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 6 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:28:02 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(66): view('Admin/index', [...], [])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:28:32 --> Undefined property: App\Controllers\Admin::$data
+in APPPATH\Controllers\Admin.php on line 66.
+ 1 APPPATH\Controllers\Admin.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$data', 'APPPATH\\Controllers\\Admin.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:29:19 --> syntax error, unexpected token "[", expecting "," or ";"
+in APPPATH\Controllers\BaseController.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseController')
+ 3 APPPATH\Controllers\Base.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(284): include_once('APPPATH\\Controllers\\Base.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Base.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Base')
+ 7 APPPATH\Controllers\Admin.php(23): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Base')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(284): include_once('APPPATH\\Controllers\\Admin.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+11 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+12 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+13 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+14 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:29:26 --> syntax error, unexpected token "[", expecting "," or ";"
+in APPPATH\Controllers\BaseController.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\BaseController')
+ 3 APPPATH\Controllers\Base.php(7): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(284): include_once('APPPATH\\Controllers\\Base.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Base.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Base')
+ 7 APPPATH\Controllers\Admin.php(23): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Base')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(284): include_once('APPPATH\\Controllers\\Admin.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+11 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+12 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+13 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+14 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:29:49 --> Undefined variable $layout
+in APPPATH\Views\Admin\index.php on line 1.
+ 1 APPPATH\Views\Admin\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $layout', 'APPPATH\\Views\\Admin\\index.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(66): view('Admin/index', [...], [])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 15:32:46 --> Undefined variable $get_periode
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $get_periode', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 20:15:12 --> Array to string conversion
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 20:15:24 --> Attempt to read property "total" on array
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "total" on array', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 20:16:00 --> Undefined array key "total"
+in APPPATH\Views\Admin\index.php on line 24.
+ 1 APPPATH\Views\Admin\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total"', 'APPPATH\\Views\\Admin\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 20:45:35 --> syntax error, unexpected identifier "l", expecting ")"
+in APPPATH\Controllers\Admin.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2024-01-27 20:45:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`....' at line 1
+CRITICAL - 2024-01-27 20:45:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`....' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `tahap`.`id`, COUNT( jenis_kelamin, l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `tahap`.`id`, COUNT( jenis_kelamin, l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `tahap`.`id`, COUNT( jenis_kelamin, l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = 2
+GROUP BY `tahap`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `tahap`.`id`, COUNT( jenis_kelamin, l) as total
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+GROUP BY `tahap`.`id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(43): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 21:04:39 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Dynamic_dependent.php on line 113.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dynamic_dependent.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dynamic_dependent')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dynamic_dependent')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Dynamic_dependent', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 21:05:40 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Dynamic_dependent.php on line 113.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('dynamic_dependent/action')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('dynamic_dependent/action')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('dynamic_dependent/action')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 21:14:28 --> Attempt to read property "asal_sekolah_manual" on array
+in APPPATH\Views\components\partials\scripts.php on line 47.
+ 1 APPPATH\Views\components\partials\scripts.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "asal_sekolah_manual" on array', 'APPPATH\\Views\\components\\partials\\scripts.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\components\\partials\\scripts.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('components/partials/scripts', null, true)
+ 5 APPPATH\Views\layouts\default.php(39): CodeIgniter\View\View->include('components/partials/scripts')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\default.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/default', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+10 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 21:16:27 --> Attempt to read property "asal_sekolah_manual" on array
+in APPPATH\Views\components\partials\scripts.php on line 47.
+ 1 APPPATH\Views\components\partials\scripts.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "asal_sekolah_manual" on array', 'APPPATH\\Views\\components\\partials\\scripts.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\components\\partials\\scripts.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('components/partials/scripts', null, true)
+ 5 APPPATH\Views\layouts\default.php(39): CodeIgniter\View\View->include('components/partials/scripts')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\default.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/default', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+10 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-27 21:17:35 --> Attempt to read property "asal_sekolah_manual" on array
+in APPPATH\Views\components\partials\scripts.php on line 45.
+ 1 APPPATH\Views\components\partials\scripts.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "asal_sekolah_manual" on array', 'APPPATH\\Views\\components\\partials\\scripts.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\components\\partials\\scripts.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('components/partials/scripts', null, true)
+ 5 APPPATH\Views\layouts\default.php(39): CodeIgniter\View\View->include('components/partials/scripts')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\default.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/default', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/index', [], true)
+10 APPPATH\Controllers\Admin.php(67): view('Admin/index', [...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2024-01-27 21:30:40 --> Column 'id' in field list is ambiguous
+CRITICAL - 2024-01-27 21:30:40 --> Column 'id' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+AND `data_pendaftar`.`jenis_kelamin` = :data_pendaftar.jenis_kelamin:
+GROUP BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dynamic_dependent.php(114): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2024-01-27 21:53:14 --> Column 'id' in field list is ambiguous
+CRITICAL - 2024-01-27 21:53:14 --> Column 'id' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = \'2\'
+AND `data_pendaftar`.`jenis_kelamin` = \'p\'
+GROUP BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `pendaftaran`.`id_pendaftar`, `tahap`.`nama_tahap`, `id`, COUNT( * ) as total_p
+FROM `pendaftaran`
+JOIN `tahap` ON `tahap`.`id` = `pendaftaran`.`tahap`
+JOIN `data_pendaftar` ON `data_pendaftar`.`id` = `pendaftaran`.`id_pendaftar`
+WHERE `pendaftaran`.`periode` = :pendaftaran.periode:
+AND `data_pendaftar`.`jenis_kelamin` = :data_pendaftar.jenis_kelamin:
+GROUP BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dynamic_dependent.php(114): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

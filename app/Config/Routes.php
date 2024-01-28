@@ -7,7 +7,7 @@ $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
-if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
+if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
     require SYSTEMPATH . 'Config/Routes.php';
 }
 
@@ -36,8 +36,6 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-    
-$routes->get('chart', 'GoogleCharts::index');
 $routes->get('formulir-pendaftaran/(:segment)', 'User::formulir_pendaftaran/$1');
 $routes->get('jalur/(:segment)', 'User::jalur/$1');
 $routes->get('tahap/(:segment)', 'User::tahap/$1');
@@ -56,7 +54,8 @@ $routes->post('masuk', 'Login::process');
 $routes->get('logout', 'Login::logout');
 
 
-$routes->get('dashboard', 'Admin::dashboard');
+
+$routes->get('dashboard', 'Admin::dashboard', ['as' => 'dashboard']);
 $routes->get('dashboard-siswa', 'Admin::dashboard_siswa');
 $routes->get('pilih-tahap/(:segment)', 'Admin::pilih_tahap/$1');
 $routes->get('data-pendaftar/(:segment)', 'Admin::data_pendaftar/$1');
@@ -79,25 +78,25 @@ $routes->post('add-opsi/(:segment)', 'Opsi::add_opsi/$1');
 $routes->post('update-opsi/(:segment)', 'Opsi::update_opsi/$1');
 $routes->post('delete-opsi/(:segment)', 'Opsi::delete_opsi/$1');
 
-$routes->get('data-periode', 'Admin::periode');
-$routes->post('add-periode', 'TahapSeleksi::add_periode');
-$routes->post('update-periode/(:segment)', 'TahapSeleksi::update_periode/$1');
-$routes->post('delete-periode/(:segment)', 'TahapSeleksi::delete_periode/$1');
+$routes->get('data-periode', 'Admin::periode', ['as' => 'data-periode']);
+$routes->post('add-periode', 'TahapSeleksi::add_periode', ['as' => 'add-periode']);
+$routes->post('update-periode/(:segment)', 'TahapSeleksi::update_periode/$1', ['as' => 'update-periode']);
+$routes->post('delete-periode/(:segment)', 'TahapSeleksi::delete_periode/$1', ['as' => 'delete-periode']);
 
 $routes->get('data-sekolah', 'Admin::datasekolah');
 $routes->post('update-sekolah/(:segment)', 'Admin::update_sekolah/$1');
 $routes->post('delete-sekolah/(:segment)', 'Admin::delete_sekolah/$1');
 $routes->post('import', 'WorksheetSekolah::import');
 
-$routes->get('data-tahap', 'Admin::tahap');
-$routes->post('add-tahap', 'TahapSeleksi::add_tahap');
-$routes->post('update-tahap/(:segment)', 'TahapSeleksi::update_tahap/$1');
-$routes->post('delete-tahap/(:segment)', 'TahapSeleksi::delete_tahap/$1');
+$routes->get('data-tahap', 'Admin::tahap', ['as' => 'data-tahap']);
+$routes->post('add-tahap', 'TahapSeleksi::add_tahap', ['as' => 'add-tahap']);
+$routes->post('update-tahap/(:segment)', 'TahapSeleksi::update_tahap/$1', ['as' => 'update-tahap']);
+$routes->post('delete-tahap/(:segment)', 'TahapSeleksi::delete_tahap/$1', ['as' => 'delete-tahap']);
 
-$routes->get('data-jalur', 'Admin::jalur');
-$routes->post('add-jalur', 'TahapSeleksi::add_jalur');
-$routes->post('update-jalur/(:segment)', 'TahapSeleksi::update_jalur/$1');
-$routes->post('delete-jalur/(:segment)', 'TahapSeleksi::delete_jalur/$1');
+$routes->get('data-jalur', 'Admin::jalur', ['as' => 'data-jalur']);
+$routes->post('add-jalur', 'TahapSeleksi::add_jalur', ['as' => 'add-jalur']);
+$routes->post('update-jalur/(:segment)', 'TahapSeleksi::update_jalur/$1', ['as' => 'update-jalur']);
+$routes->post('delete-jalur/(:segment)', 'TahapSeleksi::delete_jalur/$1', ['as' => 'delete-jalur']);
 
 $routes->get('data-akun', 'Admin::akun');
 $routes->post('add-akun', 'Akun::add_akun');
