@@ -128,7 +128,7 @@
         ?>
         <div>
           <div class="card border-1 border-dark rounded-5 card-pengumuman">
-            <img src="<?= base_url('assets/' . $k->file_foto); ?>" class="card-img-top img-card-jurusan" style="object-fit: contain;" alt="Wild Landscape" />
+            <img src="<?= base_url('assets/' . $k->file_foto); ?>" class="rounded mx-auto d-block pt-2" style="object-fit: contain;" alt="Jurusan SMK WIDYA MANDALA TAMBAK" />
             <div class="card-body">
               <h5 class="card-title text-center"><?= $k->nama_jurusan ?></h5>
               <p class="card-text"><?= $k->deskripsi ?></p>

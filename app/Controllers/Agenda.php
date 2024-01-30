@@ -15,8 +15,8 @@ class Agenda extends Base
         }
         $agenda = new DataAgenda();
 
-        $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
-        $tanggal_selesai = $this->formatTanggalReverse($this->request->getPost('tanggal_selesai'));
+        $tanggal_mulai = $this->request->getPost('tanggal_mulai');
+        $tanggal_selesai = $this->request->getPost('tanggal_selesai');
 
         session()->setFlashdata('alert', 'Data berhasil ditambahkan');
 
@@ -59,8 +59,8 @@ class Agenda extends Base
         $agenda = new DataAgenda();
         $data_agenda = $agenda->where(['id' => $id])->first();
 
-        $tanggal_mulai = $this->formatTanggalReverse($this->request->getPost('tanggal_mulai'));
-        $tanggal_selesai = $this->formatTanggalReverse($this->request->getPost('tanggal_selesai'));
+        $tanggal_mulai = $this->request->getPost('tanggal_mulai');
+        $tanggal_selesai = $this->request->getPost('tanggal_selesai');
 
         session()->setFlashdata('alert', 'Data berhasil diedit');
 

@@ -21,7 +21,8 @@ use App\Models\Pendaftaran;
 use CodeIgniter\Database\RawSql;
 
 class Admin extends BaseController
-{    
+{   
+
     public function dashboard()
     {
         // proteksi halaman
@@ -54,14 +55,16 @@ class Admin extends BaseController
         $this->data['pendaftar'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->findAll();
         $this->data['pendaftar_laki'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('data_pendaftar.jenis_kelamin','l')->findAll();
         $this->data['pendaftar_p'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('data_pendaftar.jenis_kelamin','p')->findAll();
-        $this->data['tahapan'] = $tahap->join('pendaftaran', 'pendaftaran.tahap = tahap.id')->where('pendaftaran.periode', '2')->findAll();
+        
         $this->data['tahap'] = $tahap->findall();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
         $this->data['isTour'] = true;
         $this->data['isSelect2'] = true;
         $this->data['isFlatpickr'] = true;
         $this->data['page'] = 'Selamat Datang '.session()->get('nama_user').'!';
         $this->data['ket'] = 'Di Aplikasi Penerimaan Peserta Didik Baru SMK WIDYA MANDALA TAMBAK';
         $this->data['title'] = 'Dashboard';
+        $this->data['activePage'] = 'dashboard';
         $this->data['periode'] = $periodeModel->orderBy('id', 'ASC')->findAll();
         $this->data['periode_get'] = $periodeModel->orderBy('id', 'ASC')->where('status','tidak_aktif')->findAll();
         $this->data['get_periode'] = $periodeModel->where('status','aktif')->first();
@@ -102,6 +105,7 @@ class Admin extends BaseController
         $this->data['stat3'] = $this->codeWithName('Menunggu Konfirmasi Pembayaran');
         $this->data['stat4'] = $this->codeWithName('Pembayaran Berhasil');
         $this->data['title'] = 'Dashboard Siswa';
+        $this->data['activePage'] = 'dashboard-siswa';
         return view('Admin/dashboard_siswa', $this->data);
     }
 
@@ -123,13 +127,14 @@ class Admin extends BaseController
 
         // get input nomor pendaftar
         $this->data['tahap'] = $tahap->where('id',$id)->first();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
         $this->data['jalur1'] = $jalur->where('id_tahap', $this->data['tahap']->id)->first();
         $periode = new DataPeriode();
         $this->data['periode'] = $periode->where('id', $this->data['tahap']->id_periode)->first();
         $pendaftar = new DataPendaftar();
-        $this->data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
-        if ($this->data_pendaftar != null) {
-            $id_pendaftar = $this->data_pendaftar->id;
+        $data_pendaftar = $pendaftar->orderBy('id', 'DESC')->first();
+        if ($data_pendaftar != null) {
+            $id_pendaftar = $data_pendaftar->id;
         } else $id_pendaftar = '0';
 
         if ($this->data['jalur1']) {
@@ -150,27 +155,12 @@ class Admin extends BaseController
 
         
         
-        $this->data['page'] = 'pendaftar';
+        $this->data['page'] = 'Data Pendaftar';
+        $this->data['ket'] = 'List Data Pendaftar SMK WIDYA MANDALA TAMBAK';
         $this->data['title'] = 'Data Pendaftar';
+        $this->data['activePage'] = 'pendaftar';
         
         return view('Admin/data_pendaftar', $this->data);
-    }
-
-    public function pilih_tahap($id)
-    {
-        
-        // proteksi halaman
-        if (! session()->get('logged_in')) {
-            session()->setFlashdata('error', 'Anda Belum Login !');
-            return redirect()->to('/login');
-        }
-        $tahap = new DataTahap();
-        $this->data['tahap'] = $tahap->where('id_periode',$id)->findAll();
-        
-        $this->data['page'] = 'pendaftar';
-        $this->data['title'] = 'Pilih Tahap';
-        
-        return view('Admin/pilih_tahap', $this->data);
     }
 
     public function data_seleksi()
@@ -182,6 +172,7 @@ class Admin extends BaseController
         }
         $this->data['page'] = 'seleksi';
         $this->data['title'] = 'Data Seleksi';
+
 
         return view('Admin/data_siswa', $this->data);
     }
@@ -195,6 +186,7 @@ class Admin extends BaseController
         }
         $this->data['page'] = 'pendaftar';
         $this->data['title'] = 'Profil Siswa';
+        $this->data['activePage'] = 'profilsiswa';
 
         return view('Admin/profil_siswa', $this->data);
     }
@@ -207,6 +199,7 @@ class Admin extends BaseController
             return redirect()->to('/login');
         }
         $this->data['title'] = 'Profil Pendaftar';
+        $this->data['activePage'] = 'profilpendaftar';
         return view('Admin/profil_pendaftar', $this->data);
     }
 
@@ -229,13 +222,19 @@ class Admin extends BaseController
 
         $pembayaran = new DataPembayaran();
         $user = new Users();
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
         $this->data['user'] = $user->findAll();
         $this->data['pembayaran'] = $pembayaran->findAll();
         $stat = $this->codeWithName('Daftar Ulang Berhasil');
         // $this->data['data_pendaftar'] = $pendaftar->where('status_penerimaan', $stat->id)->findAll();
         $this->data['data_pendaftar'] = $user->join('data_pendaftar', 'data_pendaftar.id = user.id_ref')->where('data_pendaftar.status_penerimaan',$stat->id)->findAll();
-        $this->data['page'] = 'pembayaran';
+        $this->data['page'] = 'Data Pembayaran';
+        $this->data['ket'] = 'Pembayaran PPDB SMK WIDYA MANDALA TAMBAK';
         $this->data['title'] = 'Data Pembayaran';
+        $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'pembayaran';
+
 
         
         return view('Admin/data_pembayaran', $this->data);
@@ -249,9 +248,12 @@ class Admin extends BaseController
             return redirect()->to('/login');
         }
         $kategori = new KategoriKode();
-
-        $this->data['page'] = 'kategori';
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['ket'] = 'Data Kategori Aplikasi PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['page'] = 'Kategori';
         $this->data['title'] = 'Kategori';
+        $this->data['activePage'] = 'kategori';
 
         $this->data['kategori'] = $kategori->findall();
 
@@ -265,10 +267,13 @@ class Admin extends BaseController
             return redirect()->to('/login');
         }
         $periode = new DataPeriode();
-
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
         $this->data['page'] = 'Data Periode';
         $this->data['ket'] = 'Periode PPDB SMK WIDYA MANDALA TAMBAK';
         $this->data['title'] = 'Data Periode';
+        $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'periode';
 
         $this->data['periode'] = $periode->findall();
         
@@ -282,9 +287,13 @@ class Admin extends BaseController
             return redirect()->to('/login');
         }
         $sekolah = new DataSekolah();
-
-        $this->data['page'] = 'sekolah';
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['page'] = 'Sekolah';
+        $this->data['ket'] = 'Data Sekolah Asal Wilayah Kabupaten Banyumas';
         $this->data['title'] = 'Data Sekolah';
+        $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'sekolah';
 
         $this->data['sekolah'] = $sekolah->findall();
         
@@ -300,11 +309,13 @@ class Admin extends BaseController
         $periode = new DataPeriode();
 
         $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();  
 
         $this->data['page'] = 'Data Tahap';
         $this->data['ket'] = 'Tahap PPDB SMK WIDYA MANDALA TAMBAK';
         $this->data['title'] = 'Data Tahap';
         $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'tahap';
 
         $this->data['periode'] = $periode->findall();
 
@@ -325,9 +336,13 @@ class Admin extends BaseController
         $tahap = new DataTahap();
 
         $jalur = new DataJalur();
-
-        $this->data['page'] = 'tahap';
-        $this->data['title'] = 'Jalur';
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['page'] = 'Data Jalur';
+        $this->data['ket'] = 'Jalur PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['title'] = 'Data Jalur';
+        $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'jalur';
 
         $this->data['opsi_jalur'] = $this->codeAll('JALUR');
 
@@ -350,9 +365,12 @@ class Admin extends BaseController
         $user = new Users();
 
         $pendaftar = new DataPendaftar();
-        
-        $this->data['page'] = 'akun';
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['page'] = 'Akun';
+        $this->data['ket'] = 'Data Akun PPDB SMK WIDYA MANDALA TAMBAK ';
         $this->data['title'] = 'Akun';
+        $this->data['activePage'] = 'akun';
 
         $this->data['user'] = $user->findall();
 
@@ -405,6 +423,7 @@ class Admin extends BaseController
         $this->data['page'] = 'pembayaran';
         $this->data['title'] = 'Konfirmasi Pembayaran';
         $this->data['token'] = $snapToken;
+        $this->data['activePage'] = 'pembayaran';
 
         return view('Admin/konfirmasi_pembayaran',$this->data);
     }
@@ -433,10 +452,15 @@ class Admin extends BaseController
             return redirect()->to('/login');
         }
         $jurusan = new DataJurusan();
+        $tahap = new DataTahap();
+        $periode = new DataPeriode();
+        $this->data['periode'] = $periode->findAll();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['title'] = 'Jurusan';
+        $this->data['page'] = 'Jurusan';
+        $this->data['ket'] = 'Data Jurusan PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['activePage'] = 'jurusan';
         $this->data['jurusan'] = $jurusan->findAll();
-
-        $this->data['page'] = 'jurusan';
-        $this->data['title'] = 'Data Jurusan';
 
         return view('Admin/data_jurusan', $this->data);
     }
@@ -450,13 +474,14 @@ class Admin extends BaseController
         }
         $agenda = new DataAgenda();
         $periode = new DataPeriode();
-
-        $this->data['agenda'] = $agenda->findAll();
-        
         $this->data['periode'] = $periode->findAll();
-
-        $this->data['page'] = 'agenda';
-        $this->data['title'] = 'Data Agenda';
+        $this->data['agenda'] = $agenda->findAll();
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['title'] = 'Agenda';
+        $this->data['page'] = 'Agenda';
+        $this->data['ket'] = 'Data Agenda PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['activePage'] = 'agenda';
 
         return view('Admin/data_agenda', $this->data);
     }

@@ -1,18 +1,19 @@
-<?= $this->extend('Admin/index.php') ?>
+<?= $this->extend($layout) ?>
 
 <?= $this->section('content') ?>
 
-<div class="container border-0 pt-4 pb-4 ps-0">
-    <div class="pb-3">
-        <h3 class="border-bottom pb-3">Kategori Kode</h3>
-    </div>
-    <div class="pb-3">
-        <div class="d-flex">
-            <a href="#" class="btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <div class="header-title">
+          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
         </div>
-    </div>
-    <table id="" class="display table table-striped table-bordered" style="width:100%">
-        <thead>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table id="datatable" class="table" data-toggle="data-table">
+            <thead>
             <tr>
                 <th>No.</th>
                 <th>Nama Kategori</th>
@@ -86,7 +87,11 @@
             <?php $no++;
             endforeach ?>
         </tbody>
-    </table>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="modal fade" id="sliderModal" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">

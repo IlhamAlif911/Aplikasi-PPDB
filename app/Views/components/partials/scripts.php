@@ -111,6 +111,7 @@
 		selector: 'textarea#tiny'
 	});
 </script>
+
 <script>
 	function preview() {
 		frame.src = URL.createObjectURL(event.target.files[0]);

@@ -87,23 +87,25 @@ class Midtrans extends Base
         $pembayaran = new DataPembayaran();
         $city = new Cities();
         $postalcode = new Postalcode();
-        $data['pembayaran'] = $pembayaran->where('id_pendaftar',$id)->first();
+        $this->data['pembayaran'] = $pembayaran->where('id_pendaftar',$id)->first();
 
-        $data['stat'] = $this->codeWithName('Daftar Ulang Berhasil');
+        $this->data['stat'] = $this->codeWithName('Daftar Ulang Berhasil');
 
-        $data['user'] = $user->where('id_ref',$id)->first();
+        $this->data['user'] = $user->where('id_ref',$id)->first();
 
-        $data['pendaftar'] = $pendaftar->where('id',$id)->first();
+        $this->data['pendaftar'] = $pendaftar->where('id',$id)->first();
         
-        $data['city'] = $city->where('city_id', $data['pendaftar']->kabupaten)->first();
+        $this->data['city'] = $city->where('city_id', $this->data['pendaftar']->kabupaten)->first();
 
-        $data['postalcode'] = $postalcode->where('postal_id', $data['pendaftar']->kode_pos)->first();
+        $this->data['postalcode'] = $postalcode->where('postal_id', $this->data['pendaftar']->kode_pos)->first();
         
-        $data['page'] = 'pembayaran';
-        $data['title'] = 'Konfirmasi Pembayaran';
-        // $data['token'] = $snapToken;
+        $this->data['page'] = 'Pembayaran PPDB';
+        $this->data['ket'] = 'Pembayaran PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['title'] = 'Pembayaran Pendaftar';
+        $this->data['isFullCalendar'] = true;
+        $this->data['activePage'] = 'pembayaran';
 
-        return view('Admin/konfirmasi_pembayaran',$data);
+        return view('Admin/konfirmasi_pembayaran',$this->data);
     }
 
     public function token()
@@ -133,7 +135,7 @@ class Midtrans extends Base
         $nama_pembayaran = $this->request->getVar('nama_pembayaran');
 
         $transaction_details = array(
-            'order_id' => 'PPDB-'.$nomor_pendaftaran.'-'.date('YmdHis'),
+            'order_id' => 'PPDB-'.$nomor_pendaftaran.'-'.date('H:i:s'),
             'gross_amount' => $nominal_bayar, // no decimal allowed for creditcard
         );
 

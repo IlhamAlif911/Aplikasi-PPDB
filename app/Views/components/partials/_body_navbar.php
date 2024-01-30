@@ -8,9 +8,8 @@
 				</svg>
 			</i>
 		</div>
-		<a href="<?= base_url(route_to('dashboard')) ?>" class="d-flex d-lg-none ms-3">
+		<a href="<?= base_url() ?>" class="d-flex d-lg-none ms-3">
 			<?= $this->include('components/widgets/logo') ?>
-			
 		</a>
 		
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,20 +24,21 @@
 				<li class="nav-item dropdown">
 					<a class="py-0 nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						<img src="<?= base_url('assets/images/avatars/01.png')?>" alt="User-Profile" class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded">
-						<img src="<?= base_url('assets/images/avatars/avtar_1.png')?>" alt="User-Profile" class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded">
-						<img src="<?= base_url('assets/images/avatars/avtar_2.png')?>" alt="User-Profile" class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded">
-						<img src="<?= base_url('assets/images/avatars/avtar_4.png')?>" alt="User-Profile" class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded">
-						<img src="<?= base_url('assets/images/avatars/avtar_5.png')?>" alt="User-Profile" class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded">
-						<img src="<?= base_url('assets/images/avatars/avtar_3.png')?>" alt="User-Profile" class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded">
+						
 						<div class="caption ms-3 d-none d-md-block ">
 							<h6 class="mb-0 caption-title"><?= session()->get('nama_user')?></h6>
-							<p class="mb-0 caption-sub-title">Administrator</p>
+							<?php if (session()->get('role') == '1') { ?>
+								<p class="mb-0 caption-sub-title">Administrator</p>
+							<?php } else { ?>
+								<p class="mb-0 caption-sub-title">Pendaftar</p>
+							<?php } ?>
+							
 						</div>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="<?= base_url(route_to('user.profile'))?>">Profile</a></li>
+						<li><a class="dropdown-item" href="#Profile">Profil</a></li>
 						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="<?= base_url(route_to('login'))?>">Logout</a></li>
+						<li><a class="dropdown-item" data-bs-toggle="modal" href="#Logout" data-bs-target="#logoutModal">Logout</a></li>
 					</ul>
 				</li>
 			</ul>

@@ -1,14 +1,18 @@
-<?= $this->extend('Admin/index.php') ?>
+<?= $this->extend($layout) ?>
 
 <?= $this->section('content') ?>
 
-<div class="container border-0 pt-4 pb-4 ps-0">
-    <div class="pb-3">
-        <h3 class="border-bottom pb-3">Konfirmasi Pembayaran</h3>
-        
-        
-    </div>
-    <?php if (session()->has('error')) : ?>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+            <div class="header-title">
+               <h4 class="card-title">Pembayaran PPDB</h4>
+            </div>
+         </div>
+            <div class="card-body">
+                <?php if (session()->has('error')) : ?>
         <ul id="alert" class="alert alert-danger list-unstyled">
             <li><?= session('error') ?></li>
         </ul>
@@ -74,7 +78,10 @@
         <ul class="alert alert-success list-unstyled">
             <li>Anda sudah melakukan konfirmasi.</li>
         </ul>
-    <?php } ?>
+    <?php } ?> 
+            </div>
+        </div>
+    </div>
 </div>
 
 

@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('test', 'Admin::test');
 $routes->get('formulir-pendaftaran/(:segment)', 'User::formulir_pendaftaran/$1');
 $routes->get('jalur/(:segment)', 'User::jalur/$1');
 $routes->get('tahap/(:segment)', 'User::tahap/$1');
@@ -57,8 +58,8 @@ $routes->get('logout', 'Login::logout');
 
 $routes->get('dashboard', 'Admin::dashboard', ['as' => 'dashboard']);
 $routes->get('dashboard-siswa', 'Admin::dashboard_siswa');
-$routes->get('pilih-tahap/(:segment)', 'Admin::pilih_tahap/$1');
-$routes->get('data-pendaftar/(:segment)', 'Admin::data_pendaftar/$1');
+$routes->get('pilih-tahap/(:segment)', 'Admin::pilih_tahap/$1', ['as' => 'pilih-tahap']);
+$routes->get('data-pendaftar/(:segment)', 'Admin::data_pendaftar/$1', ['as' => 'data-pendaftar']);
 $routes->get('export/(:segment)', 'Worksheet::export/$1');
 $routes->get('export-accepted/(:segment)', 'Worksheet::export_diterima/$1');
 $routes->post('import/(:segment)', 'Worksheet::import/$1');

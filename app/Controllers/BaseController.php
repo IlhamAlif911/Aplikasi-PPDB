@@ -100,7 +100,7 @@ abstract class BaseController extends Controller
         $this->data['isNavbar'] = true;
         $this->data['isBanner'] = false;
         $this->data['isPageContainer'] = true;
-
+        
     }
 
     protected function getSettings()

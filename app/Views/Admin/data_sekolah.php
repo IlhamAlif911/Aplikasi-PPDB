@@ -1,32 +1,19 @@
-<?= $this->extend('Admin/index.php') ?>
+<?= $this->extend($layout) ?>
 
 <?= $this->section('content') ?>
 
-<div class="container border-0 pt-4 pb-4 ps-0">
-    
-    <div class="pb-3">
-        <div class="d-flex">
-            <div class="btn-group">
-                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#sliderModal1">
-                    <i class="fas fa-file-upload"></i>&nbsp;&nbsp;Impor
-                </button>
-            </div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <div class="header-title">
+          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">Import</a>
         </div>
-    </div>
-    <div class="pb-3">
-        
-        <?php if (session()->has('error')) : ?>
-        <ul id="alert" class="alert alert-danger list-unstyled">
-            <li><?= session('error') ?></li>
-        </ul>
-            <?php elseif (session()->has('alert')) : ?>
-            <ul id="alert" class="alert alert-success list-unstyled">
-                <li><?= session('alert') ?></li>
-            </ul>
-        <?php endif ?>
-    </div>
-    <table id="" class="display table table-striped table-bordered" style="width:100%">
-        <thead>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table id="datatable" class="table" data-toggle="data-table">
+            <thead>
             <tr>
                 <th>No.</th>
                 <th>Nama Sekolah</th>
@@ -98,10 +85,14 @@
             <?php $no++;
             endforeach ?>
         </tbody>
-    </table>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="modal fade" id="sliderModal1" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
+<div class="modal fade" id="sliderModal" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">

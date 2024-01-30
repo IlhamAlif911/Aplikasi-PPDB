@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\KategoriKode;
 use App\Models\KodeAplikasi;
+use App\Models\DataTahap;
 
 
 class Opsi extends BaseController
@@ -18,14 +19,20 @@ class Opsi extends BaseController
 
         $kategori = new KategoriKode();
 
-        $data['page'] = 'kategori';
-        $data['title'] = 'Kategori';
+        $this->data['page'] = 'kategori';
+        $this->data['title'] = 'Kategori';
+        $tahap = new DataTahap();
+        $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
+        $this->data['ket'] = 'Kode Aplikasi PPDB SMK WIDYA MANDALA TAMBAK';
+        $this->data['page'] = 'Kode Aplikasi';
+        $this->data['title'] = 'kode Apiikasi';
+        $this->data['activePage'] = 'kategori';
 
-        $data['kategori'] = $kategori->where('id',$id)->first();
+        $this->data['kategori'] = $kategori->where('id',$id)->first();
 
-		$data['kode_aplikasi'] = $kode_aplikasi->where('id_kategori',$id)->findall();
+		$this->data['kode_aplikasi'] = $kode_aplikasi->where('id_kategori',$id)->findall();
 
-        return view('Admin/kode_aplikasi',$data);
+        return view('Admin/kode_aplikasi',$this->data);
     }
 
     public function update_kategori($id)
@@ -37,7 +44,7 @@ class Opsi extends BaseController
         }
         $kategori = new KategoriKode();
 
-        $data['kategori'] = $kategori->where('id',$id)->findall();
+        $this->data['kategori'] = $kategori->where('id',$id)->findall();
 
         if (!$this->validate([
             'nama_kategori' => [
@@ -104,7 +111,7 @@ class Opsi extends BaseController
         }
         $kode_aplikasi = new KodeAplikasi();
 
-        $data['kode_aplikasi'] = $kode_aplikasi->where('id',$id)->first();
+        $this->data['kode_aplikasi'] = $kode_aplikasi->where('id',$id)->first();
 
         if (!$this->validate([
             'nama_opsi' => [
@@ -127,7 +134,7 @@ class Opsi extends BaseController
             'nama_opsi' => $this->request->getVar('nama_opsi'),
         ]);
 
-        return redirect()->to('edit-kategori/'.$data['kode_aplikasi']->id_kategori);
+        return redirect()->to('edit-kategori/'.$this->data['kode_aplikasi']->id_kategori);
     }
 
     public function add_opsi($id){
@@ -171,12 +178,12 @@ class Opsi extends BaseController
         }
         $kode_aplikasi=new KodeAplikasi();
 
-        $data['kode_aplikasi']=$kode_aplikasi->where(['id'=>$id])->first();
+        $this->data['kode_aplikasi']=$kode_aplikasi->where(['id'=>$id])->first();
 
         $kode_aplikasi->delete($id);
 
         session()->setFlashdata('error', 'Data berhasil dihapus');
 
-        return redirect()->to('edit-kategori/'.$data['kode_aplikasi']->id_kategori);
+        return redirect()->to('edit-kategori/'.$this->data['kode_aplikasi']->id_kategori);
     }
 }

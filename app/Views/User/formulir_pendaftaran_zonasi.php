@@ -452,7 +452,7 @@
                            <div class="d-flex justify-content-end">
                               <div class="d-flex align-items-center m-3 border-start border-end border-top border-bottom p-3">
                                  <span class="h6 me-3">Selanjutnya</span>
-                                 <div class="step btn btn-primary" icon="fa fa-arrow-right" id="2"></div>
+                                 <div class="step btn btn-success" icon="fa fa-arrow-right" id="2"></div>
                               </div>
                            </div>
                         </div>
@@ -486,12 +486,12 @@
                </div>
                <div class="d-flex justify-content-end">
                   <div class="d-flex align-items-center m-3 border-start border-end border-top border-bottom p-3">
-                     <div class="step btn btn-primary" icon="fa fa-arrow-left" id="1"></div>
+                     <div class="step btn btn-success" icon="fa fa-arrow-left" id="1"></div>
                      <span class="h6 me-3">Sebelumnya</span>
                   </div>
                   <div class="d-flex align-items-center m-3 border-start border-end border-top border-bottom p-3">
                      <span class="h6 me-3">Selanjutnya</span>
-                     <div class="step btn btn-primary" icon="fa fa-arrow-right" id="3"></div>
+                     <div class="step btn btn-success" icon="fa fa-arrow-right" id="3"></div>
                   </div>
                </div>
             </div>
@@ -507,12 +507,12 @@
                      </label>
                   </div>
                   <div class="mt-3">
-                     <button class="btn btn-primary btn-lg col-12" type="submit" id="submit" name="submit">Submit Data</button>
+                     <button class="btn btn-success btn-lg col-12" type="submit" id="submit" name="submit">Submit Data</button>
                   </div>
                </div>
                <div class="d-flex justify-content-end">
                   <div class="d-flex align-items-center m-3 border-start border-end border-top border-bottom p-3">
-                     <div class="step btn btn-primary" icon="fa fa-arrow-left" id="2"></div>
+                     <div class="step btn btn-success" icon="fa fa-arrow-left" id="2"></div>
                      <span class="h6 me-3">Sebelumnya</span>
                   </div>
                </div>

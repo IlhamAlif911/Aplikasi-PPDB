@@ -15,7 +15,7 @@
                         <p class="">No. Pendaftaran</p>
                         <p class="fw-bold"><?= $user->nomor_pendaftaran ?></p>
                         <p class="">Status Pendaftaran</p>
-                        <p class="fw-bold bg-danger text-white rounded-4 p-2"><?= $status_penerimaan->nama_opsi ?></p>
+                        <p class="fw-bold text-white rounded-4 p-2" style="background-color: #4D7C0F;"><?= $status_penerimaan->nama_opsi ?></p>
                 </div>
             </div>
         </div>
