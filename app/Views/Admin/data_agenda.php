@@ -7,10 +7,20 @@
     <div class="card">
       <div class="card-header d-flex justify-content-between">
         <div class="header-title">
-          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          <a href="#" class="card-title btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          
         </div>
       </div>
       <div class="card-body">
+        <?php if (session()->has('error')) { ?>
+            <ul id="alert" class="alert alert-danger list-unstyled">
+              <li><?= session('error') ?></li>
+            </ul>
+          <?php } elseif (session()->has('alert')) { ?>
+            <ul id="alert" class="alert alert-success list-unstyled">
+              <li><?= session('alert') ?></li>
+            </ul>
+          <?php } ?>
         <div class="table-responsive">
           <table id="datatable" class="table" data-toggle="data-table">
             <thead>
@@ -100,23 +110,17 @@
                             </div>
                           </div>
                           <div class="row mb-2">
-                            <div class="input-group input-daterange">
-                              <div class="row">
-                                <label for="TanggalMulai" class="col-3 col-form-label">Tanggal Mulai<span class="text-danger">*</span></label>
-                                <div class="col-3">
-                                  <div class="input-group">
-                                    <input type="text" class="form-control mb-0" id="autoSizingInputGroup" name="tanggal_mulai" value="<?= $tanggal_mulai ?>" required>
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                  </div>
+                            <label for="TanggalMulai" class="col-3 col-form-label">Tanggal Mulai<span class="text-danger">*</span></label>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="exampleInputdate" name="tanggal_mulai" value="<?= $k->tanggal_mulai ?>" required>
                                 </div>
-                                <label for="TanggalSelesai" class="mb-2 col-3 col-form-label">Tanggal Selesai<span class="text-danger">*</span></label>
-                                <div class="col-3">
-                                  <div class="input-group">
-                                    <input type="text" class="form-control mb-0" id="autoSizingInputGroup" name="tanggal_selesai" value="<?= $tanggal_selesai ?>" required>
-                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                  </div>
+                            </div>
+                            <label for="TanggalSelesai" class="mb-2 col-3 col-form-label">Tanggal Selesai<span class="text-danger">*</span></label>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="exampleInputdate" name="tanggal_selesai" value="<?= $k->tanggal_selesai ?>" required>
                                 </div>
-                              </div>
                             </div>
                           </div>
                           <div class="modal-footer">
@@ -196,25 +200,19 @@
             </div>
           </div>
           <div class="row mb-2">
-            <div class="input-group input-daterange">
-              <div class="row">
-                <label for="TanggalMulai" class="col-3 col-form-label">Tanggal Mulai<span class="text-danger">*</span></label>
-                <div class="col-3">
-                  <div class="input-group">
-                    <input type="text" class="form-control mb-0" id="autoSizingInputGroup" name="tanggal_mulai" required>
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                  </div>
+            <label for="TanggalMulai" class="col-3 col-form-label">Tanggal Mulai<span class="text-danger">*</span></label>
+            <div class="col-3">
+                <div class="input-group">
+                    <input type="date" class="form-control" id="exampleInputdate" name="tanggal_mulai" required>
                 </div>
-                <label for="TanggalSelesai" class="mb-2 col-3 col-form-label">Tanggal Selesai<span class="text-danger">*</span></label>
-                <div class="col-3">
-                  <div class="input-group">
-                    <input type="text" class="form-control mb-0" id="autoSizingInputGroup" name="tanggal_selesai" required>
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+            <label for="TanggalSelesai" class="mb-2 col-3 col-form-label">Tanggal Selesai<span class="text-danger">*</span></label>
+            <div class="col-3">
+                <div class="input-group">
+                    <input type="date" class="form-control" id="exampleInputdate" name="tanggal_selesai" required>
+                </div>
+            </div>
+        </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>

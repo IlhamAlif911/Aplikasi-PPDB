@@ -53,16 +53,16 @@
                   </div>
                   <div class="d-flex icon-pill">
                      <?php if ($data_pendaftar->status_penerimaan == $stat1->id) { ?>
-                        <a href="<?= site_url('registrasi-ulang/'.session()->get('id_ref')) ?>" class="btn rounded-pill px-2 py-2 ms-2">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <a href="<?= site_url('registrasi-ulang/'.session()->get('id_ref')) ?>" class="btn btn-success rounded-pill px-2 py-2 ms-2 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="20" height="20" viewBox="0 0 20 20" fill="#FFFFFF">
                               <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
                            </svg> Daftar Ulang
                         </a>
                      <?php }elseif ($data_pendaftar->status_penerimaan == $stat2->id) { ?>
-                        <a href="<?= site_url('konfirmasi-pembayaran/'.session()->get('id_ref')) ?>" class="btn rounded-pill px-2 py-2  ms-2">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <a href="<?= site_url('konfirmasi-pembayaran/'.session()->get('id_ref')) ?>" class="btn btn-success rounded-pill px-2 py-2 ms-2 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="20" height="20" viewBox="0 0 20 20" fill="#FFFFFF">
                               <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-                           </svg> Konfirmasi Pembayaran
+                           </svg> Lakukan Pembayaran
                         </a>
                      <?php } ?>
                   </div>

@@ -1,0 +1,780 @@
+CRITICAL - 2024-02-05 07:21:29 --> Class "App\Controllers\Cities" not found
+in APPPATH\Controllers\Pembayaran.php on line 274.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->konfirmasi_pembayaran('28')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 07:22:22 --> Class "App\Controllers\Postalcode" not found
+in APPPATH\Controllers\Pembayaran.php on line 276.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pembayaran->konfirmasi_pembayaran('28')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembayaran))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:25:46 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["customer_details.email format is invalid"]}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...], 'POST')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...])
+ 3 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\Midtrans.php(92): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->token()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:26:32 --> Midtrans API is returning API error. HTTP status code: 400 API response: {"error_messages":["customer_details.email format is invalid"]}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 167.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(39): Midtrans\ApiRequestor::remoteCall('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...], 'POST')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(108): Midtrans\ApiRequestor::post('https://app.sandbox.midtrans.com/snap/v1/transactions', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', [...])
+ 3 VENDORPATH\midtrans\midtrans-php\Midtrans\Snap.php(36): Midtrans\Snap::createTransaction([...])
+ 4 APPPATH\Controllers\Midtrans.php(92): Midtrans\Snap::getSnapToken([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->token()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:54:41 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:54:44 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:54:48 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:54:49 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:54:50 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:31 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:52 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:55 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:55 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:55 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:56 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:55:56 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:56:00 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:56:05 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:56:06 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 14:56:07 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:00:46 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:00:55 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:31 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:38 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:39 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:39 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:39 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:40 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:40 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:40 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:40 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:41 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:42 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:44 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:45 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:52 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:01:57 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:02:07 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:02:15 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:02:26 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:02:57 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:11 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:18 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:22 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:23 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:23 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:23 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:24 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:24 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:03:24 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:04:25 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:04:32 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:08:04 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:42 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:45 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:45 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:46 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:47 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:48 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:48 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:50 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:50 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:51 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:52 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:53 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:53 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:55 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:56 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:56 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:12:57 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:13:37 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:13:56 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:13:57 --> Attempt to read property "id_ref" on null
+in APPPATH\Controllers\Dynamic_dependent.php on line 75.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_ref" on null', 'APPPATH\\Controllers\\Dynamic_dependent.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:37 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:40 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:43 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:46 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:47 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:48 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:49 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:54 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:57 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:58 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:30:59 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:00 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:01 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:02 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:03 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:03 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:04 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:06 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:06 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:06 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:07 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:07 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:07 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-02-05 15:31:07 --> Undefined variable $data_pendaftar
+in APPPATH\Controllers\Dynamic_dependent.php on line 77.
+ 1 APPPATH\Controllers\Dynamic_dependent.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_pendaftar', 'APPPATH\\Controllers\\Dynamic_dependent.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Dynamic_dependent->action()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dynamic_dependent))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -122,6 +122,9 @@
 	function cek_status(id,idPendaftar){
 		window.location.href='/midtrans/status/'+ id + '/' + idPendaftar;
 	}
+	function get_status(id){
+		window.location.href='/midtrans/get_status/'+ id;
+	}
 
 
 	function bacaGambar(input) {
@@ -466,6 +469,7 @@
 				}
 
 				snap.pay(data, {
+					uiMode: "auto",
 					onSuccess: function(result) {
 						changeResult('success', result);
 						console.log(result.status_message);
@@ -483,7 +487,8 @@
 						changeResult('error', result);
 						console.log(result.status_message);
 						$("#payment-form").submit();
-					}
+					},
+
 				});
 			}
 		});

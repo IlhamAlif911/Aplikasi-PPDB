@@ -7,10 +7,20 @@
     <div class="card">
       <div class="card-header d-flex justify-content-between">
         <div class="header-title">
-          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          <a href="#" class="card-title btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          
         </div>
       </div>
       <div class="card-body">
+        <?php if (session()->has('error')) { ?>
+            <ul id="alert" class="alert alert-danger list-unstyled">
+              <li><?= session('error') ?></li>
+            </ul>
+          <?php } elseif (session()->has('alert')) { ?>
+            <ul id="alert" class="alert alert-success list-unstyled">
+              <li><?= session('alert') ?></li>
+            </ul>
+          <?php } ?>
         <div class="table-responsive">
           <table id="datatable" class="table" data-toggle="data-table">
             <thead>
@@ -57,7 +67,7 @@
                           <div class="row mb-2">
                             <label for="Deskripsi" class="col-3 col-form-label">Deskripsi</label>
                             <div class="col-9">
-                              <textarea id="tiny" name="deskripsi"><?= $k->deskripsi ?></textarea>
+                              <textarea class="form-control" name="deskripsi" rows="3"><?= $k->deskripsi ?></textarea>
                             </div>
                           </div>
                           <div class="row mb-2">
@@ -114,7 +124,7 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="sliderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -132,7 +142,7 @@
           <div class="row mb-2">
             <label for="Deskripsi" class="col-3 col-form-label">Deskripsi<span class="text-danger">*</span></label>
             <div class="col-9">
-              <textarea id="tiny" name="deskripsi"></textarea>
+              <textarea class="form-control" name="deskripsi" rows="3"></textarea>
             </div>
           </div>
           <div class="row mb-2">

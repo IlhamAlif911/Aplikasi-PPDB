@@ -108,7 +108,7 @@ $routes->get('data-pembayaran', 'Admin::data_pembayaran');
 $routes->post('add-konfirmasi', 'Pembayaran::add_konfirmasi');
 
 $routes->post('add-konfirmasi-siswa', 'Pembayaran::add_konfirmasi_siswa');
-$routes->get('konfirmasi-pembayaran/(:segment)', 'Midtrans::konfirmasi_pembayaran/$1');
+$routes->get('konfirmasi-pembayaran/(:segment)', 'Pembayaran::konfirmasi_pembayaran/$1');
 $routes->post('/midtrans/token', 'Midtrans::token');
 
 $routes->get('pembayaran-selesai', 'Admin::pembayaran_selesai');

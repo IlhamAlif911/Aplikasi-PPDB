@@ -7,10 +7,20 @@
     <div class="card">
       <div class="card-header d-flex justify-content-between">
         <div class="header-title">
-          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          <a href="#" class="card-title btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          
         </div>
       </div>
       <div class="card-body">
+        <?php if (session()->has('error')) { ?>
+            <ul id="alert" class="alert alert-danger list-unstyled">
+              <li><?= session('error') ?></li>
+            </ul>
+          <?php } elseif (session()->has('alert')) { ?>
+            <ul id="alert" class="alert alert-success list-unstyled">
+              <li><?= session('alert') ?></li>
+            </ul>
+          <?php } ?>
         <div class="table-responsive">
           <table id="datatable" class="table" data-toggle="data-table">
             <thead>

@@ -8,7 +8,11 @@
       <div class="card-header d-flex justify-content-between">
         <div class="header-title">
           <h3 class="border-bottom pb-3">Data Siswa <?= $tahap->nama_tahap ?></h3>
-          <?php if (session()->has('error')) { ?>
+          
+        </div>
+      </div>
+      <div class="card-body">
+        <?php if (session()->has('error')) { ?>
             <ul id="alert" class="alert alert-danger list-unstyled">
               <li><?= session('error') ?></li>
             </ul>
@@ -17,9 +21,6 @@
               <li><?= session('alert') ?></li>
             </ul>
           <?php } ?>
-        </div>
-      </div>
-      <div class="card-body">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
           <?php if (!$jalur1) { ?>
             <ul class="alert alert-danger list-unstyled">

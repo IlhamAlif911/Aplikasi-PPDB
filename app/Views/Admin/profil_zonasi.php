@@ -67,9 +67,8 @@
                 <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir<span class="text-danger">*</span></label>
                 <div class="col-sm-4">
                   <div class="input-group">
-                    <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_lahir" value="<?php $pecah = explode('-', $pendaftar->tanggal_lahir); $tanggal_lahir = $pecah[2] . '-' . $pecah[1] . '-' . $pecah[0];
-                    echo $tanggal_lahir; ?>" required>
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <input type="date" class="form-control mb-0" id="autoSizingInputGroup" name="tanggal_lahir" value="<?php echo $pendaftar->tanggal_lahir; ?>" required>
+                    
                   </div>
                 </div>
               </div>
@@ -454,9 +453,8 @@
                 <label for="TanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir<span class="text-danger">*</span></label>
                 <div class="col-sm-4">
                   <div class="input-group">
-                    <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_lahir" value="<?php $pecah = explode('-', $pendaftar->tanggal_lahir); $tanggal_lahir = $pecah[2] . '-' . $pecah[1] . '-' . $pecah[0];
-                    echo $tanggal_lahir; ?>" required>
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <input type="date" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_lahir" value="<?= $pendaftar->tanggal_lahir; ?>" required>
+                    
                   </div>
                 </div>
               </div>

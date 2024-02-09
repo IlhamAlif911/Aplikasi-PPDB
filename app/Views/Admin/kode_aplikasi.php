@@ -9,11 +9,21 @@
                 <div class="header-title">
                     <a class="text-primary pb-5" href="<?= base_url(); ?>/kategori-kode"><i class="fa fa-arrow-left"></i> Kembali</a>
                     <h3 class="pb-2">Kategori <?php $nk= strtolower($kategori->nama_kategori); echo ucfirst($nk); ?></h3>
-                    <a href="#" class="btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+                    <a href="#" class="btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+                    
                 </div>
             </div>
             
             <div class="card-body">
+                <?php if (session()->has('error')) { ?>
+                      <ul id="alert" class="alert alert-danger list-unstyled">
+                        <li><?= session('error') ?></li>
+                      </ul>
+                    <?php } elseif (session()->has('alert')) { ?>
+                      <ul id="alert" class="alert alert-success list-unstyled">
+                        <li><?= session('alert') ?></li>
+                      </ul>
+                    <?php } ?>
                 <table id="" class="display table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>

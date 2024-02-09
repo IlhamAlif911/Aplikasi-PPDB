@@ -124,14 +124,12 @@
                         dataType: "JSON",
                         success: function(data) {
                             if (data.nama_lengkap == nama) {
-                                var html = '<div class="card mt-5 shadow" style="width: 40rem;"><div class="card-body text-center"><p class="card-title h2 pb-3">' + data.nama_lengkap + '</p><p class="">No. Pendaftaran</p><p class="fw-bold">' + nomor + '</p><p class="">Status Pendaftaran</p><p class="fw-bold text-white rounded-4 p-2" style="background-color: #4D7C0F;">' + data.status + '</p></div></div>';
+                                var html = '<div class="card mt-5 shadow" style="width: 40rem;"><div class="card-body text-center"><p class="card-title h2 pb-3">' + data.nama_lengkap + '</p><p class="">No. Pendaftaran</p><p class="fw-bold">' + nomor + '</p><p class="">Status Pendaftaran</p><p class="fw-bold bg-danger text-white rounded-4 p-2">' + data.status + '</p></div></div>';
                                 $('#result_data').html(html);
                             } else {
                                 var html = '<h3>Data Tidak Cocok!</h3>';
                                 $('#result_data').html(html);
                             }
-
-
                         }
                     });
                 } else {
@@ -139,7 +137,6 @@
                     $('#result_data').html(html);
                 }
             });
-
         });
     </script>
     <script>

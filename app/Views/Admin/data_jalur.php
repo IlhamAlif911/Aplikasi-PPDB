@@ -7,10 +7,20 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <div class="header-title">
-                    <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+                    <a href="#" class="card-title btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+                    
                 </div>
             </div>
             <div class="card-body">
+                <?php if (session()->has('error')) { ?>
+                      <ul id="alert" class="alert alert-danger list-unstyled">
+                        <li><?= session('error') ?></li>
+                      </ul>
+                    <?php } elseif (session()->has('alert')) { ?>
+                      <ul id="alert" class="alert alert-success list-unstyled">
+                        <li><?= session('alert') ?></li>
+                      </ul>
+                    <?php } ?>
                 <div class="table-responsive">
                     <table id="datatable" class="table" data-toggle="data-table">
                         <thead>
@@ -60,7 +70,7 @@
                                     <div class="modal-dialog modal-dialog-scrollable modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="kalenderModalLabel">Edit Periode</h5>
+                                                <h5 class="modal-title" id="kalenderModalLabel">Edit Jalur</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -112,7 +122,7 @@
                                                     <div class="row mb-2">
                                                         <label for="Syarat" class="col-3 col-form-label">Syarat<span class="text-danger">*</span></label>
                                                         <div class="col-9">
-                                                            <textarea id="tiny" name="syarat"><?= $k->syarat ?></textarea>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" aria-label="With textarea" name="syarat" rows="3"><?= $k->syarat ?></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -128,7 +138,7 @@
                                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="kalenderModalLabel">Hapus Periode</h5>
+                                                <h5 class="modal-title" id="kalenderModalLabel">Hapus Jalur</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -156,7 +166,7 @@
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="sliderModalLabel">Tambah Tahap</h5>
+                <h5 class="modal-title" id="sliderModalLabel">Tambah Jalur</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

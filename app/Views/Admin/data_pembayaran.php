@@ -7,19 +7,29 @@
     <div class="card">
       <div class="card-header d-flex justify-content-between">
         <div class="header-title">
-          <a href="#" class="card-title btn btn-primary align-self-end" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          <a href="#" class="card-title btn btn-primary align-self-end pb-2" data-bs-toggle="modal" data-bs-target="#sliderModal">+ Tambah Data</a>
+          
         </div>
       </div>
       <div class="card-body">
+        <?php if (session()->has('error')) { ?>
+            <ul id="alert" class="alert alert-danger list-unstyled">
+              <li><?= session('error') ?></li>
+            </ul>
+          <?php } elseif (session()->has('alert')) { ?>
+            <ul id="alert" class="alert alert-success list-unstyled">
+              <li><?= session('alert') ?></li>
+            </ul>
+          <?php } ?>
         <div class="table-responsive">
           <table id="datatable" class="table" data-toggle="data-table">
             <thead>
               <tr>
                 <th>No.</th>
                 <th>Nomor Pendaftaran</th>
-                <th>Order ID</th>
+                
                 <th>Tanggal Transfer</th>
-                <th>Nama Bank</th>
+                <th>Jenis Pembayaran</th>
                 <th>Status</th>
                 <th>Aksi</th>
               </tr>
@@ -40,7 +50,7 @@
                     } 
                     ?>
                   </td>
-                  <td><?= $k->order_id ?></td>
+                  
                   <td>
                     <?php
                     if ($k->tanggal_transfer != "") {
@@ -50,27 +60,43 @@
                     }
                     ?>
                   </td>
-                  <td><?= $k->nama_bank ?></td>
+                  <td><?php if ($k->nama_bank == 'bri') { ?>
+                      BRI
+                    <?php } else if($k->nama_bank == 'bca') { ?>
+                      BCA
+                    <?php }else if ($k->nama_bank == 'bni'){ ?>
+                      BNI
+                    <?php }else{ ?>
+                      <?= $k->nama_bank ?>
+                    <?php } ?>
+                      
+                    </td>
                   <td class="text-center">
                     <?php if ($k->status == 'pending') { ?>
-                      <span class="badge badge-warning">Pending</span>
+                      <span class="badge bg-warning">Pending</span>
                     <?php } else if($k->status == 'expire') { ?>
-                      <span class="badge badge-danger">Kadaluarsa</span>
+                      <span class="badge bg-danger">Kadaluarsa</span>
                     <?php }else if ($k->status == 'settlement'){ ?>
-                      <span class="badge badge-success">Sukses</span>
+                      <span class="badge bg-success">Sukses</span>
                     <?php } ?>
                   </td>
                   <td class="text-center">
-                    <button class="btn btn-success btn-sm" type="button" onclick="cek_status('<?= $k->id; ?>', '<?= $k->id_pendaftar; ?>')">Cek Status</button>
+                    <?php if ($k->nama_bank == 'Tunai'): ?>
+                      
+                    <?php else: ?>
+                      <button class="btn btn-success btn-sm" type="button" onclick="cek_status('<?= $k->id; ?>', '<?= $k->id_pendaftar; ?>')">Cek Status</button>
+                    <?php endif ?>
+                    
                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" value="<?= $k->id ?>" id="edit_jurusan" name="edit_jurusan" data-bs-target="#kalenderModalEdit<?= $k->id ?>">Edit</a>
                     <a href="#" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#alertModalEdit<?= $k->id ?>">Hapus</a>
                   </td>
                 </tr>
-                <div class="modal fade" id="kalenderModalEdit<?= $k->id ?>" tabindex="-1" aria-labelledby="kalenderModalLabel" aria-hidden="true">
+                <?php if ($k->nama_bank == 'Tunai'): ?>
+                  <div class="modal fade" id="kalenderModalEdit<?= $k->id ?>" tabindex="-1" aria-labelledby="kalenderModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-scrollable modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="kalenderModalLabel">Edit Data Pembayaran</h5>
+                        <h5 class="modal-title" id="kalenderModalLabel">Ubah Data Pembayaran Tunai</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
@@ -86,40 +112,35 @@
                             </div>
                           </div>
                           <div class="row mb-2">
-                            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
+                            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Pembayaran<span class="text-danger">*</span></label>
                             <div class="col-sm-9">
                               <div class="input-group">
-                                <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" value="<?= $tanggal_transfer ?>" required>
-                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                <input type="date" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" value="<?= $k->tanggal_transfer ?>" required>
+                                
                               </div>
                             </div>
                           </div>
                           <div class="row mb-2">
-                            <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
+                            <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama<span class="text-danger">*</span></label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" id="nama_pemilik_rekening" name="nama_pemilik_rekening" value="<?= $k->nama_pemilik_rekening ?>" required>
                             </div>
                           </div>
                           <div class="row mb-2">
-                            <label for="NamaBank" class="col-sm-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
+                            <label for="NamaBank" class="col-sm-3 col-form-label">Jenis Pembayaran<span class="text-danger">*</span></label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" id="nama_bank" name="nama_bank" value="<?= $k->nama_bank ?>" required>
+                              <input type="text" class="form-control" id="nama_bank" name="nama_bank" value="
+                              <?php if ($k->nama_bank == 'bri') { ?>BRI<?php } else if($k->nama_bank == 'bca') { ?>BCA<?php }else if ($k->nama_bank == 'bni'){ ?>BNI<?php }else{ ?><?= $k->nama_bank ?><?php } ?>" readonly>
                             </div>
                           </div>
                           <div class="row mb-2">
-                            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
+                            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Bayar<span class="text-danger">*</span></label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" id="nominal_transfer" name="nominal_transfer" value="<?= $k->nominal_transfer ?>" required>
                               <span class="text-danger">Angka saja tanpa titik atau koma. Contoh : 200000</span>
                             </div>
                           </div>
-                          <div class="row mb-2">
-                            <label for="BuktiTransfer" class="col-sm-3 col-form-label">Bukti Transfer</label>
-                            <div class="col-sm-9">
-                              <img id="gambar_load2" src="<?= base_url('assets/' . $k->bukti_transfer); ?>" class="img-fluid pad" />
-                              <input type="file" class="form-control" id="bukti_transfer2" name="bukti_transfer" placeholder="Bukti Transfer">
-                            </div>
-                          </div>
+                          
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>
@@ -129,6 +150,66 @@
                     </div>
                   </div>
                 </div>
+                <?php else: ?>
+                  <div class="modal fade" id="kalenderModalEdit<?= $k->id ?>" tabindex="-1" aria-labelledby="kalenderModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="kalenderModalLabel">Ubah Data Pembayaran Online</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3 mt-2" method="post" enctype="multipart/form-data" action="<?= base_url(); ?>/update-konfirmasi/<?= $k->id ?>">
+                          <div class="row mb-3">
+                            <label for="NomorPendaftaran" class="col-sm-3 col-form-label">Nomor Pendaftaran<span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="nomor_pendaftaran" name="nomor_pendaftaran" value="<?php foreach ($user as $u) {
+                                if ($u->id_ref == $k->id_pendaftar) { 
+                                  echo $u->nomor_pendaftaran;
+                                }
+                              } ?>" readonly>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Pembayaran<span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                              <div class="input-group">
+                                <input type="date" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" value="<?= $k->tanggal_transfer ?>" required>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama <span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="nama_pemilik_rekening" name="nama_pemilik_rekening" value="<?= $k->nama_pemilik_rekening ?>" required>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <label for="NamaBank" class="col-sm-3 col-form-label">Jenis Pembayaran<span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="nama_bank" name="nama_bank" value="<?= $k->nama_bank ?>" readonly>
+                            </div>
+                          </div>
+                          <div class="row mb-2">
+                            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Bayar<span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="nominal_transfer" name="nominal_transfer" value="<?= $k->nominal_transfer ?>" readonly>
+                              <span class="text-danger">Angka saja tanpa titik atau koma. Contoh : 200000</span>
+                            </div>
+                          </div>
+                          
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <?php endif ?>
+                
                 <div class="modal fade" id="alertModalEdit<?= $k->id ?>" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
                     <div class="modal-content">
@@ -161,51 +242,7 @@
     </div>
   </div>
 </div>
-<?php foreach ($pembayaran as $key => $value) { ?>
-  <div class="modal fade" id="alertModalVerifikasi<?= $value->id ?>" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="kalenderModalLabel">Verifikasi Pembayaran <?php foreach ($user as $u) {
-            if ($u->id_ref == $value->id_pendaftar) {
-              echo $u->nomor_pendaftaran;
-            }
-          } ?></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="table-responsive">
-            <?php echo form_open('status-pembayaran/'. $value->id.'/'.$value->id_pendaftar) ?>
-            <table class="table" width="100%" cellspacing="0">
-              <tr>
-                <th>Nama Bank</th>
-                <th>:</th>
-                <td><?= $value->nama_bank; ?></td>
-              </tr>
-              <tr>
-                <th>Atas Nama</th>
-                <th>:</th>
-                <td><?= $value->nama_pemilik_rekening; ?></td>
-              </tr>
-              <tr>
-                <th>Total Bayar</th>
-                <th>:</th>
-                <td>Rp. <?= number_format($value->nominal_transfer, 0); ?></td>
-              </tr>
-            </table>
-          </div>
-          <img class="img-fluid pad" src="<?= base_url('assets/' . $value->bukti_transfer); ?>" alt="">
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-success">Verifikasi</button>
-          </div>
-          <?php echo form_close() ?>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<?php } ?>
 
 <div class="modal fade" id="sliderModal" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg">
@@ -234,38 +271,19 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Transfer<span class="text-danger">*</span></label>
+            <label for="TanggalTransfer" class="col-sm-3 col-form-label">Tanggal Bayar<span class="text-danger">*</span></label>
             <div class="col-sm-9">
               <div class="input-group">
-                <input type="text" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" required>
-                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                <input type="date" class="datepicker form-control mb-0" id="autoSizingInputGroup" name="tanggal_transfer" required>
+                
               </div>
             </div>
           </div>
           <div class="row mb-2">
-            <label for="NamaPemilik" class="col-sm-3 col-form-label">Nama Pemilik Rekening<span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="nama_pemilik_rekening" name="nama_pemilik_rekening" placeholder="Nama Pemilik Rekening" required>
-            </div>
-          </div>
-          <div class="row mb-2">
-            <label for="NamaBank" class="col-sm-3 col-form-label">Nama Bank<span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="nama_bank" name="nama_bank" placeholder="Nama Bank" required>
-            </div>
-          </div>
-          <div class="row mb-2">
-            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Transfer<span class="text-danger">*</span></label>
+            <label for="NominalTransfer" class="col-sm-3 col-form-label">Nominal Bayar<span class="text-danger">*</span></label>
             <div class="col-sm-9">
               <input type="text" class="form-control" id="nominal_transfer" name="nominal_transfer" placeholder="Nominal Transfer" required>
               <span class="text-danger">Angka saja tanpa titik atau koma. Contoh : 200000</span>
-            </div>
-          </div>
-          <div class="row mb-2">
-            <label for="BuktiTransfer" class="col-sm-3 col-form-label">Bukti Transfer<span class="text-danger">*</span></label>
-            <div class="col-sm-9">
-              <img id="gambar_load" width="400px">
-              <input type="file" class="form-control" id="bukti_transfer" name="bukti_transfer" placeholder="Bukti Transfer" required>
             </div>
           </div>
           <div class="modal-footer">

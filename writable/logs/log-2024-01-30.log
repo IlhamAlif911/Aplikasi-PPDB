@@ -101,3 +101,145 @@ in APPPATH\Controllers\Pendaftar.php on line 103.
  3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 15:24:05 --> Undefined variable $l
+in APPPATH\Views\Admin\data_pembayaran.php on line 101.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $l', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 101)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(240): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 19:53:24 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 280.
+ 1 APPPATH\Controllers\Midtrans.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 19:53:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 280.
+ 1 APPPATH\Controllers\Midtrans.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 19:53:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Midtrans.php on line 280.
+ 1 APPPATH\Controllers\Midtrans.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Midtrans.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->finish()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 20:26:46 --> Undefined variable $k
+in APPPATH\Views\Admin\konfirmasi_pembayaran.php on line 104.
+ 1 APPPATH\Views\Admin\konfirmasi_pembayaran.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $k', 'APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\konfirmasi_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/konfirmasi_pembayaran', [], true)
+ 5 APPPATH\Controllers\Midtrans.php(108): view('Admin/konfirmasi_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->konfirmasi_pembayaran('29')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 21:20:53 --> CURL Error: Could not resolve host: api.sandbox.midtrans.com
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 156.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-21:02:15/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-21:02:15/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(445): Midtrans\Transaction::status('PPDB-2122000128-21:02:15')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->get_status('29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 21:21:10 --> CURL Error: Could not resolve host: api.sandbox.midtrans.com
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 156.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-21:02:15/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-21:02:15/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(445): Midtrans\Transaction::status('PPDB-2122000128-21:02:15')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->get_status('29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 21:28:02 --> Midtrans API is returning API error. HTTP status code: 500 API response: {"status_code":"500","status_message":"Sorry. Our system is recovering from unexpected issues. Please retry.","id":"0684f230-28e7-4c07-b2b9-1c03f1d1f516"}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 165.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(403): Midtrans\Transaction::status('PPDB-2122000128-212330')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->status('23', '29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 21:28:39 --> Midtrans API is returning API error. HTTP status code: 500 API response: {"status_code":"500","status_message":"Sorry. Our system is recovering from unexpected issues. Please retry.","id":"3611814d-fc8a-41e0-b11f-308ca050b210"}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 165.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(445): Midtrans\Transaction::status('PPDB-2122000128-212330')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->get_status('29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 21:28:47 --> Midtrans API is returning API error. HTTP status code: 500 API response: {"status_code":"500","status_message":"Sorry. Our system is recovering from unexpected issues. Please retry.","id":"8c6cabf6-dc7a-4cfa-9bf1-ef31810bbc0f"}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 165.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-212330/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(445): Midtrans\Transaction::status('PPDB-2122000128-212330')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->get_status('29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 22:43:57 --> Undefined property: stdClass::$bukti_transfer
+in APPPATH\Views\Admin\data_pembayaran.php on line 277.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$bukti_transfer', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 277)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(240): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 22:44:10 --> Undefined property: stdClass::$bukti_transfer
+in APPPATH\Views\Admin\data_pembayaran.php on line 277.
+ 1 APPPATH\Views\Admin\data_pembayaran.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$bukti_transfer', 'APPPATH\\Views\\Admin\\data_pembayaran.php', 277)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\data_pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 5 APPPATH\Controllers\Admin.php(240): view('Admin/data_pembayaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 22:44:52 --> syntax error, unexpected token ";"
+in APPPATH\Views\Admin\data_pembayaran.php on line 277.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Admin/data_pembayaran', [], true)
+ 3 APPPATH\Controllers\Admin.php(240): view('Admin/data_pembayaran', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->data_pembayaran()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2024-01-30 22:52:33 --> Midtrans API is returning API error. HTTP status code: 500 API response: {"status_code":"500","status_message":"Sorry. Our system is recovering from unexpected issues. Please retry.","id":"45f6ecdd-a422-4227-b6fc-391af75ba6fa"}
+in VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php on line 165.
+ 1 VENDORPATH\midtrans\midtrans-php\Midtrans\ApiRequestor.php(25): Midtrans\ApiRequestor::remoteCall('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-224731/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false, 'GET')
+ 2 VENDORPATH\midtrans\midtrans-php\Midtrans\Transaction.php(22): Midtrans\ApiRequestor::get('https://api.sandbox.midtrans.com/v2/PPDB-2122000128-224731/status', 'SB-Mid-server-vMrJTbzKEfdvuviQdOvnvuC5', false)
+ 3 APPPATH\Controllers\Midtrans.php(431): Midtrans\Transaction::status('PPDB-2122000128-224731')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Midtrans->get_status('29')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Midtrans))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
