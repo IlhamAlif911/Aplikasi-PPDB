@@ -76,7 +76,7 @@
                     <?php } else { ?>
                         <ul class="alert alert-success list-unstyled">
                             <li>Anda sudah melakukan pembayaran. <br>
-                                <a class="btn btn-primary rounded-pill pt-2" onclick="get_status(<?= $pembayaran->id_pendaftar; ?>)"> Cek Status Pembayaran</a>
+                                <a class="btn btn-primary rounded-pill pt-2" onclick="get_status('<?= $pembayaran->id; ?>', '<?= $pembayaran->id_pendaftar; ?>')"> Cek Status Pembayaran</a>
                             </li>
                         </ul>
                         <div class="card">

@@ -293,7 +293,7 @@ class Midtrans extends Base
         
     }
 
-    public function get_status($id)
+    public function getstatus($id,$idPendaftar)
     {
         // proteksi halaman
         if (! session()->get('logged_in')) {
@@ -312,7 +312,7 @@ class Midtrans extends Base
         $pembayaran = new DataPembayaran();
         $pendaftar = new DataPendaftar();
         $stat = $this->codeWithName('Pembayaran Berhasil');
-        $cekData = $pembayaran->where('id_pendaftar',$id)->first();
+        $cekData = $pembayaran->where('id',$id)->first();
 
         if ($cekData) {
 
@@ -321,17 +321,17 @@ class Midtrans extends Base
                 "status" => $status->transaction_status,
             ]);
             if ($status->transaction_status == 'settlement') {
-                $pendaftar->update($cekData->id,[
+                $pendaftar->update($idPendaftar,[
                     "status_penerimaan" => $stat->id,
                 ]);
             }
 
             session()->setFlashdata('alert', 'Cek Status Berhasil');
-            return redirect()->to('konfirmasi-pembayaran/'.$id);
+            return redirect()->to('konfirmasi-pembayaran/'.$idPendaftar);
 
         } else {
             session()->setFlashdata('error', 'Data Tidak Ditemukan');
-            return redirect()->to('konfirmasi-pembayaran/'.$id);
+            return redirect()->to('konfirmasi-pembayaran/'.$idPendaftar);
         }
         
     }

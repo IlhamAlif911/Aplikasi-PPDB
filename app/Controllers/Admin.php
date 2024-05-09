@@ -32,30 +32,22 @@ class Admin extends BaseController
         }
         
         $pendaftaran = new DataPendaftaran();
-        $_pendaftar = new Pendaftaran();
         $tahap = new DataTahap();
         $stateModel = new Periode();
         $tahap = new DataTahap();
         $pendaftar = new DataPendaftar();
         $periodeModel = new Periode();
         $countryModel = new Provinces();
-        $this->data['state'] = $pendaftaran->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode',2)->findAll();
-        $this->data['query'] = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', 2)->groupBy('id')->findAll();
-        $this->data['query_l'] = $pendaftaran->select('pendaftaran.id_pendaftar, tahap.nama_tahap, tahap.id, COUNT( * ) as total')->join('tahap', 'tahap.id = pendaftaran.tahap')->join('data_pendaftar', 'data_pendaftar.id = pendaftaran.id_pendaftar')->where('pendaftaran.periode', 2)->where('data_pendaftar.jenis_kelamin','l')->groupBy('tahap.id')->findAll();
+        $pembayaran = new DataPembayaran();
         //test
-        $this->data['cek'] = $pendaftar->select('sum(jenis_kelamin = "p") P, sum(jenis_kelamin = "l") L, tahap.nama_tahap')->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', 2)->groupBy('tahap.nama_tahap')->findAll();
+        // $this->data['cek'] = $pendaftar->select('sum(jenis_kelamin = "p") P, sum(jenis_kelamin = "l") L, tahap.nama_tahap')->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('pendaftaran.periode', 2)->groupBy('tahap.nama_tahap')->findAll();
 
-        $this->data['state2'] = $tahap->where('id_periode', 2)->orderBy('id', 'ASC')->findAll();
-        $state1 = $pendaftaran->findAll();
-        $this->data['statedata'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', 2)->findAll();
-        $this->data['jml_'] = $stateModel->join('tahap', 'tahap.id_periode = periode.id')->join('pendaftaran', 'pendaftaran.periode = periode.id')->where('periode.id', 2)->findAll();
-        $this->data['pendaftar_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->findAll();
-        $this->data['pendaftar_laki_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->where('data_pendaftar.jenis_kelamin','l')->findAll();
-        $this->data['pendaftar_p_zonasi'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->where('pendaftaran.jalur', '15')->where('data_pendaftar.jenis_kelamin','p')->findAll();
-        $this->data['pendaftar'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->findAll();
-        $this->data['pendaftar_laki'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('data_pendaftar.jenis_kelamin','l')->findAll();
-        $this->data['pendaftar_p'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('tahap', 'tahap.id = pendaftaran.tahap')->where('data_pendaftar.jenis_kelamin','p')->findAll();
-        
+        $this->data['bill_sukses'] = $pembayaran->where('status','settlement')->findAll();
+        $this->data['bill_pending'] = $pembayaran->where('status','pending')->findAll();
+        $this->data['bill_expired'] = $pembayaran->where('status','expire')->findAll();
+
+        $this->data['pendaftar'] = $pendaftar->join('pendaftaran', 'pendaftaran.id_pendaftar = data_pendaftar.id')->join('periode', 'periode.id = pendaftaran.periode')->where('pendaftaran.periode', session()->periode)->findAll();
+            
         $this->data['tahap'] = $tahap->findall();
         $this->data['tahapan'] =$tahap->where('id_periode',session()->periode)->findAll();
         $this->data['isTour'] = true;

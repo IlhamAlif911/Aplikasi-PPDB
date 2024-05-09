@@ -122,8 +122,8 @@
 	function cek_status(id,idPendaftar){
 		window.location.href='/midtrans/status/'+ id + '/' + idPendaftar;
 	}
-	function get_status(id){
-		window.location.href='/midtrans/get_status/'+ id;
+	function get_status(id,idPendaftar){
+		window.location.href='/midtrans/getstatus/'+ id + '/' + idPendaftar;
 	}
 
 

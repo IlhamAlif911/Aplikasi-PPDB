@@ -13,7 +13,7 @@
                         <h4 class="counter" style="visibility: visible;"><?= count($pendaftar)?></h4>
                      </div>
                      <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
-                        <div class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-primary" data-toggle="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                      </div>
                   </div>
                </li>
@@ -21,10 +21,10 @@
                   <div class="card-body">
                      <div class="progress-detail">
                         <p class="mb-1">Total Pembayaran Sukses</p>
-                        <h4 class="counter" style="visibility: visible;"><?= count($pendaftar_laki)?></h4>
+                        <h4 class="counter" style="visibility: visible;"><?= count($bill_sukses) ?></h4>
                      </div>
                      <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
-                        <div class="progress-bar bg-success" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" data-toggle="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                      </div>
                   </div>
                </li>
@@ -32,10 +32,10 @@
                   <div class="card-body">
                      <div class="progress-detail">
                         <p class="mb-1">Total Pembayaran Pending</p>
-                        <h4 class="counter" style="visibility: visible;"><?= count($pendaftar_p)?></h4>
+                        <h4 class="counter" style="visibility: visible;"><?= count($bill_pending)?></h4>
                      </div>
                      <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
-                        <div class="progress-bar bg-warning" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" data-toggle="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                      </div>
                   </div>
                </li>
@@ -43,10 +43,10 @@
                   <div class="card-body">
                      <div class="progress-detail">
                         <p class="mb-1">Total Pembayaran Kadaluarsa</p>
-                        <h4 class="counter" style="visibility: visible;">11.2M</h4>
+                        <h4 class="counter" style="visibility: visible;"><?= count($bill_expired) ?></h4>
                      </div>
                      <div class="progress bg-soft-primary shadow-none w-100" style="height: 4px">
-                        <div class="progress-bar bg-danger" data-toggle="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-danger" data-toggle="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                      </div>
                   </div>
                </li>
